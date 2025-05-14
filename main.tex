@@ -1,0 +1,425 @@
+% !TeX spellcheck = es_ES
+\documentclass[11pt,a4paper,twoside]{report}
+
+% ===== Paquetes esenciales =====
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{courier}
+\usepackage{pgfgantt}
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{tocloft}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usetikzlibrary{shapes, arrows, positioning}
+
+\renewcommand{\lstlistlistingname}{Índice de Códigos}
+
+\raggedbottom
+
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% ===== Configuraciones generales =====
+\setlength{\headheight}{16pt}
+\geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
+\linespread{1.15} % Interlineado normativo
+
+% ===== Encabezado y pie de página =====
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyfoot[CE,CO]{\thepage}
+
+% ===== Formato de títulos =====
+\titleformat{\chapter}[hang]{\bfseries\huge}{\thechapter.}{1pc}{}
+\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+\titleformat{\section}[hang]{\bfseries\Large}{\thesection.}{1pc}{}
+\titleformat{\subsection}[hang]{\bfseries\large}{\thesubsection.}{1pc}{}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+% Definición de colores si aún no los has puesto
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% Estilo snortstyle completo y compatible
+% Estilo snortstyle completo y compatible
+\lstdefinestyle{snortstyle}{
+	backgroundcolor=\color{white},
+	basicstyle=\footnotesize\ttfamily,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	commentstyle=\color{mygreen},
+	escapeinside={\%*}{*)},
+	extendedchars=true,
+	frame=single,
+	keepspaces=true,
+	keywordstyle=\color{blue},
+	language=bash,
+	morekeywords={sudo,systemctl,make,cmake,apt,tar,configure},
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\tiny\color{mygray},
+	rulecolor=\color{black},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	stepnumber=2,
+	stringstyle=\color{mymauve},
+	tabsize=2,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	title=\lstname,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+	{°}{{\textdegree}}1 {→}{{$\rightarrow$}}1 {⇒}{{$\Rightarrow$}}1
+	{≥}{{$\geq$}}1 {≤}{{$\leq$}}1 {–}{{--}}1
+	{“}{{``}}1 {”}{{''}}1 {’}{{'}}1 {•}{{\textbullet}}1
+	{\{}{{\{}}1 {\}}{{\}}}1
+	{\_}{{\_}}1 {\%}{{\%}}1 {\$}{{\$}}1
+	{\\}{{\textbackslash}}1 {\#}{{\#}}1 {\&}{{\&}}1
+	{\^}{{\^{}}}1 {\~}{{\~{}}}1 {\|}{{\textbar}}1
+	{\033}{{\textbackslash033}}1,
+}
+
+% Activar el estilo globalmente
+\lstset{style=snortstyle}
+
+\lstdefinestyle{commandstyle}{
+	backgroundcolor=\color{gray!10},
+	basicstyle=\ttfamily\small\color{black}, % Todo el texto en negro
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	columns=flexible,
+	xleftmargin=1.5em,
+	framexleftmargin=1.5em,
+	stringstyle=\color{mymauve}, % Cadenas en rosado
+	commentstyle=\color{mygreen}, % Comentarios (si los hay)
+	keywordstyle=\color{black}, % Keywords en negro (elimina el azul)
+	language=bash,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	numbersep=8pt,
+	firstnumber=1,
+	stepnumber=1,
+	numberblanklines=false,
+	numberfirstline=true,
+	prebreak=\mbox{\textcolor{red}{$\hookleftarrow$}\space},
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	morekeywords={} % Vaciamos completamente la lista de keywords
+}
+
+% Para evitar que \lstlistoflistings añada al TOC
+\makeatletter
+\let\oldlstlistoflistings\lstlistoflistings
+\renewcommand{\lstlistoflistings}{\begingroup\let\addcontentsline\@gobble\oldlstlistoflistings\endgroup}
+\makeatother
+
+% Título en español para el índice de códigos
+\renewcommand{\lstlistlistingname}{Índice de Códigos}
+
+
+% ===== Inicio del documento =====
+\begin{document}
+	
+	\pagenumbering{roman}
+	
+	% ===== Portada (debes sustituirla por la oficial del Anexo II en la entrega) =====
+\cleardoublepage
+\includepdf[pages=1, pagecommand={\thispagestyle{empty}}, fitpaper=true]{portada.pdf}
+	
+	\thispagestyle{empty}
+	\cleardoublepage
+	\thispagestyle{empty}
+	
+	
+	
+	% ===== Licencia Creative Commons =====
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace*{\fill}
+		\includegraphics[width=0.3\textwidth]{adicional/cc.xlarge.png}\\
+		Este trabajo está bajo una licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional.
+		\vspace*{\fill}
+	\end{center}
+	
+	\newpage
+	\thispagestyle{empty}
+	\null
+	\newpage
+	
+	% ===== Agradecimientos =====
+	\cleardoublepage
+	\thispagestyle{empty}
+	{
+		\begin{center}
+			\Large\bfseries Agradecimientos
+		\end{center}
+		
+		\vspace{1cm}
+		
+		Quiero expresar mi más sincero agradecimiento a mi tutor, Julio Gómez López, y a mi cotutor, Nicolás Padilla Soriano, por su orientación y apoyo durante
+		todo el desarrollo de este trabajo. Su experiencia ha sido el pilar para mantener un enfoque de este proyecto.\newline
+		
+		También quiero dar las gracias a mi familia, en especial a mis padres, por haberme transmitido desde pequeño el valor del esfuerzo, la constancia y la curiosidad.
+	    Su confianza incondicional me ha permitido perseguir mis metas con libertad y determinación.\newline
+		
+		A mis amigos y compañeros de carrera, con quienes he compartido frustraciones, risas, noches de trabajo y logros, gracias por formar parte de este camino.
+		Vuestra compañía ha sido tan importante como el contenido aprendido.\newline
+		
+		Y por último, a mí mismo, por no rendirme. Por seguir adelante incluso cuando el cansancio o la duda amenazaban con paralizarme. Este trabajo representa no
+		solo un proyecto académico, sino también un ejercicio de crecimiento, disciplina y pasión por la tecnología como herramienta para construir un mundo más seguro y accesible.
+		
+		\vfill
+	}
+	
+		\newpage
+	\thispagestyle{empty}
+		\cleardoublepage
+
+	% ===== Índice general =====
+	\tableofcontents
+	\newpage
+	
+	% ===== Índice de figuras =====
+	\listoffigures
+	\newpage
+	
+	% ===== Índice de tablas/cuadros =====
+	\listoftables
+	
+	% SOLO esto para insertar página vacía después
+	\newpage
+	\thispagestyle{empty}
+	\null
+	\newpage
+	
+% ===== Índice de códigos (sin TOC pero con encabezado) =====
+% ===== Índice de códigos =====
+\cleardoublepage
+\markboth{Índice de Códigos}{Índice de Códigos}
+\lstlistoflistings
+
+
+% ===== Abreviaturas (sin TOC pero con encabezado) =====
+\chapter*{Abreviaturas}
+\markboth{Abreviaturas}{Abreviaturas}
+\begin{itemize}
+	\item \textbf{APT}: (Advanced Persistent Threat). Amenaza Avanzada Persistente. Suele involucrar ataques dirigidos y prolongados contra objetivos concretos.
+	\item \textbf{ClamAV}: Antivirus de código abierto que analiza y detecta archivos maliciosos o infecciones. Se integra como complemento en el proyecto.
+	\item \textbf{CPU}: (Central Processing Unit). Unidad central de procesamiento, comúnmente conocida como procesador, encargada de ejecutar instrucciones en un sistema.
+	\item \textbf{CSV}: (Comma-Separated Values). Formato de archivo de texto plano que representa datos tabulares separados por comas o puntos y coma.
+	\item \textbf{Debian Package (*.deb)}: Formato estándar de paquetes en sistemas GNU/Linux basados en Debian/Ubuntu. Facilita la instalación y gestión de software.
+	\item \textbf{DoS}: (Denial of Service). Ataque que busca interrumpir el funcionamiento normal de un sistema o red.
+	\item \textbf{FTP}: (File Transfer Protocol). Protocolo para la transferencia de archivos en redes IP.
+	\item \textbf{GNU/Linux}: Sistema operativo de software libre en el que se basan distribuciones como Ubuntu, Debian, CentOS, etc.
+	\item \textbf{HIDS}: (Host Intrusion Detection System). Sistema de Detección de Intrusiones basado en Host, centrado en vigilar el comportamiento interno de un equipo específico.
+	\item \textbf{HTTP}: (Hypertext Transfer Protocol). Protocolo de comunicación utilizado en la web para transmitir información entre cliente y servidor.
+	\item \textbf{HTTP2}: Segunda versión del protocolo HTTP, optimizada para mayor velocidad y eficiencia.
+	\item \textbf{ICMP}: (Internet Control Message Protocol). Protocolo usado para enviar mensajes de error y diagnóstico en redes IP.
+	\item \textbf{IDS}: (Intrusion Detection System). Sistema de Detección de Intrusiones (término general). Comprende tanto la detección en host (HIDS) como en red (NIDS).
+	\item \textbf{IEC 104}: Protocolo de comunicación utilizado en sistemas de automatización industrial y redes eléctricas.
+	\item \textbf{IMAP}: (Internet Message Access Protocol). Protocolo para acceder y gestionar correos electrónicos en servidores remotos.
+	\item \textbf{IPS}: (Intrusion Prevention System). Sistema de Prevención de Intrusiones. Además de detectar acciones maliciosas, reacciona automáticamente para bloquearlas.
+	\item \textbf{LuaJIT}: Implementación just-in-time (JIT) del lenguaje de scripting Lua, que Snort 3 utiliza para reglas y configuraciones más flexibles.
+	\item \textbf{MIME}: (Multipurpose Internet Mail Extensions). Estándar para enviar contenido diverso (como archivos) a través de correos electrónicos.
+	\item \textbf{NIDS}: (Network Intrusion Detection System). Sistema de Detección de Intrusiones en Red. Se encarga de monitorear el tráfico que circula por la red en busca de acciones sospechosas o maliciosas.
+	\item \textbf{OT}: (Operational Technology). Tecnología usada para controlar procesos físicos en industrias, como sistemas SCADA o PLCs.
+	\item \textbf{POP3}: (Post Office Protocol version 3). Protocolo usado para recuperar correos electrónicos desde un servidor.
+	\item \textbf{Raspberry Pi (R-Pi)}: Máquina de bajo coste y tamaño reducido. Muy popular para proyectos de electrónica, servidores ligeros.
+	\item \textbf{R-SNORT}: Adaptación o paquete de Snort diseñado para ejecutarse de forma optimizada en una Raspberry Pi, con funciones específicas para redes SOHO.
+	\item \textbf{SIEM}: (Security Information and Event Management). Plataforma que recopila y correlaciona datos de seguridad (logs, alertas, eventos) para proporcionar una visión global y centralizada.
+	\item \textbf{SIP}: (Session Initiation Protocol). Protocolo usado principalmente para establecer y controlar sesiones multimedia, como llamadas VoIP.
+	\item \textbf{SMB}: (Server Message Block). Protocolo de red para compartir archivos, impresoras y puertos serie entre nodos.
+	\item \textbf{Snort}: Herramienta de código abierto usada para la detección de intrusiones en red, muy extendida en el ámbito de la ciberseguridad.
+	\item \textbf{SOHO}: (Small Office/Home Office). Redes pequeñas o domésticas, típicas de oficinas y hogares con recursos más limitados que una gran empresa.
+	\item \textbf{SSL/TLS}: (Secure Sockets Layer / Transport Layer Security). Protocolos de cifrado que permiten la comunicación segura entre sistemas a través de redes.
+\end{itemize}
+
+% Introducción
+
+\chapter{Introducción}
+\pagenumbering{arabic}
+
+La creciente dependencia digital de las empresas ha convertido a la ciberseguridad en un factor crítico para la supervivencia y éxito de cualquier negocio, especialmente en el caso de las pequeñas y medianas empresas (PYMEs). En España, donde las PYMEs constituyen la base del tejido empresarial (en torno al 99\% de las empresas) \cite{enisa2023}
+, los ciberataques se han disparado en número y sofisticación. Se estima que casi la mitad de los ciberataques a nivel mundial van dirigidos a PYMEs, un problema particularmente serio en países como España \cite{google2024}. De hecho, siete de cada diez ataques en España tienen como objetivo organizaciones de tamaño pequeño o mediano, aprovechando que suelen contar con menos medidas de seguridad y sistemas más vulnerables. Las consecuencias de estas brechas pueden ser devastadoras: según datos de Telefónica, un 60\% de las PYMEs que sufren un ciberataque acaban desapareciendo en menos de seis meses tras el incidente \cite{telefonica2023}, ya sea por pérdidas financieras, daños reputacionales o interrupción prolongada de sus operaciones. Este panorama pone de manifiesto la importancia de una ciberseguridad robusta para la supervivencia empresarial en la era digital.\newline
+
+Sin embargo, lograr una protección adecuada presenta desafíos particulares para las PYMEs. Estas organizaciones suelen enfrentar amenazas diversas desde campañas de phishing y malware hasta ransomware y ataques dirigidos a sus aplicaciones web pero carecen de los recursos financieros y técnicos que disponen las grandes corporaciones para contrarrestarlas. En general, muchas PYMEs son especialmente vulnerables, ya que “afrontan retos digitales con recursos limitados y, en ocasiones, con desconocimiento de las amenazas que conllevan”. La falta de personal especializado en seguridad, junto con presupuestos exiguos, deriva en lagunas importantes de protección: no siempre se monitoriza la red en busca de comportamientos anómalos, no se cuenta con mecanismos sólidos de detección de intrusiones, y la prevención de fugas de información suele quedar relegada o confiada únicamente a medidas básicas. Todo ello ocurre en un contexto donde los ataques no solo van en aumento (INCIBE gestionó 107.500 incidentes en 2022, un 15\% más que el año anterior), sino que además los incidentes críticos están creciendo exponencialmente, poniendo en riesgo la continuidad del negocio.\newline
+
+En respuesta a esta problemática, organismos e iniciativas tanto nacionales como europeas han comenzado a centrar su atención en las PYMEs. La Unión Europea, consciente del papel fundamental de estas empresas en la economía, ha incluido a muchas de ellas dentro del alcance de la nueva Directiva NIS2 para reforzar su ciberresiliencia \cite{incibe2025}. En España, instituciones como INCIBE impulsan programas de sensibilización y apoyo específico (Protege tu Empresa, Kit Digital, ayudas de Activa Ciberseguridad, etc.), reconociendo que la ciberseguridad de las PYMEs es un asunto de interés general. No obstante, sigue existiendo una brecha importante entre las necesidades de seguridad de las PYMEs y las soluciones disponibles en el mercado que puedan permitirse o gestionar sin un departamento técnico dedicado.\newline
+
+En este Trabajo Fin de Grado se plantea abordar dicha brecha. La idea central es explorar y justificar la viabilidad de una solución accesible, profesional y asequible basada en Snort 3 sobre una plataforma de bajo coste (Raspberry Pi), complementada con una interfaz web de gestión y paneles visuales de Grafana –una solución que denominaremos R-Snort– para cubrir las necesidades actuales de ciberseguridad de las PYMEs españolas. En los siguientes apartados se detallarán la motivación y objetivos concretos del proyecto, así como un análisis del estado del arte y de los requerimientos de seguridad más apremiantes para este sector empresarial.
+
+% Capítulos
+\chapter{Motivación}
+
+La motivación de este proyecto surge de la constatación de una necesidad real y urgente: las pequeñas y medianas empresas se encuentran en la mira de los ciberdelincuentes, pero no disponen de las herramientas ni conocimientos adecuados para protegerse. A pesar de ser blanco de la mayoría de ataques, muchas PYMEs en España aún “no cuentan con el presupuesto suficiente para hacer frente a los ciberataques”, y más preocupante incluso, carecen de concienciación y conocimiento sobre las soluciones a su alcance. Expertos en seguridad señalan que esta falta de concienciación es un factor crítico –en ocasiones mayor obstáculo que el económico–, pues existen medidas de bajo coste que podrían mitigar gran parte de las amenazas si las empresas supieran cómo aplicarlas. En otras palabras, el problema no es solo qué falta de recursos, sino también falta de accesibilidad a soluciones de ciberseguridad adaptadas a las limitaciones de las PYMEs.\newline
+
+Actualmente, las opciones profesionales en el mercado para monitorizar redes, prevenir fugas de datos o detectar intrusiones suelen implicar costosas inversiones en equipos especializados, licencias de software o servicios gestionados (firewalls de nueva generación, sistemas de prevención de intrusiones, plataformas SIEM, etc.). Estas soluciones están pensadas para empresas con departamentos de TI consolidados y con presupuesto holgado, lo que deja a las PYMEs en una situación de desventaja: o bien operan sin las debidas medidas de seguridad (asumiendo riesgos elevados), o intentan implementar herramientas gratuitas/open-source por su cuenta, encontrándose con dificultades técnicas de configuración y mantenimiento. Por ejemplo, Snort –un sistema de detección de intrusiones de código abierto ampliamente reconocido– requiere experiencia para su despliegue y gestión, lo que suele exceder las capacidades del personal de TI generalista con el que cuentan las PYMEs típicas. De igual modo, soluciones de prevención de fuga de información o monitorización de red continua se perciben como complejas y fuera del alcance práctico de estas organizaciones.\newline
+
+Este TFG nace con la motivación de democratizar el acceso a la ciberseguridad para las PYMEs, aprovechando herramientas open-source de probada eficacia pero integrándolas en una plataforma que minimice las barreras de entrada. La elección de una Raspberry Pi como base responde al objetivo de abaratar costes de hardware al máximo, a la vez que proporciona la flexibilidad de un entorno Linux completo. Snort 3 se adopta por ser la evolución moderna de uno de los IDS más fiables a nivel industrial, ahora con mejoras de rendimiento y usabilidad que lo hacen más adaptable a entornos modestos. Al desarrollar una interfaz web amigable y complementarla con la visualización de datos mediante Grafana, buscamos que la solución resultante R-Snort sea utilizable por administradores no especializados, permitiéndoles vigilar el tráfico de su red, recibir alertas de intrusiones o comportamientos sospechosos, y supervisar potenciales fugas de información de forma sencilla e intuitiva.\newline
+
+En resumen, la motivación del proyecto se sustenta en tres pilares: (1) la necesidad palpable de mejorar la seguridad en PYMEs ante el aumento de amenazas, (2) la oportunidad de combinar tecnología open-source y hardware económico para crear una herramienta adaptada a dichas necesidades, y (3) la convicción de que una solución accesible y de bajo coste puede marcar la diferencia evitando incidentes que podrían suponer el cierre de muchas pequeñas empresas. Atendiendo a esta motivación, a continuación se definen los objetivos concretos que se pretenden alcanzar.
+
+\chapter{Objetivos}
+
+El objetivo general de este Trabajo Fin de Grado es diseñar, implementar y validar un sistema integral de monitorización y detección de intrusiones orientado a PYMEs, basado en Snort 3 sobre Raspberry Pi (R-Snort), con interfaz web de gestión y visualización mediante Grafana, que responda eficazmente a las necesidades de seguridad de este tipo de organizaciones.\newline
+
+De este objetivo principal se desprenden los siguientes objetivos específicos:
+
+\begin{enumerate}
+	\item Analizar las necesidades de ciberseguridad de las PYMEs en España, particularmente en los ámbitos de monitorización de red, prevención de fugas de información y detección de intrusiones, así como sus limitaciones presupuestarias y técnicas. Este análisis, sustentado en la revisión del estado del arte y fuentes especializadas, servirá para justificar los requisitos y el enfoque de la solución propuesta.
+	
+	\item Diseñar la arquitectura de R-Snort, seleccionando los componentes adecuados (hardware Raspberry Pi y software Snort 3, junto con herramientas de apoyo como motores de almacenamiento de logs, dashboards de Grafana, etc.) y configurando una instancia optimizada de Snort que pueda funcionar de forma estable y eficiente en un entorno de recursos limitados. Esto implica ajustar la carga de reglas, parámetros de rendimiento y posibles complementos para asegurar que la Raspberry Pi pueda analizar el tráfico en tiempo real sin degradación notable.
+	
+	\item Desarrollar una interfaz web intuitiva para la gestión de Snort y la visualización de eventos de seguridad. La interfaz deberá permitir realizar las tareas más comunes (por ejemplo, actualizar reglas, iniciar/detener la captura de tráfico, revisar alertas) sin necesidad de recurrir a la línea de comandos, haciendo la solución más accesible a personal no experto. Asimismo, se integrará Grafana u otro sistema de visualización para presentar métricas e indicadores de la red (p. ej., volumen de tráfico, alertas por tipo, tendencias temporales) de forma gráfica y comprensible.
+	
+	\item Validar el sistema R-Snort en un escenario representativo de PYME, verificando que cumple con los requisitos identificados. Esto incluirá pruebas de funcionalidad (comprobando que detecta intrusiones conocidas, que registra eventos de posible exfiltración de datos, etc.), de rendimiento (medir el tráfico máximo que puede manejar la Raspberry Pi con Snort 3 y el impacto en tiempos de respuesta), y de usabilidad (evaluar si un usuario con conocimientos técnicos básicos puede manejar la interfaz y entender la información proporcionada). Los resultados de esta validación permitirán determinar en qué medida la solución efectivamente mejora la postura de seguridad de una PYME típica y qué limitaciones o consideraciones deben tenerse en cuenta en su despliegue real.
+\end{enumerate}
+
+Con estos objetivos, se pretende que el TFG no solo culmine en un prototipo funcional, sino también en una justificación bien fundamentada de por qué dicha solución es adecuada para las PYMEs y cómo contribuye a cerrar la brecha existente entre los riesgos que enfrentan y los medios de protección actualmente a su disposición.
+
+
+\chapter{Fases de la realización y cronograma}
+en proceso
+\chapter{Estructura y metodología}
+en proceso
+
+\chapter{Sistemas de detección de intrusos: Snort y frontends}
+
+\section{IDS / NIDS}
+
+Un \textit{Intrusion Detection System} (IDS), o sistema de detección de intrusos, es una herramienta de seguridad cuya función principal es identificar accesos no autorizados o comportamientos anómalos en un sistema o red informática \cite{wikiNIDS}. Estos sistemas analizan los eventos de la red o del host en tiempo real buscando patrones que puedan indicar amenazas, como ataques de denegación de servicio, escaneos de puertos o intentos de intrusión \cite{NISTSP80094}. En general, un IDS no actúa directamente sobre el tráfico; se limita a monitorear y generar alertas para notificar a los administradores cuando detecta actividades sospechosas o violaciones a las políticas de seguridad.\newline
+
+Existen dos grandes categorías de IDS según el ámbito que vigilan: los basados en host (HIDS) y los basados en red (NIDS). Un HIDS se despliega en un equipo específico y analiza los registros (\textit{logs}) y actividades de ese sistema para descubrir intrusiones locales (por ejemplo, modificaciones no autorizadas, accesos indebidos, etc.). Por otro lado, un \textit{Network IDS} o NIDS inspecciona el tráfico de una red completa o segmento de red para detectar amenazas que transitan por ella. El NIDS examina todos los paquetes que atraviesan la red en tiempo real, buscando en ellos patrones o firmas conocidas de ataques (malware, \textit{port scanning}, explotación de vulnerabilidades, etc.) y puede detectar tanto tráfico malicioso entrante como saliente. Debido a su naturaleza pasiva (escucha en modo promiscuo una copia del tráfico), un NIDS no introduce prácticamente latencia ni altera el flujo de datos en la red que vigila.\newline
+
+Es importante distinguir un IDS de un sistema de prevención de intrusos o IPS (\textit{Intrusion Prevention System}). La diferencia clave es que el IDS opera de forma pasiva (detectando y alertando sobre posibles ataques), mientras que un IPS actúa de forma activa/intervencionista: un IPS posee todas las capacidades de detección de un IDS pero, adicionalmente, puede bloquear o impedir automáticamente el tráfico malicioso una vez identificado \cite{a2secure2019}. En otras palabras, el IDS avisa de una intrusión, pero es el administrador quien debe tomar acciones (por ejemplo, actualizar reglas de cortafuegos o aislar equipos comprometidos); en cambio, un IPS está situado en línea en la red y, al detectar un ataque, puede descartarlo o cortarlo en el momento. Por este motivo, a menudo se habla de sistemas IDPS (detección y prevención) cuando una misma solución combina ambas facetas.\newline
+
+Diversos ejemplos ilustran cada tipo de sistema. En el ámbito de host (HIDS) se pueden citar soluciones como OSSEC, Wazuh o Samhain, que monitorizan archivos de log y actividades de un servidor específico. En el ámbito de red (NIDS), destacan herramientas de código abierto ampliamente utilizadas como Snort, Suricata o Bro/Zeek. En particular, Snort se ha convertido en el estándar de facto con el que se comparan todos los IDS de red desde hace más de dos décadas \cite{SnortBlog2011}. Snort es un NIDS (y IPS) open source que emplea un conjunto actualizado de \textit{reglas} de detección para identificar patrones de tráfico malicioso; cuando un paquete o flujo coincide con alguna firma o criterio definido en sus reglas, Snort genera una alerta que notifica del posible incidente \cite{CiscoSnort3Blog}. Además, Snort puede desplegarse en modo \textit{inline} (en línea) actuando como IPS, de forma que no solo detecte sino que también bloquee aquellos paquetes que violen las reglas de seguridad. Esta versatilidad ha hecho que Snort sea una referencia obligada en IDS de red tanto para uso personal como empresarial, contando con una amplia comunidad que contribuye con reglas, mejoras y soporte.\newline
+
+
+\section{R-Snort}
+
+R-Snort es la denominación del sistema desarrollado en este proyecto, el cual consiste en una solución integral de monitorización y detección de intrusos basada en Snort 3 sobre hardware de bajo coste (una plataforma Raspberry Pi). En esencia, R-Snort implementa un sensor NIDS autónomo que aprovecha las mejoras de la nueva generación de Snort junto con una interfaz web para la gestión y visualización remota de eventos. A diferencia de un IDS tradicional aislado, R-Snort se concibe de forma modular con componentes que automatizan la recolección de datos, el análisis y la presentación de la información de seguridad, todo ello utilizando únicamente tecnologías abiertas.\newline
+
+El \textbf{núcleo de detección} de R-Snort lo constituye Snort 3 ejecutándose en una Raspberry Pi. Snort 3 (también conocido como Snort++) es una reimplementación modernizada del motor Snort que aporta importantes ventajas técnicas respecto a la rama 2.X. Por ejemplo, Snort 3 fue reescrito en C++ para lograr una base de código más modular y fácil de mantener. Incorpora soporte nativo de multiproceso (hilos) y uso de memoria compartida, permitiendo explotar mejor los procesadores multi-núcleo y ofreciendo mayor rendimiento y escalabilidad en la inspección de tráfico. Asimismo, Snort 3 introduce un sistema flexible de complementos (\textit{plugins}) e integración con el lenguaje Lua (LuaJIT) para extender sus funcionalidades, por ejemplo añadiendo nuevas opciones de reglas o analizadores de protocolos de forma más sencilla que antes. La sintaxis de las reglas de detección también se refinó para hacerlas más concisas y fáciles de escribir, reduciendo partes innecesarias y optimizando la velocidad de evaluación \cite{Sakura2020}. Todas estas mejoras hacen de Snort 3 un motor más adaptable, eficiente y potente para nuestro sistema de detección de intrusos.\newline
+
+En R-Snort, Snort 3 actúa como sensor de red, inspeccionando el tráfico (por ejemplo, mediante una interfaz en modo promiscuo o conectado a un puerto espejo de switch) y generando alertas de intrusión en formato JSON. Dichas alertas son procesadas y almacenadas para su consulta mediante la capa de \textbf{back-end}, que está implementada con un servidor web desarrollado en Spring Boot (framework Java) siguiendo una arquitectura de API REST. Este servidor intermedia entre el sensor y la interfaz de usuario, proporcionando servicios como el registro de alertas en una base de datos, la gestión de las reglas activas, y la exposición de endpoints seguros para que los administradores consulten el estado del sistema o apliquen configuraciones de forma remota.\newline
+
+La \textbf{interface web} o front-end de R-Snort se ha construido como una \textit{single-page application} moderna utilizando Angular (framework JavaScript/TypeScript). A través de esta webapp, accesible desde cualquier navegador, el usuario puede visualizar en tiempo real las alertas generadas por Snort, revisar estadísticas históricas, filtrar y buscar eventos por múltiples criterios, así como realizar tareas de administración del sensor (activar/desactivar reglas, reiniciar el servicio IDS, cargar actualizaciones, etc.). El diseño front-end se ha orientado a la simplicidad y claridad en la presentación de datos, inspirándose en las mejores prácticas de UX de aplicaciones de monitoreo.\newline
+
+Para enriquecer la experiencia de monitorización, R-Snort integra además la plataforma \textbf{Grafana} como herramienta de visualización de datos de seguridad. Grafana es un software open source ampliamente utilizado para construir paneles de control interactivos, y en nuestro proyecto se emplea para generar gráficas y paneles personalizados a partir de los datos de alertas y métricas del IDS. Por ejemplo, se han creado dashboards que muestran el número de alertas por unidad de tiempo, la clasificación de las alertas por severidad o tipo de ataque, e incluso mapas de calor de IP de origen/destino más detectadas. Este enfoque sigue la línea de otras implementaciones de comunidad que utilizan Grafana para visualizar eventos de Snort (a menudo en conjunción con bases de datos de tiempo real como Elasticsearch/Graylog) \cite{GrafanaForum2020}. En R-Snort, Grafana se conecta al almacenamiento de alertas del back-end y permite tener, dentro de la misma solución, una vista gráfica y analítica de la seguridad de la red en tiempo real.\newline
+
+En conjunto, R-Snort supone una propuesta de IDS/NIDS completo de bajo coste y código abierto. Combina el potente motor de detección de Snort 3 (sensor) con un ecosistema web moderno (Spring Boot/Angular en el servidor y cliente) y herramientas de visualización profesionales (Grafana) para proporcionar a pequeñas y medianas empresas una plataforma accesible para proteger sus redes. Toda la solución se despliega sobre hardware económico (una Raspberry Pi como nodo sensor), lo que reduce la barrera de entrada en términos de inversión. Pese a su sencillez de despliegue, el sistema mantiene un enfoque modular y escalable: cada componente (detección, almacenamiento, visualización, gestión) está desacoplado, permitiendo en el futuro reemplazar o ampliar funcionalidades (por ejemplo, agregar más sensores en varias ubicaciones reportando al mismo back-end, o incorporar nuevas fuentes de datos de seguridad). En resumen, R-Snort demuestra cómo es posible aprovechar tecnologías abiertas actuales para construir un IDS integrado, manejable vía web y orientado a entornos con recursos limitados, sin incurrir en los altos costes ni complejidad de soluciones comerciales tradicionales.
+
+
+\section{Frontends más utilizados de Snort}
+
+A lo largo de la evolución de Snort han surgido múltiples aplicaciones front-end para facilitar la gestión y análisis de las alertas generadas por este IDS. Estos frontends web proveen consolas gráficas donde los eventos de Snort pueden visualizarse, filtrarse y reportarse de forma más amigable que mediante los logs en texto plano. A continuación se describen algunos de los frontends históricos más populares asociados a Snort –como Snorby, BASE, Aanval, Sguil o Snort Report– incluyendo sus características principales, enfoques y limitaciones, para luego comparar sus conceptos con la propuesta de nuestro R-Snort.\newline
+
+\textbf{BASE (Basic Analysis and Security Engine)} es uno de los frontales web clásicos para Snort. Nació como una continuación del proyecto anterior ACID (\textit{Analysis Console for Intrusion Databases}), el cual fue un pionero en proveer una interfaz web para consultar las alertas registradas por Snort en una base de datos. ACID, desarrollado a inicios de los 2000, quedó discontinuado alrededor de 2003 \cite{SnorbyHelpnet2010}, pero BASE retomó su código y lo mejoró, añadiendo nuevas funciones y compatibilidad con múltiples idiomas. Al igual que ACID, BASE está escrito en PHP y se apoya típicamente en un stack LAMP (Linux-Apache-MySQL-PHP): Snort vuelca las alertas en una base de datos relacional (por ejemplo MySQL) –usando para ello complementos como Barnyard2– y BASE ofrece consultas, gráficos básicos y gestión de alertas desde una página web dinámica. Durante muchos años, BASE fue la interfaz preferida por la comunidad, llegando a superar las 200.000 descargas. Entre sus fortalezas estaban la simplicidad de despliegue y su funcionalidad probada para navegación y búsqueda en los eventos (permitiendo ordenar por fecha, tipo de ataque, IP, etc., y ver detalles de cada alerta). Como limitaciones, al ser una herramienta concebida hace más de 15 años, su interfaz resulta poco moderna y no ofrece visualizaciones avanzadas; además depende de tecnologías y librerías ya obsoletas, lo que puede dificultar su instalación en entornos actuales. A pesar de planes para rediseñar BASE e incluso cambiar su formato de base de datos, el proyecto perdió ímpetu tras la salida de sus mantenedores originales y su desarrollo activo se ha ralentizado considerablemente.\newline
+
+\textbf{Snort Report} es otra solución veterana, centrada en proporcionar informes rápidos del estado del IDS. Surgido alrededor de 2001, Snort Report se distribuía como un módulo adicional ligero para obtener “instantáneas” de las alertas más recientes y resumir la actividad de Snort en la red \cite{SnortReport2010}. A diferencia de BASE, que brinda múltiples vistas y filtros de análisis forense, Snort Report se enfocaba en la monitorización en tiempo real: presentaba en una pantalla principal un tablero con las alertas actuales (número de eventos, tipo más frecuente, origen de las últimas alarmas, etc.), permitiendo al administrador hacerse una idea inmediata de lo que estaba ocurriendo en su sensor IDS. Era una aplicación sencilla en PHP que leía directamente de la base de datos de Snort o de los archivos de log. Entre sus ventajas estaba la facilidad de uso y la mínima configuración necesaria. Sin embargo, también ofrecía menos profundidad analítica que otras herramientas (no tenía tantas opciones de búsqueda histórica o correlación) y con el tiempo fue quedando relegada en favor de frontends más completos. Aun así, para pequeñas implementaciones Snort Report fue útil por su simplicidad. Con el lanzamiento de Snort 2.x y la aparición de otros dashboards más sofisticados, Snort Report dejó de actualizarse regularmente y hoy en día se considera descontinuado.\newline
+
+\textbf{Aanval} representa una aproximación distinta, orientada a entornos empresariales que buscaban una solución más completa de tipo SIEM integrando a Snort. Es un producto comercial (desarrollado por Tactical FLEX, Inc.) que desde 2003 ha ofrecido soporte para recoger y correlacionar eventos de Snort, Suricata y fuentes de logs generales (syslog) en una plataforma unificada \cite{AanvalWiki}. Aanval se caracteriza por una interfaz web propietaria bastante pulida, con dashboards personalizables, mapas de topologías, alertas en tiempo real y gestión centralizada de múltiples sensores Snort. A lo largo de sus numerosas versiones, ha incorporado funcionalidades avanzadas como: clasificación de eventos por categorías de ataque, generación de informes ejecutivos, alertamiento vía correo/SMS, e integración con herramientas externas (por ejemplo, ticketing de incidentes). En esencia, Aanval va más allá de un simple visor de alertas y se posiciona como un centro de operaciones de seguridad (\textit{Security Operations Center} simplificado) para quienes despliegan Snort. Entre sus fortalezas está la robustez y amplitud de características, así como su continuidad en el tiempo (es uno de los frontends para Snort con más larga trayectoria, con mantenimiento activo por más de 15 años). Su principal desventaja, desde la perspectiva de nuestro proyecto, es que no es software libre; si bien tuvo versiones gratuitas limitadas, la versión completa de Aanval es de pago, lo que supone una barrera para PYMEs con presupuesto reducido. Asimismo, su enfoque todo-en-uno puede resultar complejo de desplegar en escenarios muy pequeños. No obstante, conceptualmente Aanval demuestra cómo una interfaz web puede escalar para administrar múltiples sensores Snort y agregar inteligencia de seguridad a partir de sus alertas.\newline
+
+
+\textbf{Sguil} (pronunciado \textit{“esquil”}) es otro frontend ampliamente reconocido, aunque su filosofía y arquitectura difieren notablemente de las opciones antes mencionadas. Sguil nació alrededor de 2004 impulsado por Bamm Visscher como parte del paradigma de \textit{Network Security Monitoring} (NSM). A diferencia de BASE o Snorby, que son aplicaciones web puras, Sguil es una solución cliente-servidor pesada escrita en Tcl/Tk que provee una consola para analistas de seguridad. Consta de tres componentes principales: sensores (por ejemplo Snort ejecutándose en modo sensor), un servidor central que recopila eventos, y uno o varios clientes GUI que los analistas utilizan para conectarse y revisar los datos \cite{sectoolsSguil}. Sguil se distingue por proporcionar acceso a información muy detallada: su interfaz gráfica muestra los eventos de Snort en tiempo real (pestaña de \textit{RealTime Events}), y permite al analista profundizar en cada alerta consultando datos de sesión (conexiones relacionadas) e incluso ver las capturas completas de los paquetes asociados al evento, gracias a que integra un sistema de captura continua de tráfico. En esencia, Sguil no solo alerta de un posible ataque, sino que ofrece las evidencias crudas para que un analista las verifique (por ejemplo, reconstruir la sesión TCP o examinar la carga útil del paquete sospechoso). Esto convierte a Sguil en una potente herramienta de análisis e investigación de intrusiones. Muchos administradores empezaban usando BASE para lo básico y luego migraban a Sguil cuando necesitaban capacidades forenses más avanzadas. Sin embargo, toda esta funcionalidad tenía contrapartidas: la aplicación, al estar escrita en Tcl/Tk, resulta menos accesible (no es web, requiere instalar el cliente gráfico) y su usabilidad es más tosca en comparación con las soluciones web modernas. Sguil está muy enfocada al especialista en seguridad, por lo que su curva de aprendizaje es mayor y su interfaz es densa en información técnica. Pese a ello, marcó un hito en cuanto a profundidad de datos disponibles para un IDS y sentó las bases de suites NSM actuales (como Security Onion, que integra Sguil/Squert). Cabe mencionar que existieron frontends web complementarios a Sguil, como Squert, que ofrecían en navegador una vista simplificada de los datos de Sguil, pero incluso estos han ido quedando obsoletos con el tiempo. En resumen, Sguil ofreció una aproximación de “análisis total” del tráfico en torno a Snort, sacrificando la estética y simplicidad a cambio de capacidades analíticas únicas en su momento.\newline
+
+\textbf{Snorby} es uno de los frontends para Snort más destacables de la década de 2010, pues supuso un intento de modernizar la experiencia de usuario en la gestión de alertas IDS. Presentado originalmente en 2010, Snorby es una aplicación web desarrollada en Ruby on Rails que enfatizaba la interfaz gráfica elegante y la facilidad de uso. Sus principios fundamentales eran la simplicidad y la potencia: el objetivo declarado del proyecto Snorby fue crear una herramienta abierta, gratuita y altamente competitiva para monitoreo de redes, dirigida tanto a entornos empresariales como a usuarios particulares \cite{SnorbyHelpnet2010}. A nivel funcional, Snorby retomó muchas características conocidas de BASE (consultas a la base de datos de Snort, filtros por protocolos, exportación de alertas a CSV/PDF, etc.) pero añadiendo numerosas mejoras. Entre las funcionalidades que incorporó estaban: un panel de inicio con métricas y gráficas de las alertas (\textit{dashboard} dinámico), generación automática de informes diarios, semanales y mensuales enviados por correo, sistema de comentarios y anotaciones colaborativas en cada evento (útil para trabajo en equipo), categorización personalizada de la severidad de alertas, y actualizaciones en tiempo real de nuevas alarmas vía AJAX (sin refrescar la página). Incluso ofreció integración con captura de paquetes a través de OpenFPC y aplicaciones móviles (desarrollaron un cliente para iOS). Todo ello con una estética web 2.0 atractiva: gráficos interactivos, uso intensivo de HTML5/CSS3, y una experiencia similar a aplicaciones modernas. Snorby fue considerado durante un tiempo el sucesor natural de BASE en entornos donde no se requería la profundidad de Sguil. Otra ventaja fue la facilidad de despliegue relativamente alta para la época, proporcionándose máquinas virtuales preconfiguradas (Insta-Snorby) para probar el sistema rápidamente. No obstante, Snorby también tuvo limitaciones: su instalación manual podía ser compleja debido a dependencias (particularmente, ciertas gemas de Ruby y librerías como ImageMagick que en distribuciones Linux estables estaban desactualizadas). Además, con el tiempo el proyecto dejó de mantenerse activamente (sus últimas actualizaciones datan de mediados de la década de 2010). Esto, sumado a la aparición de otras soluciones integrales (por ejemplo SIEM completos o el propio Security Onion), hizo que Snorby cayera en desuso recientemente. Aun así, su influencia se nota en el énfasis que puso en la usabilidad del análisis de alertas IDS.\newline
+
+En perspectiva, cada frontend de Snort mencionado abordó la necesidad de manejar las alertas de intrusión desde un ángulo distinto: unos priorizaron la simplicidad y rapidez (Snort Report, BASE en sus inicios), otros la profundidad de datos (Sguil), otros la estética y facilidad de manejo (Snorby), u ofrecer un ecosistema integral (Aanval). Muchos de estos proyectos, sin embargo, ya no se actualizan o han quedado técnicamente anticuados para los estándares actuales (por ejemplo, ACID/BASE se basaba en PHP5 y Snorby en Rails 3, entornos que hoy presentan problemas de compatibilidad) \cite{StackExchange2011}. La propuesta R-Snort toma inspiración conceptual de estas soluciones previas pero busca aprender de sus limitaciones para ofrecer algo más acorde a los tiempos actuales. En particular, R-Snort comparte con Snorby la filosofía de una interfaz web amigable y orientada al usuario general, donde la información importante esté fácilmente disponible sin mucha complejidad. Del mismo modo que Snorby perseguía “simplicidad y poder”, nuestra aplicación web Angular pretende ser intuitiva pero sin sacrificar funcionalidades clave (por ejemplo, R-Snort permite comentar o marcar eventos, de forma similar al enfoque colaborativo que introdujo Snorby). Por otro lado, recogemos la idea de Sguil de tener una arquitectura modular con sensores dedicados y un servidor central que consolida eventos \cite{sectoolsSguil}; no en vano, R-Snort implementa su sensor Snort en Raspberry Pi y envía las alertas a un servidor web central para su almacenamiento y análisis, emulando en pequeña escala el esquema sensor-servidor-cliente de Sguil (aunque reemplazando el pesado cliente Tcl por una ligera aplicación web). Además, R-Snort brinda cierta capacidad de inspección de datos más allá de la alerta básica integrando Grafana para visualizaciones; esto se inspira en la filosofía NSM de proveer contexto adicional al analista, si bien nuestro proyecto no llega al nivel de captura completa de paquetes que ofrecía Sguil. En comparación con Aanval, R-Snort busca democratizar el acceso a este tipo de herramientas: optamos por tecnologías 100\% open source y asequibles, evitando licencias comerciales o dependencias propietarias, de forma que incluso pequeñas organizaciones puedan desplegarlo sin trabas. Conceptualmente “bebemos” de las lecciones de Aanval en cuanto a consolidar múltiples componentes (detección, base de datos, visualización) en un solo sistema cohesionado, pero simplificando la implementación para que no requiera personal altamente especializado para mantenerlo. En resumen, R-Snort moderniza la idea del frontend de Snort integrando las mejores ideas de proyectos previos (la accesibilidad de Snorby, la arquitectura distribuida de Sguil, la visión general de Snort Report, etc.) y actualizándolas con una arquitectura vigente y orientada a la facilidad de despliegue. El resultado es una solución actualizada que mejora a aquellas históricas en varios aspectos: interfaz web responsiva y actual, instalación sencilla en hardware barato, soporte nativo a Snort 3 (frente a muchas consolas legadas que solo manejaban Snort 2.X), y capacidad de adaptación a las necesidades de monitoreo de redes pequeñas con recursos limitados, manteniendo al mismo tiempo un enfoque profesional en la detección de intrusiones.
+
+
+
+
+\chapter{Resultados}
+
+\section{Resumen}
+
+
+% Conclusiones
+\chapter*{Conclusiones}
+\addcontentsline{toc}{chapter}{Conclusiones}
+
+
+
+\chapter*{Trabajo futuro}
+\addcontentsline{toc}{chapter}{Trabajo futuro}
+
+
+
+
+% Bibliografía
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografía}
+
+\begin{thebibliography}{99}
+	
+	\bibitem{enisa2023}
+	ENISA. \textit{Cybersecurity for SMEs}. Agencia de la Unión Europea para la Ciberseguridad. Disponible en: \url{https://www.enisa.europa.eu/topics/awareness-and-cyber-hygiene/smes-cybersecurity#:~:text=Small\%20and\%20medium,the\%20European\%20Commission\%20SMEs\%20report}. Último acceso: mayo de 2025.
+	
+	\bibitem{google2024}
+	20Minutos. \textit{Google avisa que España tiene un problema gordo: el 43\% de los ciberataques son a PYMEs}. Publicado en 20minutos.es, 2024. Disponible en: \url{https://www.20minutos.es/tecnologia/google-avisa-que-espana-tiene-un-problema-gordo-43-los-ciberataques-son-pymes-5195895/#:~:text=El\%2043,experta\%20en\%20ciberseguridad\%20Cristina\%20Pitarch}. Último acceso: mayo de 2025.
+	
+	\bibitem{telefonica2023}
+	Telefónica Cyber Security Tech. \textit{Informe sobre la situación de la ciberseguridad en 2023}. Plataforma Tecnológica Española de Tecnologías Disruptivas (PTE Disruptive), 2023. Disponible en: \url{https://ptedisruptive.es/wp-content/uploads/2023/12/Informe-situacion-ciberseguridad-2023_compressed.pdf#:~:text=Telef\%C3\%B3nica\%20Cyber\%20Security\%20Tech\%2C\%20el,empresarial\%20en\%20la\%20era\%20digital}. Último acceso: mayo de 2025.
+	
+	\bibitem{incibe2025}
+	INCIBE-CERT. \textit{Sector PYMES NIS2}. Instituto Nacional de Ciberseguridad de España. Disponible en: \url{https://www.incibe.es/incibe-cert/sectores-estrategicos/pymes-nis2}. Último acceso: mayo de 2025.
+	
+		\bibitem{a2secure2019} A. Alcaide, “Sistemas IDS, IPS, HIDS, NIPS, SIEM – ¿Qué son?” \textit{Blog de A2Secure}, 12 febrero 2019. [En línea]. Disponible: \url{https://www.a2secure.com/blog/ids-ips-hids-nips-siem-que-es-esto/}.
+	
+	\bibitem{wikiNIDS} Wikipedia, “NIDS (Network Intrusion Detection System),” \textit{Wikipedia en español}, última edición: 23 mayo 2023. [En línea]. Disponible: \url{https://es.wikipedia.org/wiki/NIDS}.
+	
+	\bibitem{NISTSP80094} K. Scarfone y P. Mell, \textit{Guide to Intrusion Detection and Prevention Systems (IDPS)}, NIST Special Publication 800-94, National Institute of Standards and Technology, 2007.
+	
+	\bibitem{CiscoSnort3Blog} A. Tatistcheff, “Snort 3: Rearchitected for Simplicity and Performance,” \textit{Cisco Security Blog}, 2021. [En línea]. Disponible: \url{https://blogs.cisco.com/security/snort-3-rearchitected-for-simplicity-and-performance}.
+	
+	\bibitem{Sakura2020} Sakura Sky, “Supporting Snort 3 and above,” \textit{Sakura Sky Blog}, 2020. [En línea]. Disponible: \url{https://www.sakurasky.com/blog/supporting-snort/}.
+	
+	\bibitem{GrafanaForum2020} Grafana Labs, “SNORT 3, using JSON alert on latest GRAFANA dashboard,” \textit{Grafana Labs Community Forums}, mensaje de usuario barukcic, 27 junio 2020. [En línea]. Disponible: \url{https://community.grafana.com/t/snort-3-using-json-alert-on-latest-grafana-dashboard/32798}.
+	
+	\bibitem{SnortBlog2011} Snort.org, “GUIs for Snort,” \textit{Snort Blog}, 20 enero 2011. [En línea]. Disponible: \url{https://blog.snort.org/2011/01/guis-for-snort.html}.
+	
+	\bibitem{SnorbyHelpnet2010} Help Net Security, “Snorby: Modern Snort IDS frontend,” 7 diciembre 2010. [En línea]. Disponible: \url{https://www.helpnetsecurity.com/2010/12/07/snorby-modern-snort-ids-frontend/}.
+	
+	\bibitem{SnortReport2010} D. Gullett, “Re: Snort Report 2.0 Beta Released,” mensaje en \textit{Snort-users Mailing List}, 18 junio 2010. [En línea]. Disponible: \url{https://seclists.org/snort/2010/q2/898}.
+	
+	\bibitem{AanvalWiki} Wikipedia, “Aanval,” \textit{Wikipedia, The Free Encyclopedia}, 2023. [En línea]. Disponible: \url{https://en.wikipedia.org/wiki/Aanval}.
+	
+	\bibitem{sectoolsSguil} Insecure.org, “Sguil – Open Source Network Security Monitoring,” \textit{SecTools Top Network Security Tools}, 2006. [En línea]. Disponible: \url{https://sectools.org/tool/sguil/}.
+	
+	\bibitem{StackExchange2011} Iszi, “Snort’s great, but BASE isn’t. What are some alternative front-ends?” \textit{Security StackExchange}, pregunta y respuestas, febrero 2011. [En línea]. Disponible: \url{https://security.stackexchange.com/q/2041}.
+	
+	
+	
+\end{thebibliography}
+
+% Anexos
+\appendix
+\chapter{Anexo A: Repositorio de R-SNORT}
+
+
+%\includepdf[pages=1, pagecommand={\thispagestyle{empty}}, fitpaper=true]{ContraportadaCTFG.pdf}
+
+
+\end{document}
