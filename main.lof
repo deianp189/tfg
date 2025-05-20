@@ -6,6 +6,21 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura general del sistema R-Snort.}}{18}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Esquema de despliegue de R-Snort en la red local.}}{22}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort, mostrando la interacción entre el usuario, el servidor central (backend + frontend) y los agentes Snort remotos.}}{27}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort.}}{28}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Tabla alertas.}}{31}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tabla métricas.}}{31}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla usuario.}}{32}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Tablas base de datos.}}{32}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Dashboard de Grafana adaptado para R-Snort.}}{37}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de funcionamiento del agente.}}{38}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Documentación Swagger de la API de un agente R-Snort.}}{39}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Vista general.}}{44}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Vista de alertas del agente seleccionado en la interfaz R-Snort.}}{45}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Reglas del sistema de R-Snort.}}{45}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Estado del agente seleccionado.}}{46}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Estado de los servicios de un agente individual.}}{46}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{52}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización.}}{52}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{53}{figure.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -62,7 +62,7 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introducción}{17}{section.2.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura general del sistema R-Snort.}}{18}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:arquitectura}{{2.1}{18}{Arquitectura general del sistema R-Snort}{figure.caption.8}{}}
+\newlabel{fig:arquitectura-general}{{2.1}{18}{Arquitectura general del sistema R-Snort}{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Especificaciones del sistema}{18}{section.2.2}\protected@file@percent }
 \citation{Grafana}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Entorno de trabajo}{20}{section.2.3}\protected@file@percent }
@@ -74,21 +74,117 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Software: Snort 3 y complementos}{22}{subsection.2.3.2}\protected@file@percent }
 \citation{Grafana}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Entorno de desarrollo}{25}{subsection.2.3.3}\protected@file@percent }
+\citation{grafana-snort-dashboard}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Diseño / Arquitectura / Elementos}{26}{section.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Diseño de la arquitectura}{26}{subsection.2.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort, mostrando la interacción entre el usuario, el servidor central (backend + frontend) y los agentes Snort remotos.}}{27}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:arquitectura}{{2.3}{27}{Esquema de la arquitectura distribuida de R-Snort, mostrando la interacción entre el usuario, el servidor central (backend + frontend) y los agentes Snort remotos}{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{27}{subsection.2.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{29}{subsection.2.4.3}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}{\ignorespaces Estructura de la tabla alerts}}{30}{lstlisting.2.1}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}{\ignorespaces Estructura de la tabla system-metrics}}{30}{lstlisting.2.2}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.3}{\ignorespaces Estructura de la tabla users}}{30}{lstlisting.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Resultados}{33}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Agentes Snort distribuidos (\texttt  {snort-agent})}{26}{subsection.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Módulo central (coordinador + interfaz web)}{27}{subsection.2.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort.}}{28}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:arquitectura}{{2.3}{28}{Esquema de la arquitectura distribuida de R-Snort}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{28}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Frontend web (Angular SPA)}{28}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mecanismo de autenticación y control de acceso}{30}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{30}{subsection.2.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Tabla alertas.}}{31}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:alertas-bd}{{2.4}{31}{Tabla alertas}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Tabla métricas.}}{31}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:metricas-bd}{{2.5}{31}{Tabla métricas}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla usuario.}}{32}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:usuario-bd}{{2.6}{32}{Tabla usuario}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Tablas base de datos.}}{32}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:esquema-bd}{{2.7}{32}{Tablas base de datos}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Implementación y configuración del sistema}{33}{section.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Snort 3: configuración de salida de alertas en JSON}{33}{subsection.2.5.1}\protected@file@percent }
+\newlabel{lst:snort-json}{{2.1}{33}{Configuración de Snort~3 para salida de alertas en JSON}{lstlisting.2.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}{\ignorespaces Configuración de Snort~3 para salida de alertas en JSON}}{33}{lstlisting.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Servicio de ingesta de alertas en base de datos}{34}{lstnumber.2.1.6}\protected@file@percent }
+\newlabel{lst:ingest}{{2.2}{34}{Esquema simplificado del servicio de ingesta de alertas}{lstlisting.2.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}{\ignorespaces Esquema simplificado del servicio de ingesta de alertas}}{34}{lstlisting.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Servicio de métricas y monitorización del agente}{35}{lstnumber.2.2.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Rotación y archivado de logs de Snort}{35}{lstnumber.2.2.15}\protected@file@percent }
+\citation{grafana-dashboard}
+\newlabel{lst:logrotate}{{2.3}{36}{Regla de logrotate para los logs de Snort}{lstlisting.2.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.3}{\ignorespaces Regla de logrotate para los logs de Snort}}{36}{lstlisting.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Integración de Grafana con base de datos MariaDB}{36}{lstnumber.2.3.10}\protected@file@percent }
+\newlabel{lst:sql-proto}{{2.4}{37}{Consulta SQL (simplificada) para panel de protocolos en Grafana}{lstlisting.2.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.4}{\ignorespaces Consulta SQL (simplificada) para panel de protocolos en Grafana}}{37}{lstlisting.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Dashboard de Grafana adaptado para R-Snort.}}{37}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:grafana-dashboard}{{2.8}{37}{Dashboard de Grafana adaptado para R-Snort}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de funcionamiento del agente.}}{38}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:agent-bpmn}{{2.9}{38}{Diagrama de funcionamiento del agente}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Implementación del backend}{39}{subsection.2.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Backend de los agentes (FastAPI)}{39}{subsection.2.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Documentación Swagger de la API de un agente R-Snort.}}{39}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:fastapi}{{2.10}{39}{Documentación Swagger de la API de un agente R-Snort}{figure.caption.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Resumen de los endpoints expuestos por el backend del agente R-Snort.}}{40}{table.caption.18}\protected@file@percent }
+\newlabel{tab:endpoints-agente}{{2.1}{40}{Resumen de los endpoints expuestos por el backend del agente R-Snort}{table.caption.18}{}}
+\newlabel{lst:ejemplo-endpoint}{{2.5}{40}{Fragmento del código que maneja cada endpoint}{lstlisting.2.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.5}{\ignorespaces Fragmento del código que maneja cada endpoint}}{40}{lstlisting.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Backend central (Spring Boot)}{40}{lstnumber.2.5.6}\protected@file@percent }
+\newlabel{lst:llamada-agente}{{2.6}{42}{Ejemplo simplificado de llamada desde el backend central a un agente}{lstlisting.2.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.6}{\ignorespaces Ejemplo simplificado de llamada desde el backend central a un agente}}{42}{lstlisting.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Resumen del backend}{43}{Item.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Implementación del frontend}{44}{subsection.2.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Vista general.}}{44}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:overview-frontend}{{2.11}{44}{Vista general}{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Vista de alertas del agente seleccionado en la interfaz R-Snort.}}{45}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:alertas-frontend}{{2.12}{45}{Vista de alertas del agente seleccionado en la interfaz R-Snort}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Reglas del sistema de R-Snort.}}{45}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:reglas-frontend}{{2.13}{45}{Reglas del sistema de R-Snort}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Estado del agente seleccionado.}}{46}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:status-frontend}{{2.14}{46}{Estado del agente seleccionado}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Estado de los servicios de un agente individual.}}{46}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:status-agent-frontend}{{2.15}{46}{Estado de los servicios de un agente individual}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Enrutamiento y selección dinámica de agentes}{47}{figure.caption.23}\protected@file@percent }
+\newlabel{lst:authGuard}{{2.7}{48}{Ejemplo simplificado de authGuard}{lstlisting.2.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.7}{\ignorespaces Ejemplo simplificado de authGuard}}{48}{lstlisting.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Integración de Grafana para visualización de métricas}{48}{lstnumber.2.7.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Integración de Grafana en la interfaz Angular}{48}{lstnumber.2.7.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Ejemplo de interacciones clave en el frontend}{49}{lstnumber.2.7.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Login y almacenamiento del token JWT}{49}{lstnumber.2.7.13}\protected@file@percent }
+\newlabel{lst:frontend-login}{{2.8}{49}{Login y navegación tras autenticación}{lstlisting.2.8}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.8}{\ignorespaces Login y navegación tras autenticación}}{49}{lstlisting.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Carga de alertas del agente seleccionado}{49}{lstnumber.2.8.4}\protected@file@percent }
+\newlabel{lst:frontend-alertas}{{2.9}{49}{Carga de alertas desde el servicio}{lstlisting.2.9}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.9}{\ignorespaces Carga de alertas desde el servicio}}{49}{lstlisting.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Resumen del frontend}{49}{lstnumber.2.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Script automático R-Snort}{50}{section.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Instalador del agente: \texttt  {snort-agent}}{50}{subsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {00\_common.sh:}}{50}{subsection.2.6.1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.10}{\ignorespaces Fragmento de creación del archivo db.cnf}}{50}{lstlisting.2.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {01\_install\_db.sh:}}{51}{lstnumber.2.10.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {02\_configure\_snort.sh:}}{51}{lstnumber.2.10.7}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.11}{\ignorespaces Definición del servicio systemd para Snort}}{51}{lstlisting.2.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {03\_log\_rotation.sh:}}{51}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {04\_setup\_grafana.sh:}}{51}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {05\_setup\_python\_env.sh:}}{51}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {06\_install\_services.sh:}}{51}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {07\_import\_dashboard.sh:}}{51}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Scripts Python: arquitectura y lógica interna}{52}{lstnumber.2.11.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.12}{\ignorespaces Fragmento de inserción de alerta en ingest\_service.py}}{52}{lstlisting.2.12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{52}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:bpmn-snort-agent}{{2.16}{52}{Proceso detallado de instalación del agente R-Snort}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización.}}{52}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:arquitectura-snort-agent}{{2.17}{52}{Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Instalador del módulo central: \texttt  {r-snort-central-module}}{52}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {00\_common.sh:}}{52}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {01\_dependencies.sh:}}{52}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {02\_compile\_frontend.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {03\_compile\_backend.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {04\_prepare\_db.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {05\_add\_admin\_user.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {06\_setup\_agents.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {07\_install\_services.sh:}}{53}{subsection.2.6.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.13}{\ignorespaces Fragmento del servicio systemd para el backend}}{53}{lstlisting.2.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Script \texttt  {run\_all.sh:}}{53}{lstnumber.2.13.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{53}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:bpmn-snort-central}{{2.18}{53}{Proceso escalonado de instalación del módulo central de R-Snort}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Resultados}{56}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Resumen}{33}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Conclusiones}{35}{chapter*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{37}{chapter*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Resumen}{56}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Conclusiones}{58}{chapter*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{60}{chapter*.28}\protected@file@percent }
 \bibcite{enisa2023}{1}
 \bibcite{google2024}{2}
 \bibcite{telefonica2023}{3}
@@ -100,7 +196,7 @@
 \bibcite{Sakura2020}{9}
 \bibcite{GrafanaForum2020}{10}
 \bibcite{SnortBlog2011}{11}
-\@writefile{toc}{\contentsline {chapter}{Bibliografía}{39}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliografía}{61}{section*.29}\protected@file@percent }
 \bibcite{SnorbyHelpnet2010}{12}
 \bibcite{SnortReport2010}{13}
 \bibcite{AanvalWiki}{14}
@@ -114,7 +210,9 @@
 \bibcite{SecMaster2024}{22}
 \bibcite{Grafana}{23}
 \bibcite{JWT}{24}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{41}{appendix.Alph1}\protected@file@percent }
+\bibcite{grafana-snort-dashboard}{25}
+\bibcite{grafana-dashboard}{26}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{63}{appendix.Alph1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{55}
+\gdef \@abspage@last{79}

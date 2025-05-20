@@ -21,11 +21,54 @@
 \contentsline {subsection}{\numberline {2.3.3}Entorno de desarrollo}{25}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Diseño / Arquitectura / Elementos}{26}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Diseño de la arquitectura}{26}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{27}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{29}{subsection.2.4.3}%
-\contentsline {chapter}{\numberline {3}Resultados}{33}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Resumen}{33}{section.3.1}%
-\contentsline {chapter}{Conclusiones}{35}{chapter*.11}%
-\contentsline {chapter}{Trabajo futuro}{37}{chapter*.12}%
-\contentsline {chapter}{Bibliografía}{39}{section*.13}%
-\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{41}{appendix.Alph1}%
+\contentsline {subsubsection}{Agentes Snort distribuidos (\texttt {snort-agent})}{26}{subsection.2.4.1}%
+\contentsline {subsubsection}{Módulo central (coordinador + interfaz web)}{27}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{28}{subsection.2.4.2}%
+\contentsline {subsubsection}{Frontend web (Angular SPA)}{28}{subsection.2.4.2}%
+\contentsline {subsubsection}{Mecanismo de autenticación y control de acceso}{30}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{30}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Implementación y configuración del sistema}{33}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Snort 3: configuración de salida de alertas en JSON}{33}{subsection.2.5.1}%
+\contentsline {subsubsection}{Servicio de ingesta de alertas en base de datos}{34}{lstnumber.2.1.6}%
+\contentsline {subsubsection}{Servicio de métricas y monitorización del agente}{35}{lstnumber.2.2.15}%
+\contentsline {subsubsection}{Rotación y archivado de logs de Snort}{35}{lstnumber.2.2.15}%
+\contentsline {subsubsection}{Integración de Grafana con base de datos MariaDB}{36}{lstnumber.2.3.10}%
+\contentsline {subsection}{\numberline {2.5.2}Implementación del backend}{39}{subsection.2.5.2}%
+\contentsline {subsubsection}{Backend de los agentes (FastAPI)}{39}{subsection.2.5.2}%
+\contentsline {subsubsection}{Backend central (Spring Boot)}{40}{lstnumber.2.5.6}%
+\contentsline {subsubsection}{Resumen del backend}{43}{Item.9}%
+\contentsline {subsection}{\numberline {2.5.3}Implementación del frontend}{44}{subsection.2.5.3}%
+\contentsline {subsubsection}{Enrutamiento y selección dinámica de agentes}{47}{figure.caption.23}%
+\contentsline {subsubsection}{Integración de Grafana para visualización de métricas}{48}{lstnumber.2.7.13}%
+\contentsline {subsubsection}{Integración de Grafana en la interfaz Angular}{48}{lstnumber.2.7.13}%
+\contentsline {subsubsection}{Ejemplo de interacciones clave en el frontend}{49}{lstnumber.2.7.13}%
+\contentsline {paragraph}{Login y almacenamiento del token JWT}{49}{lstnumber.2.7.13}%
+\contentsline {paragraph}{Carga de alertas del agente seleccionado}{49}{lstnumber.2.8.4}%
+\contentsline {subsubsection}{Resumen del frontend}{49}{lstnumber.2.9.3}%
+\contentsline {section}{\numberline {2.6}Script automático R-Snort}{50}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Instalador del agente: \texttt {snort-agent}}{50}{subsection.2.6.1}%
+\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{50}{subsection.2.6.1}%
+\contentsline {paragraph}{Script \texttt {01\_install\_db.sh:}}{51}{lstnumber.2.10.7}%
+\contentsline {paragraph}{Script \texttt {02\_configure\_snort.sh:}}{51}{lstnumber.2.10.7}%
+\contentsline {paragraph}{Script \texttt {03\_log\_rotation.sh:}}{51}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {04\_setup\_grafana.sh:}}{51}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {05\_setup\_python\_env.sh:}}{51}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {06\_install\_services.sh:}}{51}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {07\_import\_dashboard.sh:}}{51}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Scripts Python: arquitectura y lógica interna}{52}{lstnumber.2.11.3}%
+\contentsline {subsection}{\numberline {2.6.2}Instalador del módulo central: \texttt {r-snort-central-module}}{52}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{52}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {01\_dependencies.sh:}}{52}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {02\_compile\_frontend.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {03\_compile\_backend.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {04\_prepare\_db.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {05\_add\_admin\_user.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {06\_setup\_agents.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {07\_install\_services.sh:}}{53}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {run\_all.sh:}}{53}{lstnumber.2.13.6}%
+\contentsline {chapter}{\numberline {3}Resultados}{56}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Resumen}{56}{section.3.1}%
+\contentsline {chapter}{Conclusiones}{58}{chapter*.27}%
+\contentsline {chapter}{Trabajo futuro}{60}{chapter*.28}%
+\contentsline {chapter}{Bibliografía}{61}{section*.29}%
+\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{63}{appendix.Alph1}%
