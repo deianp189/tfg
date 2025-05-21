@@ -66,9 +66,24 @@
 \contentsline {paragraph}{Script \texttt {06\_setup\_agents.sh:}}{53}{subsection.2.6.2}%
 \contentsline {paragraph}{Script \texttt {07\_install\_services.sh:}}{53}{subsection.2.6.2}%
 \contentsline {paragraph}{Script \texttt {run\_all.sh:}}{53}{lstnumber.2.13.6}%
-\contentsline {chapter}{\numberline {3}Resultados}{56}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Resumen}{56}{section.3.1}%
-\contentsline {chapter}{Conclusiones}{58}{chapter*.27}%
-\contentsline {chapter}{Trabajo futuro}{60}{chapter*.28}%
-\contentsline {chapter}{Bibliografía}{61}{section*.29}%
-\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{63}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {3}Caso práctico: utilización del frontend de R-Snort}{56}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Entorno de trabajo}{56}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Instalación del sistema}{58}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Preparación de la instalación}{59}{subsection.3.2.1}%
+\contentsline {subsubsection}{Instalación del sistema operativo en las Raspberry Pi}{59}{subsection.3.2.1}%
+\contentsline {subsubsection}{Conexiones físicas de la Raspberry Pi 5}{60}{figure.caption.29}%
+\contentsline {subsubsection}{Configuración del switch y port mirroring}{61}{figure.caption.30}%
+\contentsline {subsubsection}{Conexión del agente en la subred secundaria}{62}{figure.caption.32}%
+\contentsline {subsubsection}{Conexión del switch de la subred secundaria}{63}{figure.caption.33}%
+\contentsline {subsubsection}{Instalación de Snort 3 personalizado}{63}{figure.caption.34}%
+\contentsline {subsection}{\numberline {3.2.2}Instalación del agente R-Snort}{65}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Instalación del módulo central de R-Snort}{66}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Utilización y pruebas}{68}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Configuración}{68}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{72}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{74}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resumen}{74}{section.4.1}%
+\contentsline {chapter}{Conclusiones}{76}{chapter*.51}%
+\contentsline {chapter}{Trabajo futuro}{78}{chapter*.52}%
+\contentsline {chapter}{Bibliografía}{79}{section*.53}%
+\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{82}{appendix.Alph1}%

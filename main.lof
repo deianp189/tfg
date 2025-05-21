@@ -20,7 +20,31 @@
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Estado del agente seleccionado.}}{46}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Estado de los servicios de un agente individual.}}{46}{figure.caption.23}%
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{52}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización.}}{52}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort Agent.}}{52}{figure.caption.25}%
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{53}{figure.caption.26}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort.}}{56}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager.}}{60}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Conexión física de la Raspberry Pi 5 como módulo central.}}{61}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Conexiones del switch.}}{61}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración del mirroring.}}{62}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi 3 actuando como agente.}}{62}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Conexiones del switch secundario.}}{63}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Inicio de la instalación del agente.}}{64}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Resumen tras la instalación.}}{64}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Inicio de la instalación del agente.}}{65}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Finalización y resumen del agente instalado.}}{66}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Inicio de la instalación del módulo central.}}{66}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Finalización y resumen del módulo central.}}{67}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla de inicio de sesión del sistema R-Snort.}}{68}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Panel general con métricas y alertas.}}{68}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Panel de alertas clasificadas por severidad.}}{69}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Gestión de reglas Snort desde la interfaz.}}{69}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Monitoreo de temperatura, CPU y estado del servicio.}}{70}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Estado detallado del agente central.}}{70}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Menú de selección de agentes activos.}}{71}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Formulario para añadir un nuevo agente Snort.}}{71}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Visualización de métricas del agente secundario.}}{71}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{72}{figure.caption.50}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

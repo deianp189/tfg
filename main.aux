@@ -164,8 +164,8 @@
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.12}{\ignorespaces Fragmento de inserción de alerta en ingest\_service.py}}{52}{lstlisting.2.12}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{52}{figure.caption.24}\protected@file@percent }
 \newlabel{fig:bpmn-snort-agent}{{2.16}{52}{Proceso detallado de instalación del agente R-Snort}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización.}}{52}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:arquitectura-snort-agent}{{2.17}{52}{Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Representación gráfica de la arquitectura interna del agente R-Snort Agent.}}{52}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:arquitectura-snort-agent}{{2.17}{52}{Representación gráfica de la arquitectura interna del agente R-Snort Agent}{figure.caption.25}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Instalador del módulo central: \texttt  {r-snort-central-module}}{52}{subsection.2.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Script \texttt  {00\_common.sh:}}{52}{subsection.2.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Script \texttt  {01\_dependencies.sh:}}{52}{subsection.2.6.2}\protected@file@percent }
@@ -179,12 +179,84 @@
 \@writefile{toc}{\contentsline {paragraph}{Script \texttt  {run\_all.sh:}}{53}{lstnumber.2.13.6}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{53}{figure.caption.26}\protected@file@percent }
 \newlabel{fig:bpmn-snort-central}{{2.18}{53}{Proceso escalonado de instalación del módulo central de R-Snort}{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Resultados}{56}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Caso práctico: utilización del frontend de R-Snort}{56}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Resumen}{56}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Conclusiones}{58}{chapter*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{60}{chapter*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Entorno de trabajo}{56}{section.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort.}}{56}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:esquema-red}{{3.1}{56}{Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Instalación del sistema}{58}{section.3.2}\protected@file@percent }
+\citation{raspberrypi_software}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Requisitos funcionales y no funcionales previos al despliegue del sistema R-Snort}}{59}{table.caption.28}\protected@file@percent }
+\newlabel{tab:requisitos-rsnort}{{3.1}{59}{Requisitos funcionales y no funcionales previos al despliegue del sistema R-Snort}{table.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Preparación de la instalación}{59}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Instalación del sistema operativo en las Raspberry Pi}{59}{subsection.3.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager.}}{60}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:preparacion-sistema}{{3.2}{60}{Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conexiones físicas de la Raspberry Pi 5}{60}{figure.caption.29}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Conexión física de la Raspberry Pi 5 como módulo central.}}{61}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:conexion-central-rpi5}{{3.3}{61}{Conexión física de la Raspberry Pi 5 como módulo central}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Configuración del switch y port mirroring}{61}{figure.caption.30}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Conexiones del switch.}}{61}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:switch-conexiones}{{3.4}{61}{Conexiones del switch}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración del mirroring.}}{62}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:switch-mirroring}{{3.5}{62}{Configuración del mirroring}{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conexión del agente en la subred secundaria}{62}{figure.caption.32}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi 3 actuando como agente.}}{62}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:conexion-agente-rpi3}{{3.6}{62}{Raspberry Pi 3 actuando como agente}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conexión del switch de la subred secundaria}{63}{figure.caption.33}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Conexiones del switch secundario.}}{63}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:switch-subred2}{{3.7}{63}{Conexiones del switch secundario}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Instalación de Snort 3 personalizado}{63}{figure.caption.34}\protected@file@percent }
+\newlabel{lst:instalacion-rsnort}{{3.1}{64}{Instalación de R-Snort personalizada}{lstlisting.3.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.1}{\ignorespaces Instalación de R-Snort personalizada}}{64}{lstlisting.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Inicio de la instalación del agente.}}{64}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:inicio-instalacion-rsnort}{{3.8}{64}{Inicio de la instalación del agente}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Resumen tras la instalación.}}{64}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:resumen-instalacion-rsnort}{{3.9}{64}{Resumen tras la instalación}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Instalación del agente R-Snort}{65}{subsection.3.2.2}\protected@file@percent }
+\newlabel{lst:instalacion-snort-agent}{{3.2}{65}{Comandos de instalación del agente}{lstlisting.3.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.2}{\ignorespaces Comandos de instalación del agente}}{65}{lstlisting.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Inicio de la instalación del agente.}}{65}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:inicio-snort-agent}{{3.10}{65}{Inicio de la instalación del agente}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Finalización y resumen del agente instalado.}}{66}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:resumen-snort-agent}{{3.11}{66}{Finalización y resumen del agente instalado}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Instalación del módulo central de R-Snort}{66}{subsection.3.2.3}\protected@file@percent }
+\newlabel{lst:instalacion-snort-agent}{{3.3}{66}{Comandos de instalación del agente}{lstlisting.3.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.3}{\ignorespaces Comandos de instalación del agente}}{66}{lstlisting.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Inicio de la instalación del módulo central.}}{66}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:inicio-central-module}{{3.12}{66}{Inicio de la instalación del módulo central}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Finalización y resumen del módulo central.}}{67}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:fin-central-module}{{3.13}{67}{Finalización y resumen del módulo central}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Utilización y pruebas}{68}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Configuración}{68}{subsection.3.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla de inicio de sesión del sistema R-Snort.}}{68}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:login-rsnort}{{3.14}{68}{Pantalla de inicio de sesión del sistema R-Snort}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Panel general con métricas y alertas.}}{68}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:overview-rsnort}{{3.15}{68}{Panel general con métricas y alertas}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Panel de alertas clasificadas por severidad.}}{69}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:alertas-rsnort}{{3.16}{69}{Panel de alertas clasificadas por severidad}{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Gestión de reglas Snort desde la interfaz.}}{69}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:reglas-rsnort}{{3.17}{69}{Gestión de reglas Snort desde la interfaz}{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Monitoreo de temperatura, CPU y estado del servicio.}}{70}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:estado-central}{{3.18}{70}{Monitoreo de temperatura, CPU y estado del servicio}{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces Estado detallado del agente central.}}{70}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:estado-agente-central}{{3.19}{70}{Estado detallado del agente central}{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Menú de selección de agentes activos.}}{71}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:selector-agentes}{{3.20}{71}{Menú de selección de agentes activos}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces Formulario para añadir un nuevo agente Snort.}}{71}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:agregar-agente}{{3.21}{71}{Formulario para añadir un nuevo agente Snort}{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces Visualización de métricas del agente secundario.}}{71}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:dashboard-agente-secundario}{{3.22}{71}{Visualización de métricas del agente secundario}{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{72}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:estado-multiple-agentes}{{3.23}{72}{Gestión avanzada de agentes Snort desde la interfaz}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{72}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Resultados}{74}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Resumen}{74}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Conclusiones}{76}{chapter*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{78}{chapter*.52}\protected@file@percent }
 \bibcite{enisa2023}{1}
 \bibcite{google2024}{2}
 \bibcite{telefonica2023}{3}
@@ -196,7 +268,7 @@
 \bibcite{Sakura2020}{9}
 \bibcite{GrafanaForum2020}{10}
 \bibcite{SnortBlog2011}{11}
-\@writefile{toc}{\contentsline {chapter}{Bibliografía}{61}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliografía}{79}{section*.53}\protected@file@percent }
 \bibcite{SnorbyHelpnet2010}{12}
 \bibcite{SnortReport2010}{13}
 \bibcite{AanvalWiki}{14}
@@ -212,7 +284,8 @@
 \bibcite{JWT}{24}
 \bibcite{grafana-snort-dashboard}{25}
 \bibcite{grafana-dashboard}{26}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{63}{appendix.Alph1}\protected@file@percent }
+\bibcite{raspberrypi_software}{27}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{82}{appendix.Alph1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{79}
+\gdef \@abspage@last{98}

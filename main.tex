@@ -26,6 +26,7 @@
 \usepackage{subcaption}
 \usepackage{pdfpages}
 \usepackage{tabularx}
+\usepackage[table]{xcolor}
 \usepackage{array}
 \usetikzlibrary{shapes, arrows, positioning}
 \usepackage[spanish]{babel}
@@ -1131,7 +1132,7 @@ El script \texttt{snort-agent} automatiza la instalación y configuración de un
 \begin{figure}[ht]
 	\centering
 	% \includegraphics[width=0.8\textwidth]{arquitectura_snort_agent.png}
-	\caption{Representación gráfica de la arquitectura interna del agente R-Snort mostrando Snort 3, FastAPI y subsistemas de monitorización.}
+	\caption{Representación gráfica de la arquitectura interna del agente R-Snort Agent.}
 	\label{fig:arquitectura-snort-agent}
 \end{figure}
 
@@ -1186,6 +1187,416 @@ El módulo central constituye el componente principal del proyecto, este se enca
 \end{figure}
 
 Este instalador permite desplegar un sistema de visualización y control profesional, que centraliza alertas y datos de múltiples agentes, ofrece una interfaz segura para la administración de reglas y usuarios, y facilita el mantenimiento y la extensión futura del sistema R-Snort.
+
+
+\clearpage
+\null
+\thispagestyle{empty}
+\newpage
+\chapter{Caso práctico: utilización del frontend de R-Snort}
+
+El sistema R-Snort se ha desplegado y evaluado en un entorno realista orientado a redes domésticas avanzadas o pequeñas oficinas (SOHO), simulando un entorno distribuido de múltiples subredes monitorizadas mediante instancias independientes de Snort 3 en Raspberry Pi 5.
+
+\section{Entorno de trabajo}
+
+La Figura~\ref{fig:esquema-red} muestra el esquema general del entorno de pruebas. En este escenario, se distingue un módulo central encargado de consolidar alertas, métricas y reglas, así como otro agente perteneciente a otra subred, cada uno conectado a un switch con funcionalidad de \textit{port mirroring}. Esto permite clonar todo el tráfico de la red al puerto monitorizado, donde se encuentra instalado Snort en cada caso.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{documento/esquema_red.png}
+	\caption{Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort.}
+	\label{fig:esquema-red}
+\end{figure}
+
+\newpage
+
+El objetivo de esta distribución es comprobar la eficacia del proyecto en un entorno lo más cercano a una red PYME o SOHO, el agente con IP 192.168.1.169 se encarga de recoger las alertas de su subred asignada a través del port mirroring que copiará todo el tráfico de los demás puertos hacia el agente, de la misma manera, el módulo central recoge todo el tráfico de su correspondiente switch usando la misma técnica con la funcionalidad añadida de que el módulo central cuenta con el frontend previamente instalado que va a permitir cubrir toda la red de vigilancia.\newline
+
+Aunque en la práctica solo se ha empleado un agente Snort por limitaciones de infraestructura (dos si contamos el módulo central), el diseño y la implementación del sistema permiten escalar horizontalmente con facilidad, añadiendo nuevos agentes usando el instalador automático de snort-agent, posteriormente agregando la IP del nuevo agente mediante la interfaz del módulo central.\newline
+
+El hardware empleado para el despliegue y validación del sistema R-Snort incluye los siguientes dispositivos y componentes de red:
+
+\begin{itemize}
+	\item \textbf{Raspberry Pi 5 (8 GB de RAM)} con \texttt{Ubuntu Server 22.04 LTS (aarch64)}. Esta placa actúa como \emph{módulo central} de R-Snort, alojando:
+	\begin{itemize}
+		\item \texttt{rsnort-backend} (Spring Boot) y \texttt{rsnort-frontend} (Angular).
+		\item Base de datos MariaDB para alertas, métricas y configuración.
+		\item Grafana 12 para dashboards de rendimiento, alertas y uso de recursos.
+		\item Servicios systemd: \texttt{rsnort-backend.service}.
+	\end{itemize}
+	Se conecta a un switch gestionable mediante un adaptador USB 3.0 → Gigabit para garantizar ancho de banda completo y latencia mínima en la ingesta de métricas.
+	
+	\item \textbf{Raspberry Pi 3 Model B (1 GB de RAM)} con \texttt{Ubuntu Server 22.04 LTS}. Funciona como \emph{agente} Snort, ejecutando:
+	\begin{itemize}
+		\item Snort 3.1.84.0 compilado con Hyperscan.
+		\item Servicios systemd: \texttt{rsnort-ingest}, \texttt{rsnort-api}, \texttt{rsnort-metrics}.
+		\item Configuración optimizada (NUMA deshabilitado, perfil ligero) para adaptarse a recursos limitados.
+	\end{itemize}
+	Está conectado al puerto mirror de un switch gestionable Tenda TEG205E (5 puertos Gigabit), que replica el tráfico de la subred al sensor.
+	
+	\item \textbf{Switch gestionable Tenda TEG205E} con port mirroring activado, replicando todo el tráfico ethernet de cada subred hacia el agente correspondiente sin afectar al tráfico productivo.
+	
+	\item \textbf{Dispositivos cliente heterogéneos} (Windows 11, Ubuntu Desktop), que generan tráfico de usuario real y ataques de prueba (p. ej. nmap, peticiones DNS, HTTP).
+	
+	\item \textbf{PC con Ubuntu Server 22.04 LTS (x86\_64)}. Solo se utiliza para pruebas puntuales (simulación de escenarios, análisis offline de logs, generación de tráfico controlado) y no forma parte del despliegue productivo.
+\end{itemize}
+
+Todos los componentes de R-Snort se comunican vía HTTP REST API en el puerto \texttt{9000}, intercambiando alertas y métricas con la base de datos central. Grafana 12, instalado en la Raspberry Pi 5, se conecta directamente a MariaDB para ofrecer dashboards interactivos de alertas, consumo de CPU/RAM y mapas de tráfico en tiempo real.
+
+\section{Instalación del sistema}
+
+El sistema R-Snort (abreviatura de \textit{Raspberry-Snort}) ha sido concebido como una solución ligera, modular y automatizada para proteger redes pequeñas o entornos de baja potencia, como los basados en dispositivos ARM (Raspberry Pi). Todos sus componentes han sido diseñados para ejecutarse sin dificultad en hardware con recursos limitados, sin renunciar a funcionalidades avanzadas de inspección y monitorización.\newline
+
+Aunque R-Snort es plenamente compatible con cualquier sistema Ubuntu/Debian de arquitectura x86\_64 o ARM64, la elección de Raspberry Pi como plataforma principal responde al objetivo de validar su comportamiento en contextos realistas de bajo consumo, alta eficiencia energética y presupuesto reducido.\newline
+
+El sistema completo se compone de tres grandes bloques:
+
+\begin{itemize}
+	\item \textbf{Instalador del complemento del TFG (R-Snort3):} encargado de desplegar automáticamente una instancia personalizada y optimizada de Snort versión 3, incluyendo todas las dependencias, configuraciones y adaptaciones necesarias para PYMES y redes SOHO.
+	
+	\item \textbf{Módulo de agente (\texttt{snort-agent}):} permite la captura y gestión local de alertas y métricas del sistema. Se comunica con el módulo central mediante una API REST y transmite datos a una base de datos que es leída por Grafana mediante un dashboard personalizado y adaptado a alertas de Snort 3 y métricas de sistemas Linux.
+	
+	\item \textbf{Módulo central (\texttt{rsnort-central-module}):} centraliza la gestión del sistema, permitiendo desde una interfaz web el control de reglas, la visualización de alertas, la integración con Grafana y la supervisión de múltiples agentes distribuidos.
+\end{itemize}
+
+En el contexto de este Trabajo Fin de Grado, el desarrollo se ha centrado principalmente en los dos últimos módulos, es decir, en la creación de una interfaz web completa, distribuida y funcional mediante \texttt{Spring Boot} (backend) y \texttt{Angular} (frontend), que permita interactuar con los agentes y gestionar Snort de forma remota.\newline
+
+No obstante, para aprovechar al máximo las capacidades del sistema, se ha optado por utilizar la instancia personalizada de Snort 3 generada por el complemento del TFG, en lugar de emplear la versión genérica del IDS. Esta elección permite reducir el consumo de recursos, aumentar la compatibilidad con entornos ARM y facilitar la integración con los módulos del sistema.\newline
+
+\textbf{Por tanto, como requisito previo a la instalación de los agentes, se asume que el sistema ya dispone de Snort 3 instalado correctamente}, ya sea mediante el complemento \texttt{R-Snort3} o a través de una instalación manual compatible. Las instrucciones siguientes parten de esa premisa.
+
+\vspace{0.5cm}
+\noindent \textbf{Tabla \thetable: Requisitos del sistema para el despliegue de R-Snort}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{5.5cm}|p{8cm}|}
+		\hline
+		\rowcolor[HTML]{E0E0E0}
+		\textbf{Tipo de requisito} & \textbf{Descripción} \\
+		\hline
+		\textbf{R1 - Requisito funcional} & El sistema debe disponer de Snort 3 previamente instalado y configurado correctamente. \\
+		\hline
+		\textbf{R2 - Requisito funcional} & El agente debe enviar alertas y métricas al módulo central mediante API REST. \\
+		\hline
+		\textbf{R3 - Requisito funcional} & El módulo central debe permitir visualizar alertas, editar reglas y gestionar agentes desde la web. \\
+		\hline
+		\textbf{R4 - Requisito funcional} & Los logs deben poder rotarse y almacenarse automáticamente para fines forenses. \\
+		\hline
+		\textbf{R5 - Requisito no funcional} & El sistema debe ejecutarse correctamente en hardware de bajo consumo como Raspberry Pi 3 o 5. \\
+		\hline
+		\textbf{R6 - Requisito no funcional} & La instalación debe estar automatizada y requerir intervención mínima del usuario. \\
+		\hline
+		\textbf{R7 - Requisito no funcional} & El sistema debe integrarse con MariaDB y Grafana sin configuraciones manuales complejas. \\
+		\hline
+		\textbf{R8 - Requisito no funcional} & La interfaz web debe ser accesible desde cualquier navegador moderno sin necesidad de complementos. \\
+		\hline
+	\end{tabular}
+	\caption{Requisitos funcionales y no funcionales previos al despliegue del sistema R-Snort}
+	\label{tab:requisitos-rsnort}
+\end{table}
+
+\subsection{Preparación de la instalación}
+
+\subsubsection{Instalación del sistema operativo en las Raspberry Pi}
+
+Antes de comenzar con la instalación del ecosistema R-Snort, es importante preparar adecuadamente el entorno de trabajo. Como se ha explicado previamente, R-Snort está pensado para ejecutarse en dispositivos de bajo consumo como las Raspberry Pi, aunque también es compatible con cualquier sistema Ubuntu/Debian.\newline
+
+El primer paso consiste en instalar el sistema operativo en los dispositivos que actuarán como módulo central o como agentes de Snort. Para ello se utiliza \textbf{Raspberry Pi Imager}~\cite{raspberrypi_software}, una herramienta oficial y sencilla que permite seleccionar el modelo de Raspberry Pi, elegir la distribución de Linux deseada e instalarla automáticamente en una tarjeta microSD.\newline
+
+En este caso, el sistema operativo elegido ha sido \texttt{Ubuntu Server 25.04 (64-bit)}, que ofrece un equilibrio excelente entre rendimiento, estabilidad y compatibilidad con las herramientas utilizadas por R-Snort.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{install/1.png}
+	\caption{Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager.}
+	\label{fig:preparacion-sistema}
+\end{figure}
+
+\subsubsection{Conexiones físicas de la Raspberry Pi 5}
+
+Una vez instalado el sistema operativo tanto en la \textbf{Raspberry Pi 5} (que actuará como módulo central) como en la \textbf{Raspberry Pi 3 Model B} (que funcionará como agente Snort), se procede a realizar las conexiones de red necesarias para cada una de ellas.\newline
+
+En el caso de la Raspberry Pi 5, se conectan \textbf{dos interfaces de red físicas}. Esta decisión responde a la necesidad de separar el tráfico de administración del tráfico de monitorización. Por una parte, la interfaz principal \texttt{eth0} proporciona conectividad a internet y se utiliza para el control general del sistema. Por otra, se añade una segunda interfaz de red mediante adaptador USB Ethernet, configurada como \textbf{interfaz promiscua} y renombrada automáticamente como \texttt{enxc8a362b4a702}.\newline
+
+Esta segunda interfaz está especialmente diseñada para capturar todo el tráfico de red redirigido mediante \textit{port mirroring} desde el switch gestionable. Por razones de seguridad, el script de instalación de la instancia personalizada de Snort 3 desarrollada en el complemento del TFG desactiva cualquier dirección IP en esta interfaz, dejándola exclusivamente dedicada a la escucha pasiva.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{install/0.1.png}
+	\caption{Conexión física de la Raspberry Pi 5 como módulo central.}
+	\label{fig:conexion-central-rpi5}
+\end{figure}
+
+
+\subsubsection{Configuración del switch y port mirroring}
+
+En el switch gestionable Tenda, se han establecido las conexiones necesarias para habilitar la monitorización del tráfico de red. Por un lado, se conecta el router doméstico al puerto 1, lo que proporciona conectividad a internet a todos los dispositivos conectados al switch. Por otro lado, los puertos 2 y 3 se utilizan para conectar distintos dispositivos de la red local que generarán tráfico.\newline
+
+La interfaz en modo promiscuo de la Raspberry Pi 5 se conecta al puerto 4 del switch mediante un adaptador USB a Ethernet. Esta interfaz será la encargada de recibir todo el tráfico replicado desde los demás puertos del switch.\newline
+
+Para lograr este comportamiento, se configura la opción de \textit{port mirroring} desde la interfaz web del switch. Se establece el puerto 4 como destino del mirroring, y como fuente todos los puertos del 1 al 3, en ambas direcciones. Esta configuración garantiza que todo el tráfico entrante y saliente de los dispositivos conectados sea duplicado y enviado a la Raspberry Pi 5 para su análisis con Snort 3.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{install/0.2.png}
+	\caption{Conexiones del switch.}
+	\label{fig:switch-conexiones}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.70\textwidth]{install/9-asignacion_port.png}
+	\caption{Configuración del mirroring.}
+	\label{fig:switch-mirroring}
+\end{figure}
+
+
+\subsubsection{Conexión del agente en la subred secundaria}
+
+La subred secundaria es gestionada por una \textbf{Raspberry Pi 3 Model B}, que actúa como agente Snort. Debido a las limitaciones del hardware, solo dispone de una interfaz de red física (\texttt{eth0}), la cual será utilizada simultáneamente como interfaz promiscua y como salida a internet.\newline
+
+Aunque esta práctica no es recomendable en entornos de producción —donde se sugiere eliminar la dirección IP de la interfaz dedicada a la captura para evitar accesos no deseados— en este caso se ha considerado aceptable al tratarse de un entorno de pruebas controlado.\newline
+
+El instalador del complemento de Snort 3 personalizado para PYMEs está diseñado para manejar estas situaciones. En sistemas con múltiples interfaces, pregunta al usuario si desea borrar la IP de la interfaz promiscua, evitando así riesgos innecesarios. Sin embargo, si solo se detecta una interfaz, como en esta Raspberry Pi 3, la lógica del script omite esa pregunta para prevenir una pérdida accidental de conectividad.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{install/0.3.png}
+	\caption{Raspberry Pi 3 actuando como agente.}
+	\label{fig:conexion-agente-rpi3}
+\end{figure}
+
+
+\subsubsection{Conexión del switch de la subred secundaria}
+
+En la subred secundaria, el tráfico de red es gestionado por un segundo switch gestionable. Este switch recibe conexión directa al router para proporcionar acceso a internet a los dispositivos conectados.\newline
+
+La \textbf{Raspberry Pi 3 Model B}, que actúa como agente Snort, está conectada al puerto configurado para port mirroring. Su interfaz \texttt{eth0}, operando en modo promiscuo, captura todo el tráfico generado por los dispositivos de la red que están conectados al resto de puertos del switch.\newline
+
+Esta arquitectura permite extender la monitorización a múltiples subredes, manteniendo una estructura modular y escalable dentro del sistema R-Snort.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{install/0.4.png}
+	\caption{Conexiones del switch secundario.}
+	\label{fig:switch-subred2}
+\end{figure}
+
+
+\subsubsection{Instalación de Snort 3 personalizado}
+
+Para completar la preparación del sistema, es necesario instalar Snort versión 3 en ambas Raspberry Pi. Tal como se ha comentado previamente, se utilizará la instancia personalizada desarrollada como complemento de este Trabajo Fin de Grado, optimizada para entornos SOHO y compatible con arquitecturas ARM.\newline
+
+Esta versión incluye todas las dependencias necesarias, configuraciones de rendimiento ajustadas y soporte para bibliotecas como \texttt{Hyperscan}, eliminando la necesidad de instalación manual o intervención compleja por parte del usuario.\newline
+
+El proceso de instalación es completamente automático. Basta con clonar el repositorio correspondiente y ejecutar el script principal:
+
+\newpage
+
+\begin{lstlisting}[language=bash, caption={Instalación de R-Snort personalizada}, label={lst:instalacion-rsnort}]
+	git clone https://github.com/deianp189/r-snort-installer.git
+	cd r-snort-installer
+	sudo ./install_rsnort.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{install/2.png}
+	\caption{Inicio de la instalación del agente.}
+	\label{fig:inicio-instalacion-rsnort}
+\end{figure}
+
+Tras unos 15 minutos en la Raspberry Pi 5, el sistema tendrá Snort 3 instalado, configurado y activo sobre la interfaz elegida por el usuario. Al finalizar, el script ofrece un resumen detallado del estado del sistema, incluyendo información sobre recursos, antivirus y adaptadores de red.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{install/3.png}
+	\caption{Resumen tras la instalación.}
+	\label{fig:resumen-instalacion-rsnort}
+\end{figure}
+
+
+\subsection{Instalación del agente R-Snort}
+
+La instalación del agente R-Snort se realiza mediante un script completamente automatizado que integra y configura todos los componentes necesarios. Aunque previamente se ha detallado cómo se transforma Snort versión 3 en un sistema funcional mediante el complemento del TFG, este instalador encapsula todo el proceso en una ejecución sencilla y eficiente.\newline
+
+El script realiza las siguientes tareas de forma automática:
+
+\begin{itemize}
+	\item Configura Snort 3 para almacenar sus alertas en un archivo específico.
+	\item Lanza los servicios de ingestión y métrica que recogen estas alertas y las insertan en una base de datos MariaDB.
+	\item Despliega una API REST basada en FastAPI, que permite al módulo central acceder a las alertas y métricas del agente.
+	\item Instala y configura Grafana 12, incluyendo un dashboard personalizado que se importa automáticamente.
+	\item Registra todos los servicios con systemd para que arranquen de forma persistente.
+\end{itemize}
+
+Una vez instalado, el usuario no necesita realizar configuraciones adicionales. El propio sistema indica al final de la instalación las URLs desde las que se puede acceder a la API REST y al panel de Grafana.\newline
+
+El proceso comienza con los siguientes comandos:
+
+\begin{lstlisting}[language=bash, caption={Comandos de instalación del agente}, label={lst:instalacion-snort-agent}]
+	git clone https://github.com/deianp189/snort-agent.git
+	cd snort-agent
+	sudo ./install.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{install/4.png}
+	\caption{Inicio de la instalación del agente.}
+	\label{fig:inicio-snort-agent}
+\end{figure}
+
+La duración estimada es de entre 5 y 8 minutos, dependiendo de la conexión a internet. El usuario simplemente debe esperar mientras el sistema realiza toda la configuración necesaria.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{install/5.png}
+	\caption{Finalización y resumen del agente instalado.}
+	\label{fig:resumen-snort-agent}
+\end{figure}
+
+
+\subsection{Instalación del módulo central de R-Snort}
+
+Una vez instalado el agente, puede transformarse en el \textbf{módulo central de R-Snort} ejecutando un segundo instalador. Este script despliega el sistema completo de gestión: compila el frontend desarrollado en Angular, lo integra dentro del backend en Spring Boot y lo configura como servicio persistente mediante \texttt{systemd}, asegurando su ejecución tras cada reinicio del sistema.
+
+\begin{lstlisting}[language=bash, caption={Comandos de instalación del agente}, label={lst:instalacion-snort-agent}]
+	git clone https://github.com/deianp189/r-snort-central-module-installer.git
+	cd r-snort-central-module-installer/scripts
+	sudo ./run_all
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{install/6.png}
+	\caption{Inicio de la instalación del módulo central.}
+	\label{fig:inicio-central-module}
+\end{figure}
+
+\newpage
+
+Durante la instalación, el usuario solo debe indicar sus credenciales de administrador y decidir si desea declarar más agentes manualmente. En este caso se optó por omitir esa configuración, ya que la interfaz web permite añadirlos posteriormente, lo cual resulta más cómodo y sirve para demostrar la funcionalidad del sistema.\newline
+
+El proceso dura aproximadamente cinco minutos y finaliza mostrando un resumen detallado del entorno, así como la dirección web desde la cual puede accederse al panel de administración.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{install/7.png}
+	\caption{Finalización y resumen del módulo central.}
+	\label{fig:fin-central-module}
+\end{figure}
+
+\newpage
+
+
+\section{Utilización y pruebas}
+
+\subsection{Configuración}
+
+Tras completar el proceso de instalación, el acceso a la interfaz web de R-Snort se realiza fácilmente introduciendo en el navegador la dirección \texttt{http://<IP-del-módulo-central>:8080} (También se muestra con exactitud al finalizar la instalación). La autenticación se efectúa mediante las credenciales proporcionadas por el usuario durante la instalación del módulo central.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{configuracion/1.png}
+	\caption{Pantalla de inicio de sesión del sistema R-Snort.}
+	\label{fig:login-rsnort}
+\end{figure}
+
+Una vez autenticado, se accede a la pestaña \textbf{Overview}, que presenta un panel general con gráficas dinámicas alimentadas por Grafana. Estas gráficas se generan a partir de los datos almacenados en MariaDB y reflejan información escogida con sumo cuidado como: número de alertas por severidad (alta, media y baja), protocolos implicados, tipos de alertas más frecuentes, y direcciones IP origen. Todo ello permite una visualización rápida y efectiva del estado de la red.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{configuracion/2.png}
+	\caption{Panel general con métricas y alertas.}
+	\label{fig:overview-rsnort}
+\end{figure}
+
+\newpage
+
+En la pestaña \textbf{Alertas}, el usuario puede inspeccionar de forma detallada las últimas alertas generadas, agrupadas por severidad. Esta vista incluye un panel de resumen y una tabla con todas las alertas clasificadas por fecha, origen, destino y tipo de amenaza detectada. Además, se ofrece la opción de descargar alertas individuales por agente o en su totalidad para un análisis forense posterior.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/3.png}
+	\caption{Panel de alertas clasificadas por severidad.}
+	\label{fig:alertas-rsnort}
+\end{figure}
+
+La pestaña \textbf{Reglas} muestra todas las reglas actualmente activas del archivo \texttt{custom.rules}, incluyendo aquellas diseñadas para detectar fuga de datos sensibles como correos electrónicos, tarjetas de crédito o números NUSS. El sistema permite añadir nuevas reglas y elimina automáticamente aquellas duplicadas o malformadas, previniendo fallos de carga en Snort.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/4.png}
+	\caption{Gestión de reglas Snort desde la interfaz.}
+	\label{fig:reglas-rsnort}
+\end{figure}
+
+\newpage
+
+En la pestaña \textbf{Estado}, se presentan datos sobre el uso de recursos del sistema (CPU, disco, temperatura) a lo largo del tiempo, gracias a la integración con Grafana. Además, se muestra el estado actual de Snort, la última alerta capturada y la posibilidad de reiniciar los servicios involucrados (\texttt{snort}, \texttt{ingest}, \texttt{metrics}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/5.png}
+	\caption{Monitoreo de temperatura, CPU y estado del servicio.}
+	\label{fig:estado-central}
+\end{figure}
+
+Justo debajo, aparecen tarjetas individuales por cada agente declarado. En este caso se muestra el módulo central. Desde aquí se puede reiniciar cada servicio por separado o eliminar el agente (con doble confirmación). Esta vista también permite validar si Snort está en ejecución, cuántas alertas ha generado y cuál fue la última detectada.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/6.png}
+	\caption{Estado detallado del agente central.}
+	\label{fig:estado-agente-central}
+\end{figure}
+
+\newpage
+
+El menú desplegable de selección de agente permite cambiar rápidamente de instancia monitorizada. Inicialmente solo está presente el módulo central, pero se pueden añadir más agentes en caliente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/7.png}
+	\caption{Menú de selección de agentes activos.}
+	\label{fig:selector-agentes}
+\end{figure}
+
+Para registrar un nuevo agente, basta con pulsar el botón \texttt{+} de la esquina superior derecha. Se abrirá un formulario donde se especifica el nombre del agente y su dirección IP. El sistema previene duplicados automáticamente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{configuracion/8.png}
+	\caption{Formulario para añadir un nuevo agente Snort.}
+	\label{fig:agregar-agente}
+\end{figure}
+
+Una vez añadido, el nuevo agente aparecerá en el desplegable y el dashboard se actualizará dinámicamente con sus métricas y alertas. En el ejemplo mostrado, se ha conectado un segundo agente en la subred 2, el cual genera menos tráfico por haber estado inactivo durante parte del día.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{configuracion/9.png}
+	\caption{Visualización de métricas del agente secundario.}
+	\label{fig:dashboard-agente-secundario}
+\end{figure}
+
+\newpage
+
+Finalmente, en la vista de \textbf{Estado} ahora se muestran múltiples tarjetas, una por cada agente activo. Cada una de ellas permite gestionar de forma independiente los servicios del agente y consultar su última alerta. Además, se incluye la opción de eliminar el agente de forma segura mediante una doble confirmación visual.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{configuracion/10.png}
+	\caption{Gestión avanzada de agentes Snort desde la interfaz.}
+	\label{fig:estado-multiple-agentes}
+\end{figure}
+
+\subsection{Pruebas de rendimiento}
+
+
+
+
 
 
 \clearpage
@@ -1276,6 +1687,9 @@ Este instalador permite desplegar un sistema de visualización y control profesi
 	Grafana Labs. (s.f.). *Snort (Community) Dashboard for Grafana*. Recuperado de \url{https://grafana.com/grafana/dashboards/11191-snort/}
 	
 	\bibitem{grafana-dashboard} Grafana Labs. \emph{Snort IDS/IPS Dashboard}. Dashboard público ID~11191. [En línea]. Disponible en: \url{https://grafana.com/grafana/dashboards/11191-snort/}.
+	
+	\bibitem{raspberrypi_software}
+	Raspberry Pi Foundation. \textit{Raspberry Pi Software}. Disponible en: \url{https://www.raspberrypi.com/software/}. Accedido el 21 de mayo de 2025.
 	
 \end{thebibliography}
 
