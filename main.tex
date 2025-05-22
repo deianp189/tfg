@@ -338,15 +338,17 @@ El resultado final, reflejado en las imágenes adjuntas, habla de un esfuerzo so
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.90\textwidth]{cronologia/1.png}
+	\includegraphics[width=0.8\textwidth]{cronologia/1.png}
 	\caption{Cronograma de ejecución del TFG R-SNORT.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.90\textwidth]{cronologia/2.png}
+	\includegraphics[width=0.8\textwidth]{cronologia/2.png}
 	\caption{Comparativa de tiempo estimado vs. tiempo real por categoría.}
 \end{figure}
+
+\newpage
 
 En resumen, el desarrollo del TFG R-Snort ha sido un proceso de aprendizaje constante, donde la gestión real del tiempo y la adaptación a problemas inesperados han resultado tan importantes como el propio resultado técnico. Si algo queda para futuros proyectos es que toda planificación es solo una hipótesis inicial: lo realmente valioso es la capacidad de adaptarse, perseverar y terminar el viaje con una solución de calidad.
 
@@ -700,8 +702,6 @@ El \textbf{módulo central} del sistema actúa a la vez como un agente y como el
 
 En la Figura \ref{fig:arquitectura} se muestra un esquema general de la arquitectura de R-Snort, donde se aprecian sus elementos principales y las interacciones entre ellos: el usuario accede mediante un navegador al frontend Angular (alojado en el servidor central), el cual se comunica con el backend Spring Boot. El backend a su vez envía peticiones REST hacia los \texttt{snort-agent} distribuidos (incluido el agente del propio servidor central) para recopilar información o ejecutar comandos. Esta arquitectura distribuida y modular permite monitorizar múltiples puntos de la red de forma centralizada y coherente.
 
-\newpage
-
 \begin{figure}[h!]
 	\includegraphics[width=0.8\textwidth]{documento/6.png}
 	\caption{Esquema de la arquitectura distribuida de R-Snort.}
@@ -856,6 +856,8 @@ Dado el carácter continuo de la monitorización, es de vital importancia gestio
 Por un lado, como ya se indicó, Snort 3 rota internamente el archivo de alertas JSON cuando este alcanza un tamaño predefinido (\texttt{limit} en la configuración). En el despliegue, se eligió un límite (p.ej., 50MB) de modo que, al superarse, Snort cierre \texttt{alert\_json.txt} y comience un nuevo archivo (generalmente nombrado con un sufijo temporal, por ejemplo \texttt{alert\_json.txt.1684500000} usando la época Unix para garantizar un nombre único). Esto asegura que el archivo activo de alertas se mantenga de un tamaño manejable para el servicio de ingesta y que las alertas antiguas queden preservadas en ficheros aparte.\newline
 
 Por otro lado, para gestionar esos ficheros históricos y evitar la acumulación indefinida, se configuró la herramienta \textbf{logrotate} en el sistema. Se añadió una regla específica para los logs de Snort en \texttt{/etc/logrotate.d/}, de forma que diariamente (o bajo ciertas condiciones de tamaño) se compriman y archiven los archivos de alerta rotados. La configuración de \textit{logrotate} establece, por ejemplo, mantener solo los N archivos más recientes (p.ej., los últimos 7 días de alertas), comprimir automáticamente los logs rotados (formato \texttt{.gz}) y eliminar aquellos que excedan el período de retención. A continuación se muestra un extracto de dicha configuración:
+
+\newpage
 
 \begin{lstlisting}[language=bash, caption={Regla de logrotate para los logs de Snort}, label={lst:logrotate}]
 	/var/log/snort/alert_json.txt* {
@@ -1115,8 +1117,6 @@ En la implementación de R-Snort se ha optado por la comodidad de poder cambiar 
 
 El sistema de rutas de Angular también incorpora \textbf{guardas (guards)} para restringir el acceso a ciertas rutas. En particular, se utiliza un \textbf{guardia de autenticación} que impide el acceso a las rutas de la aplicación principal (\texttt{overview}, \texttt{alertas}, etc.) si el usuario no ha iniciado sesión. Esto se configura de forma que, si Angular detecta que no hay un token JWT válido almacenado (o que el usuario no ha pasado por login), automáticamente redirige la navegación hacia la ruta \texttt{/login}. A continuación se muestra un ejemplo simplificado de un \texttt{guard} de autenticación:
 
-\pagebreak
-
 \begin{lstlisting}[language=Java, caption={Ejemplo simplificado de authGuard}, label={lst:authGuard}]
 // Ejemplo de AuthGuard en Angular
 @Injectable({ providedIn: 'root' })
@@ -1324,7 +1324,7 @@ El módulo central constituye el componente principal del proyecto, este se enca
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{documento/30.png}
+	\includegraphics[width=0.57\textwidth]{documento/30.png}
 	\caption{Proceso escalonado de instalación del módulo central de R-Snort.}
 	\label{fig:bpmn-snort-central}
 \end{figure}
@@ -2311,7 +2311,7 @@ Esta guía pretende ofrecer la vía más directa para poner en marcha R-Snort, t
 
 \newpage
 \thispagestyle{empty}
-~ % Esto añade una página en blanco real
+% Esto añade una página en blanco real
 \newpage
 
 
