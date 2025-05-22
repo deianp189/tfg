@@ -312,14 +312,72 @@ Con estos objetivos, se pretende que el TFG no solo culmine en un prototipo func
 
 
 \section{Fases de la realización y cronograma}
-en proceso
+
+El desarrollo del TFG R-Snort ha estado marcado por una evolución intensiva, en la que la planificación inicial y la realidad del día a día rara vez coincidieron. Si algo queda claro tras repasar el cronograma real es que la flexibilidad y la capacidad de adaptación resultan tan valiosas como cualquier conocimiento técnico. El proceso, lejos de ser lineal, avanzó a base de iteraciones, ajustes y, en ocasiones, pasos atrás para luego avanzar con más claridad.
+
+\subsection{Planificación y arquitectura (abril 2025)}
+
+El punto de partida real del proyecto fue la definición del diseño de la arquitectura frontend-backend. Durante esta etapa, gran parte del esfuerzo se invirtió en entender cómo debía articularse la comunicación entre los distintos módulos: la API, el backend en Spring Boot y el frontend en Angular. Aunque sobre el papel todo parecía encajar, la experiencia pronto enseñó que cada elección técnica —desde la gestión de usuarios hasta la integración con Grafana— implicaba renuncias, refactorizaciones y más de una revisión en profundidad de las ideas iniciales.
+
+\subsection{Desarrollo intensivo y pivotes técnicos (primera mitad de mayo 2025)}
+
+Con la arquitectura ya clara, comenzó una etapa de implementación. En paralelo se trabajó en la creación del frontend Angular y la implementación del backend Spring Boot, obligando a priorizar unas tareas sobre otras según surgían problemas o bloqueos. El desarrollo del sistema de login y verificación, así como la integración de dashboards dinámicos para la visualización de los datos, requirieron investigar soluciones y adaptar el sistema a nuevas necesidades no previstas y soluciones que cumplieran con normas de seguridad. No hubo grandes pausas: la sucesión de tareas como la gestión de reglas personalizadas, la visualización de alertas en tiempo real y la descarga/archivado de logs se fue solapando, encadenando sprints de trabajo.
+
+\subsection{Refinamiento, pruebas y validación (segunda mitad de mayo 2025)}
+
+Una vez implementadas las funcionalidades principales, el foco cambió hacia la validación práctica y la mejora continua. Las pruebas funcionales y las pruebas de rendimiento del sistema no solo sirvieron para detectar errores, sino también para ajustar configuraciones de las automatizaciones, pulir detalles de usabilidad y comprobar hasta qué punto el sistema soportaba cargas reales. La integración de métricas y gráficos exigió replantear parte del backend y afinar queries para no penalizar el rendimiento, mientras que la gestión de logs evidenció la necesidad de mantener una documentación clara y procedimientos automáticos para facilitar el mantenimiento futuro.\newline
+
+La redacción y revisión del documento supusieron el último gran sprint, combinando jornadas intensas de escritura técnica con revisiones profundas para garantizar la coherencia y la claridad del texto final.
+
+\subsection{Análisis del cronograma y esfuerzo real}
+
+Las gráficas de planificación y carga horaria son ilustrativas. A pesar de una estimación inicial razonable, el tiempo real dedicado a muchas tareas (en especial, el desarrollo del módulo central y la integración de métricas) superó ampliamente lo previsto. Resulta tentador culpar a los “imprevistos”, pero la realidad es que los proyectos tecnológicos —y más aún en solitario— tienden a requerir mucha más iteración y refino de lo esperado. Cada decisión arrastra efectos secundarios: una mejora en la interfaz puede complicar el backend, una funcionalidad extra supone más pruebas y documentación, y así sucesivamente.\newline
+
+El resultado final, reflejado en las imágenes adjuntas, habla de un esfuerzo sostenido, a menudo desigual, pero siempre orientado a superar obstáculos y cerrar cada fase con una solución mejor que la anterior.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.90\textwidth]{cronologia/1.png}
+	\caption{Cronograma de ejecución del TFG R-SNORT.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.90\textwidth]{cronologia/2.png}
+	\caption{Comparativa de tiempo estimado vs. tiempo real por categoría.}
+\end{figure}
+
+En resumen, el desarrollo del TFG R-Snort ha sido un proceso de aprendizaje constante, donde la gestión real del tiempo y la adaptación a problemas inesperados han resultado tan importantes como el propio resultado técnico. Si algo queda para futuros proyectos es que toda planificación es solo una hipótesis inicial: lo realmente valioso es la capacidad de adaptarse, perseverar y terminar el viaje con una solución de calidad.
+
 \section{Estructura y metodología}
-en proceso
+
+El presente documento está estructurado en varios capítulos que permiten seguir el desarrollo del proyecto de manera lógica y progresiva.
+
+\textbf{Introducción, Motivación y Objetivos.} El documento comienza contextualizando la problemática de la ciberseguridad en PYMEs, explicando la motivación personal y profesional detrás del proyecto, así como los objetivos generales y específicos que se han perseguido durante su desarrollo.\newline
+
+\textbf{Fases de la realización y cronograma.} En este apartado se describe cómo se ha organizado y ejecutado el trabajo a lo largo del tiempo, recogiendo las distintas etapas del desarrollo: desde la planificación inicial y el diseño de la arquitectura, pasando por la implementación de los distintos módulos, hasta las fases finales de pruebas, validación y documentación.\newline
+
+\textbf{Capítulo 1: Sistemas de detección de intrusos: Snort y frontends.} Este primer capítulo técnico introduce al lector en el mundo de los sistemas IDS y NIDS, explicando sus conceptos y diferencias principales. Se describe el sistema R-Snort desarrollado en este trabajo, se comparan diferentes frontends existentes para Snort y se analiza el estado del arte de las interfaces web en este ámbito.\newline
+
+\textbf{Capítulo 2: Diseño e implantación de un frontend para R-Snort.} Este capítulo es el núcleo del documento y detalla el proceso de diseño y construcción de la solución propuesta. Se presentan las especificaciones y requisitos del sistema, se describen el entorno hardware y software utilizado, y se profundiza en la arquitectura del sistema, el diseño de la interfaz de usuario y el esquema de la base de datos. Además, se detallan las fases de implementación tanto del backend como del frontend, así como la automatización de la instalación mediante scripts dedicados.\newline
+
+\textbf{Capítulo 3: Caso práctico — utilización del frontend de R-Snort.} En este capítulo se describe cómo se ha desplegado y utilizado el sistema en un entorno realista. Se documentan los pasos de instalación, se muestran capturas de la interfaz y se explican las pruebas funcionales y de rendimiento realizadas, incluyendo la metodología seguida y los resultados obtenidos.\newline
+
+\textbf{Resultados y discusión.} A continuación, se presentan y analizan los resultados obtenidos tras la validación del sistema.\newline
+
+\textbf{Conclusiones y trabajo futuro.} Para finalizar se señala la relevancia práctica de la solución, así como recomendaciones para mejorar o adaptar el sistema en adelante.\newline
+
+\textbf{Bibliografía y anexos.} El documento se cierra con un compendio de referencias bibliográficas y anexos que sirven de manual rápido de la plataforma y de repositorio de recursos prácticos relacionados con el desarrollo, la instalación y la utilización de R-Snort.\newline
+
+En conjunto, la estructura del documento está pensada para que el lector pueda seguir el recorrido completo del proyecto.
+
 
 \setcounter{secnumdepth}{2} 
 
-\cleardoublepage
+\clearpage
+\null
 \thispagestyle{empty}
+\newpage
 \chapter{Sistemas de detección de intrusos: Snort y frontends}
 
 \section{IDS / NIDS}
@@ -1836,15 +1894,67 @@ Por último, el panel de estado permite visualizar en tiempo real la disponibili
 
 Estas pruebas funcionales demuestran que el sistema R-Snort no solo es capaz de detectar tráfico sospechoso y generar alertas, sino que también proporciona un conjunto de herramientas completas para la administración y supervisión de agentes, reglas y registros, mejorando la capacidad operativa y reduciendo la necesidad de intervención manual.
 
+\section{Resumen}
+
+El capítulo muestra un caso práctico exitoso del sistema R-Snort implementado en un entorno realista para pequeñas oficinas (SOHO). Se ha utilizado una infraestructura sencilla pero al mismo tiempo viable, formada por un módulo central basado en Raspberry Pi 5 y un agente secundario en Raspberry Pi 3, ambos conectados a switches gestionables que facilitan la monitorización eficiente del tráfico mediante port mirroring.\newline
+
+El módulo central integra de manera el backend en Spring Boot, la interfaz web desarrollada en Angular, la base de datos MariaDB y el dashboard interactivo en Grafana, proporcionando una solución completa de gestión centralizada. Por su parte, el ambos agentes ejecutan una versión optimizada de Snort 3 (desarrollada en el Complemento del TFG), adaptada específicamente para dispositivos de bajo consumo.\newline
+
+La instalación se destaca por ser completamente automatizada gracias a scripts especializados, lo que simplifica considerablemente la implementación en entornos reales. Las pruebas efectuadas han demostrado de manera concluyente que R-Snort maneja sin problemas grandes volúmenes de alertas (superiores a 250.000), manteniendo un rendimiento estable y una visualización fluida y dinámica de la información crítica.\newline
+
+Finalmente, las pruebas funcionales adicionales han confirmado la eficacia y fiabilidad del sistema, destacando funcionalidades imporantantes en el ámbito de la ciberseguridad y la administración de sistemas como la rotación y archivado automático de logs, la exportación sencilla de alertas, la gestión dinámica de reglas personalizadas y la administración remota intuitiva de servicios. Todo ello refuerza claramente el valor práctico del proyecto R-Snort como herramienta profesional, accesible y eficaz para la seguridad y supervisión de redes empresariales pequeñas y medianas.
+
+
+
+
 
 
 \clearpage
 \null
 \thispagestyle{empty}
 \newpage
-\chapter{Resultados}
+\chapter{Resultados y discusión}
 
-\section{Resumen}
+\section{Resultados obtenidos}
+
+El sistema R-Snort, tras su despliegue en un entorno simulado de red tipo SOHO y bajo condiciones de uso realista, ha permitido explorar y validar de forma práctica tanto la viabilidad técnica del ecosistema como su utilidad operativa para pequeñas y medianas empresas. A continuación se presentan los resultados obtenidos durante la fase experimental, diferenciando entre los aspectos de funcionalidad, rendimiento, experiencia de usuario y capacidad de adaptación.
+
+\subsection{Eficacia en la detección de amenazas}
+
+Durante la batería de pruebas funcionales, el sistema fue capaz de identificar un amplio rango de incidentes de seguridad: desde escaneos básicos de puertos y ataques ICMP, hasta patrones de exfiltración de datos y tráfico anómalo en protocolos DNS y SNMP. Las alertas generadas por Snort 3 fueron correctamente recogidas por el backend, almacenadas en la base de datos y presentadas en tiempo real a través del frontend (véase Figuras \ref{fig:overview-rsnort} y \ref{fig:alertas-rsnort}). Cabe destacar que la integración con Grafana permitió visualizar tendencias y picos de actividad, lo que facilita la rápida identificación de eventos anómalos o posibles intentos de actividad maliciosa o intrusión además de filtración de datos. Esta capacidad de monitorización continua es importante para el entorno PYME, donde la inmediatez en la detección puede suponer la diferencia entre contener un incidente o sufrir un compromiso mayor.\newline
+
+En las pruebas orientadas a la gestión de reglas, el sistema demostró flexibilidad: fue posible añadir, modificar y eliminar reglas personalizadas desde la interfaz gráfica, reflejándose los cambios en el comportamiento del sensor sin requerir intervención manual en consola. Sin embargo, debe reconocerse que, aunque la interfaz es intuitiva, la comprensión de la lógica subyacente a cada regla aún requiere cierto conocimiento técnico, lo que podría limitar la autonomía del usuario final en escenarios menos formados.
+
+\subsection{Rendimiento y escalabilidad}
+
+En términos de rendimiento, la solución mostró un comportamiento estable ante tráfico normal y bajo cargas elevadas inducidas por ataques simulados (véanse Figuras \ref{fig:temp-normal} a \ref{fig:bench-temp-cpu} y el panel de Grafana 3.29). Durante las pruebas de estrés, la Raspberry Pi 5 mantuvo un uso de CPU y temperatura dentro de márgenes aceptables, sin caídas del servicio ni pérdida de alertas. El almacenamiento de eventos alcanzó volúmenes superiores a 250.000 alertas, gestionadas correctamente gracias al sistema de rotación y archivado automático de logs.\newline
+
+No obstante, se identifican ciertos límites en la capacidad de procesamiento: bajo ataques DDoS prolongados, el retardo en la inserción de nuevas alertas aumentó ligeramente, y se evidenció la importancia de ajustar tanto el número de reglas activas como los parámetros de preprocesamiento según el hardware disponible. Así, aunque el sistema es adecuado para el entorno objetivo (redes pequeñas o medianas), su escalabilidad está condicionada por la arquitectura de Raspberry Pi; para escenarios empresariales de mayor tamaño sería necesario migrar a hardware más potente o implementar mecanismos de balanceo y paralelización de sensores.
+
+\subsection{Usabilidad y experiencia de usuario}
+
+Uno de los objetivos principales de R-Snort era lograr una solución accesible a usuarios sin especialización profunda en ciberseguridad. En este sentido, la interfaz web desarrollada cumple de forma satisfactoria: permite la visualización clara y filtrada de alertas, la gestión de reglas y la monitorización de métricas relevantes del sistema (CPU, temperatura, uso de disco). Las funcionalidades de descarga de logs, visualización por severidad y gráficos de actividad aportan valor añadido frente a otras alternativas existentes (véase la comparativa en el Capítulo 1).\newline
+
+Sin embargo, el análisis de la experiencia de usuario sugiere áreas de mejora: aunque la curva de aprendizaje es más suave que en soluciones como Sguil, algunos flujos de configuración avanzada podrían simplificarse aún más para perfiles no técnicos. La gestión de incidencias y la correlación de eventos entre múltiples agentes, aunque implementada de forma básica, puede enriquecerse con mecanismos automáticos de priorización y alerta proactiva.
+
+\subsection{Limitaciones y consideraciones}
+
+Resulta imprescindible señalar varias limitaciones detectadas durante el desarrollo y la validación del sistema:
+
+\begin{itemize}
+	\item \textbf{Dependencia del hardware:} El rendimiento general está fuertemente condicionado por las capacidades de la Raspberry Pi. Si bien esta elección se justifica por su bajo coste, no es una solución universal para todas las PYMEs; aquellas con mayor carga de red deberán valorar una plataforma hardware superior.
+	\item \textbf{Complejidad técnica residual:} Aunque se ha minimizado la necesidad de intervención manual, la instalación inicial y la resolución de ciertos errores pueden requerir conocimientos técnicos que exceden los de un usuario común. Es recomendable reforzar la documentación y considerar el desarrollo de asistentes de instalación.
+	\item \textbf{Gestión de falsas alertas:} Como en cualquier IDS basado en firmas, existe el riesgo de generación de falsos positivos, especialmente cuando las reglas activas no están bien ajustadas al entorno real. Se recomienda realizar una fase de calibración antes de un despliegue definitivo.
+	\item \textbf{Integración y futuro mantenimiento:} La modularidad del sistema permite futuras ampliaciones, pero depende de la compatibilidad de las versiones de Snort, Grafana y otros componentes open source. Es importante monitorizar estos cambios y actualizar el software regularmente para evitar obsolescencia o incompatibilidades.
+\end{itemize}
+
+\section{Discusión}
+
+En conjunto, los resultados avalan la hipótesis de partida: es posible construir un sistema de detección y monitorización profesional, accesible y de bajo coste, capaz de cubrir las necesidades básicas de ciberseguridad en PYMEs. R-Snort se posiciona como una alternativa viable frente a soluciones comerciales, especialmente para organizaciones con recursos limitados y sin personal demasiado especializado.\newline
+
+Ahora bien, la comparación con otras plataformas, tanto históricas como actuales (BASE, T-Pot, Sguil), evidencia que R-Snort no busca competir en funcionalidades avanzadas propias de un SIEM empresarial, sino ofrecer una solución equilibrada entre simplicidad, capacidad de adaptación y coste reducido. La integración de Grafana supone un salto cualitativo en la visualización de datos frente a la mayoría de alternativas open source tradicionales, pero también introduce nuevas dependencias técnicas que deben ser gestionadas.\newline
+
+Finalmente, el mayor valor de R-Snort radica en su capacidad de \textbf{democratizar} la ciberseguridad, acercando herramientas profesionales a un segmento empresarial tradicionalmente desatendido. Los resultados experimentales y la validación en entorno realista demuestran que, con un mantenimiento adecuado y una configuración inicial correcta, la solución propuesta puede suponer una mejora sustancial de la postura de seguridad en entornos PYME y SOHO. El reto futuro será mantener ese equilibrio entre sencillez, estabilidad y capacidad de adaptación a un panorama de amenazas en constante evolución.
 
 
 % Conclusiones
@@ -1856,6 +1966,25 @@ Estas pruebas funcionales demuestran que el sistema R-Snort no solo es capaz de 
 \chapter*{Conclusiones}
 \addcontentsline{toc}{chapter}{Conclusiones}
 
+El desarrollo y validación de R-Snort han permitido confirmar la viabilidad de una solución de monitorización y detección de intrusiones profesional, accesible y asequible orientada específicamente a las necesidades de las PYMEs españolas. El trabajo ha abarcado las fases fundamentales de un proyecto tecnológico real: desde la detección y justificación de la problemática, pasando por el diseño arquitectónico, la implementación técnica y la evaluación experimental, hasta la crítica y reflexión sobre los resultados alcanzados.\newline
+
+Uno de los logros más significativos ha sido demostrar que es posible dotar a pequeñas empresas de una herramienta avanzada de ciberseguridad, integrando tecnologías open source de alto nivel en una plataforma de bajo coste como la Raspberry Pi. La solución resultante además de ofrecer capacidades de detección frente a una amplia gama de amenazas y comportamientos sospechosos, sino que facilita su gestión y visualización a través de una interfaz intuitiva y amigable para usuarios no especializados. De este modo, R-Snort contribuye a reducir la brecha de ciberseguridad que actualmente sufren las PYMEs frente a grandes organizaciones.\newline
+
+Entre los principales puntos positivos cabe destacar:
+
+\begin{itemize}
+	\item \textbf{Accesibilidad y facilidad de uso:} La interfaz web y los mecanismos automáticos de despliegue simplifican la puesta en marcha y el manejo del sistema, haciendo viable su adopción incluso por personal sin formación específica en ciberseguridad.
+	\item \textbf{Eficacia técnica:} R-Snort ha demostrado su capacidad para detectar múltiples vectores de ataque y exfiltración de datos en tiempo real, generando alertas y métricas que facilitan el análisis y la reacción rápida ante incidentes.
+	\item \textbf{Escalabilidad modular:} La arquitectura permite añadir nuevos agentes, ampliar la base de reglas y personalizar la monitorización en función de las necesidades de cada red, sin depender de soluciones propietarias ni de licencias costosas.
+	\item \textbf{Bajo coste:} El uso de hardware asequible y software libre reduce drásticamente la barrera de entrada, facilitando la democratización de la ciberseguridad.
+\end{itemize}
+
+No obstante, el análisis crítico realizado durante el proyecto y la discusión de resultados invitan a matizar este optimismo. Las principales limitaciones identificadas incluyen la dependencia del hardware (que restringe el rendimiento bajo cargas extremas), la necesidad de ciertos conocimientos técnicos durante la instalación o resolución de incidencias, y el riesgo de falsos positivos en la detección, especialmente en entornos poco calibrados. Esto subraya la importancia de un mantenimiento adecuado, una buena documentación y, eventualmente, la posibilidad de migrar a plataformas de mayor potencia para escenarios más exigentes.\newline
+
+En perspectiva, R-Snort no aspira a competir con soluciones SIEM empresariales de gran escala, sino a ofrecer una alternativa realista que permita a las PYMEs protegerse de forma proactiva frente al creciente número de amenazas. El sistema, tal y como ha sido diseñado, es extensible y adaptable, y sienta las bases para futuras evoluciones ya sea integrando inteligencia artificial para la correlación de eventos, añadiendo respuestas automáticas, o extendiendo la cobertura a dispositivos IoT.\newline
+
+En última instancia, este trabajo ejemplifica que la innovación no siempre requiere grandes presupuestos, sino una adecuada integración de tecnologías y un enfoque centrado en las necesidades reales del usuario. Haber llevado a cabo este proyecto ha supuesto, además de un reto técnico, un ejercicio de madurez personal y profesional, reforzando la convicción de que la ciberseguridad debe ser un derecho accesible y no un privilegio reservado a unos pocos.
+
 
 \clearpage
 \null
@@ -1863,6 +1992,21 @@ Estas pruebas funcionales demuestran que el sistema R-Snort no solo es capaz de 
 \newpage
 \chapter*{Trabajo futuro}
 \addcontentsline{toc}{chapter}{Trabajo futuro}
+
+Como ocurre en la mayoría de proyectos de un cierto tamaño, varias ideas y funcionalidades se han quedado en el tintero, principalmente por limitaciones de tiempo y de infraestructura. Algunas de ellas ya cuentan con bases en el código o el diseño, y podrían retomarse en el futuro para mejorar R-Snort y hacerlo más completo.\newline
+
+Una de las mejoras más evidentes sería la gestión avanzada de usuarios. Aunque la base de datos y parte del backend ya están preparados para admitir múltiples cuentas y roles, finalmente no se ha habilitado la opción de tener varios perfiles con distintos permisos en la plataforma. Implementar este sistema permitiría asignar tareas y responsabilidades de manera más granular, y acercaría la herramienta a entornos colaborativos y profesionales.\newline
+
+Otra función interesante sería la detección automática de agentes en la red local. La idea era que el instalador del módulo central pudiera escanear la red, localizar dispositivos activos y comprobar si alguno expone el endpoint `/docs` en el puerto 9000 (propio del API de los agentes). Esto permitiría añadir nuevos sensores de forma prácticamente automática, sin intervención manual. Sin embargo, se descartó porque podía generar errores o falsas detecciones, especialmente en redes donde varios equipos utilizan el mismo puerto para otros servicios, pero con los ajustes correctos se podría llevar a la práctica.\newline
+
+También se contempló implementar la verificación de correo electrónico al registrar el usuario administrador. Aunque se trata de una función básica en términos de seguridad, su integración requería desplegar y mantener un servidor de correo, lo que complicaba la instalación y aumentaba la dependencia de servicios externos. Por eso, de momento, se ha optado por un sistema más sencillo que evita estos requisitos.\newline
+
+Otra idea atractiva fue el diseño de paneles geográficos, mostrando sobre un mapa mundi el origen de las direcciones IP desde las que se reciben alertas. Aunque esta funcionalidad aporta un valor visual y contextual importante, resultó poco práctica para un entorno local como el de R-Snort. Para funcionar, necesitaba acceder a servicios de geolocalización de IPs, muchos de los cuales son de pago o requieren un registro manual que no es automatizable fácilmente en el instalador y se quería evitar tener que registrar al usuario en páginas de terceros.\newline
+
+Por último, otra mejora planteada sería el asistente de creación automática de reglas. El objetivo sería facilitar al usuario la configuración de nuevas reglas sin tener que aprender la sintaxis de Snort: bastaría con seleccionar las variables y condiciones deseadas desde la interfaz, y el sistema generaría automáticamente la regla correspondiente. Esto haría la herramienta mucho más accesible para perfiles no técnicos.\newline
+
+En resumen, el margen de mejora y expansión de R-Snort es amplio. Las ideas aquí mencionadas —y otras que surgirán con el tiempo y el uso real del sistema— muestran que aún hay recorrido para hacer de esta solución algo más versátil y amigable para todos los usuarios.
+
 
 \cleardoublepage % ← SEPARA TRABAJO FUTURO Y BIBLIOGRAFÍA FÍSICAMENTE
 \phantomsection  % ← CREA ANCLA
@@ -1934,10 +2078,145 @@ Estas pruebas funcionales demuestran que el sistema R-Snort no solo es capaz de 
 
 % Anexos
 \appendix
-\chapter{Anexo A: Repositorio de R-SNORT}
+\chapter*{Anexo I. Descripción de la plataforma R-Snort}
+\addcontentsline{toc}{chapter}{Anexo I. Descripción de la plataforma}
 
+Este anexo ofrece una visión general y práctica de la plataforma R-Snort desarrollada durante el TFG, actuando como guía de referencia para usuarios y administradores que deseen desplegar, gestionar o ampliar el sistema. Se describen los componentes principales, el flujo de funcionamiento, los requisitos técnicos y los pasos básicos de uso y administración.
 
-%\includepdf[pages=1, pagecommand={\thispagestyle{empty}}, fitpaper=true]{ContraportadaCTFG.pdf}
+\section*{1. ¿Qué es R-Snort?}
 
+R-Snort es una solución integral de monitorización y detección de intrusiones en red, diseñada específicamente para pequeñas y medianas empresas (PYMEs) y entornos SOHO. El sistema se basa en el motor Snort 3, una Raspberry Pi 5 como hardware principal y una interfaz web para facilitar su uso, todo ello reforzado con dashboards de Grafana para la visualización de métricas y alertas en tiempo real. La filosofía de R-Snort es ofrecer un sistema profesional, estable y sencillo de gestionar, incluso para usuarios con poca experiencia técnica.
+
+\section*{2. Componentes principales de la plataforma}
+
+La arquitectura de R-Snort está compuesta por tres grandes bloques:
+
+\begin{itemize}
+	\item \textbf{Agente R-Snort (sensor):} Se trata de una Raspberry Pi que ejecuta Snort 3 configurado para monitorizar el tráfico de red, generar alertas y transmitirlas al backend. El agente puede instalarse en cualquier punto estratégico de la red, habitualmente conectado a un puerto espejo del switch principal.
+	\item \textbf{Backend central (Spring Boot):} Actúa como intermediario y cerebro del sistema. Recibe las alertas de los agentes, las almacena en una base de datos MariaDB, expone una API REST segura para consultas y operaciones, y gestiona la lógica de negocio (usuarios, reglas, métricas, etc.).
+	\item \textbf{Frontend web (Angular):} Proporciona una interfaz gráfica intuitiva y accesible. Permite visualizar alertas en tiempo real, consultar el estado de los agentes, gestionar reglas, descargar logs, supervisar métricas y acceder a paneles de Grafana integrados.
+\end{itemize}
+
+\section*{3. Flujo básico de funcionamiento}
+
+1. El agente R-Snort inspecciona el tráfico de red y detecta eventos sospechosos utilizando reglas personalizadas y comunitarias.
+2. Las alertas se generan en formato JSON y los servicios se encargan de enviarlo a una base de datos y después automáticamente al backend.
+3. El backend pone las alertas a disposición de la interfaz web y de Grafana y son interpretadas en distintos paneles mediante lenguaje SQL.
+4. El usuario accede al frontend, desde donde puede visualizar alertas, configurar reglas, descargar registros históricos o consultar métricas de uso y estado del sistema.
+
+\section*{4. Requisitos mínimos}
+
+\begin{itemize}
+	\item \textbf{Hardware:} Raspberry Pi 4/5 (recomendado), microSD de al menos 32 GB para el sistema operativo y inicio de la instalación, sin embargo con el paso del tiempo se requerirá almacenaje en discos duros y conexión por cable Ethernet a la red a monitorizar. Para el backend central, se recomienda un equipo con al menos 2 GB de RAM.
+	\item \textbf{Software:} Ubuntu Server 22.04/24.04 o Debian reciente, Snort 3.1.84+, MariaDB, Spring Boot (Java 17+) y Node.js 18+ (para Angular).
+	\item \textbf{Red:} Acceso a un puerto espejo (port mirroring) del switch o router para capturar el tráfico a analizar.
+\end{itemize}
+
+\section*{5. Instalación y despliegue básico}
+
+\begin{enumerate}
+	\item \textbf{Instalar el agente:} Ejecutar el script `snort-agent` en la Raspberry Pi. El proceso instala Snort 3, sus dependencias y configura el sistema para el arranque automático además de definir la base de datos MariaDB y la implantación del dashboard de Grafana.
+	\item \textbf{Desplegar el backend central:} Ejecutar el instalador `r-snort-central-module` en el servidor central. Se configuran los servicios Spring Boot, compilación del Frontend y modificaciones para MariaDB de manera automática.
+	\item \textbf{Configurar la red y agentes:} Asegurarse de que los agentes pueden comunicarse con el backend y están conectados a los puertos correctos.
+	\item \textbf{Acceder a la interfaz web:} Desde cualquier navegador, acceder a la IP del backend central en el puerto configurado (por defecto, 4200/443).
+	\item \textbf{Registrar usuarios y configurar reglas:} Crear el usuario administrador, añadir agentes si es necesario y empezar a gestionar reglas de detección y políticas de alertas.
+\end{enumerate}
+
+\section*{6. Funcionalidades principales}
+
+\begin{itemize}
+	\item Visualización de alertas en tiempo real y por histórico.
+	\item Filtros por severidad, tipo, agente y origen/destino.
+	\item Edición y despliegue de reglas Snort desde la interfaz web.
+	\item Paneles de métricas y gráficas de Grafana integrados en la aplicación.
+	\item Descarga de logs y registros archivados para análisis forense.
+	\item Gestión y monitorización de múltiples agentes en distintas subredes.
+	\item Sistema de roles y usuarios (en futuras versiones).
+\end{itemize}
+
+\section*{7. Consejos de administración y mantenimiento}
+
+- Mantener actualizado el sistema operativo y las versiones de Snort y dependencias.
+- Realizar copias de seguridad periódicas de la base de datos y los archivos de configuración.
+- Revisar las reglas de detección periódicamente y adaptarlas al entorno real de la red.
+- Consultar los paneles de Grafana para identificar tendencias y posibles anomalías.
+- Documentar cualquier cambio importante realizado en el sistema para facilitar futuras auditorías.
+
+\section*{8. Recursos y soporte}
+
+Toda la documentación técnica, scripts de instalación, ejemplos de reglas y paneles de Grafana, así como posibles actualizaciones futuras, se encuentran en el repositorio oficial de R-Snort (ver enlaces en la bibliografía y Anexo II). Para consultas adicionales, sugerencias o contribuciones, se anima a los usuarios a contactar con el autor o colaborar mediante pull requests en el repositorio.
+
+---
+
+Esta descripción busca que cualquier usuario, aunque no sea experto, pueda hacerse una idea clara de cómo funciona y cómo desplegar la plataforma, sirviendo también como punto de partida para quienes quieran profundizar o contribuir a su mejora.
+
+\chapter*{Anexo II. Repositorios y guía rápida de instalación}
+\addcontentsline{toc}{chapter}{Anexo II. Repositorios y guía rápida de instalación}
+
+A continuación se describen los repositorios oficiales de R-Snort y los pasos mínimos para descargar e instalar cada uno de los componentes principales. Toda la documentación extendida, scripts y archivos de configuración están disponibles en los propios repositorios de GitHub.
+
+\section*{1. Repositorio del Agente R-Snort}
+
+\textbf{Repo:} 
+\url{https://github.com/deianp189/snort-agent}
+
+Para clonar y lanzar la instalación automática del agente en una Raspberry Pi o servidor Ubuntu/Debian compatible:
+
+\begin{lstlisting}[language=bash]
+	git clone https://github.com/deianp189/snort-agent.git
+	cd snort-agent
+	sudo ./install.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{apendix_agent/1.png}
+	\caption{Ejemplo de documentación y guía de inicio rápido disponible en el repositorio del agente.}
+\end{figure}
+
+Este script instala todas las dependencias, configura Snort 3, la API REST, el sistema de logs y los dashboards de Grafana.
+
+\section*{2. Repositorio del Módulo Central (WebApp)}
+
+\textbf{Repo:} \url{https://github.com/deianp189/r-snort-central-module-installer}
+
+Para desplegar el módulo central (backend Spring Boot, frontend Angular y servicios asociados) en un servidor Ubuntu Server:
+
+\begin{lstlisting}[language=bash]
+	git clone https://github.com/deianp189/r-snort-central-module-installer.git
+	cd r-snort-central-module-installer/scripts
+	sudo ./run_all.sh
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{apendix_web/1.png}
+	\caption{Vista del repositorio y estructura de archivos del módulo central de R-Snort.}
+\end{figure}
+
+Este comando compila e instala automáticamente el backend, el frontend, la base de datos MariaDB, Snort 3 y los dashboards de Grafana, dejando el sistema listo para ser usado.
+
+\section*{3. Consejos rápidos y soporte}
+
+\begin{itemize}
+	\item Es recomendable ejecutar la instalación como \texttt{root} o con \texttt{sudo} para evitar problemas de permisos.
+	\item Revisa los archivos \texttt{README.md} de cada repositorio para detalles avanzados, personalización y resolución de errores frecuentes.
+	\item Para soporte adicional, utiliza el sistema de issues o pull requests de GitHub, o consulta los enlaces a la documentación que acompañan cada proyecto.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{apendix_web/3.png}
+	\caption{Ejemplo de funcionalidades destacadas y guía visual en el README de la WebApp.}
+\end{figure}
+
+\noindent
+\textit{Nota:} Los comandos y rutas mostrados son los mínimos necesarios para una instalación básica. Si se desea personalizar el sistema, añadir agentes adicionales o modificar la configuración de reglas y métricas, consulte los apartados correspondientes en los propios repositorios.
+
+---
+
+Esta guía pretende ofrecer la vía más directa para poner en marcha R-Snort, tanto en modo agente como en su módulo centralizado, ayudando al usuario a familiarizarse visualmente con los recursos del repositorio y reduciendo las barreras técnicas para usuarios poco experimentados.
+
+\includepdf[pages=1, pagecommand={\thispagestyle{empty}}, fitpaper=true]{contraportada.pdf}
 
 \end{document}
