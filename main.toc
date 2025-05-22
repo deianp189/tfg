@@ -2,110 +2,110 @@
 \contentsline {chapter}{Introducción}{1}{chapter*.2}%
 \contentsline {section}{Motivación}{2}{section*.3}%
 \contentsline {section}{Objetivos}{3}{section*.3}%
-\contentsline {section}{Fases de la realización y cronograma}{4}{Item.4}%
+\contentsline {section}{Fases de la realización y cronograma}{4}{Item.3}%
 \contentsline {subsection}{Planificación y arquitectura (abril 2025)}{4}{section*.4}%
 \contentsline {subsection}{Desarrollo intensivo y pivotes técnicos (primera mitad de mayo 2025)}{4}{section*.4}%
 \contentsline {subsection}{Refinamiento, pruebas y validación (segunda mitad de mayo 2025)}{4}{section*.4}%
-\contentsline {subsection}{Análisis del cronograma y esfuerzo real}{5}{section*.4}%
+\contentsline {subsection}{Análisis del cronograma y esfuerzo real}{4}{section*.4}%
 \contentsline {section}{Estructura y metodología}{6}{figure.caption.6}%
 \contentsline {chapter}{\numberline {1}Sistemas de detección de intrusos: Snort y frontends}{9}{chapter.1}%
 \contentsline {section}{\numberline {1.1}IDS / NIDS}{9}{section.1.1}%
 \contentsline {section}{\numberline {1.2}R-Snort}{10}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Frontends más utilizados de Snort}{11}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Comparativa de interfaces web}{15}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Interfaz web de Suricata en pfSense}{15}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Interfaz BASE para Snort}{16}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Interfaz web de Suricata en T-Pot}{17}{subsection.1.4.3}%
-\contentsline {chapter}{\numberline {2}Diseño e implantación de un frontend para R-Snort}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introducción}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Especificaciones del sistema}{22}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Entorno de trabajo}{24}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Hardware: Raspberry Pi como agente de seguridad}{24}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Software: Snort 3 y complementos}{26}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Entorno de desarrollo}{29}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Diseño / Arquitectura / Elementos}{30}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Diseño de la arquitectura}{30}{subsection.2.4.1}%
-\contentsline {subsubsection}{Agentes Snort distribuidos (\texttt {snort-agent})}{30}{subsection.2.4.1}%
-\contentsline {subsubsection}{Módulo central (coordinador + interfaz web)}{31}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{32}{subsection.2.4.2}%
-\contentsline {subsubsection}{Frontend web (Angular SPA)}{32}{subsection.2.4.2}%
-\contentsline {subsubsection}{Mecanismo de autenticación y control de acceso}{34}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{34}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Implementación y configuración del sistema}{37}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Snort 3: configuración de salida de alertas en JSON}{37}{subsection.2.5.1}%
-\contentsline {subsubsection}{Servicio de ingesta de alertas en base de datos}{38}{lstnumber.2.1.6}%
-\contentsline {subsubsection}{Servicio de métricas y monitorización del agente}{39}{lstnumber.2.2.15}%
-\contentsline {subsubsection}{Rotación y archivado de logs de Snort}{39}{lstnumber.2.2.15}%
-\contentsline {subsubsection}{Integración de Grafana con base de datos MariaDB}{40}{lstnumber.2.3.10}%
-\contentsline {subsection}{\numberline {2.5.2}Implementación del backend}{43}{subsection.2.5.2}%
-\contentsline {subsubsection}{Backend de los agentes (FastAPI)}{43}{subsection.2.5.2}%
-\contentsline {subsubsection}{Backend central (Spring Boot)}{44}{lstnumber.2.5.6}%
-\contentsline {subsubsection}{Resumen del backend}{47}{Item.9}%
-\contentsline {subsection}{\numberline {2.5.3}Implementación del frontend}{48}{subsection.2.5.3}%
-\contentsline {subsubsection}{Enrutamiento y selección dinámica de agentes}{51}{figure.caption.26}%
-\contentsline {subsubsection}{Integración de Grafana para visualización de métricas}{52}{lstnumber.2.7.13}%
-\contentsline {subsubsection}{Integración de Grafana en la interfaz Angular}{52}{lstnumber.2.7.13}%
-\contentsline {subsubsection}{Ejemplo de interacciones clave en el frontend}{53}{lstnumber.2.7.13}%
-\contentsline {paragraph}{Login y almacenamiento del token JWT}{53}{lstnumber.2.7.13}%
-\contentsline {paragraph}{Carga de alertas del agente seleccionado}{53}{lstnumber.2.8.4}%
-\contentsline {subsubsection}{Resumen del frontend}{53}{lstnumber.2.9.3}%
-\contentsline {section}{\numberline {2.6}Script automático R-Snort}{54}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Instalador del agente: \texttt {snort-agent}}{54}{subsection.2.6.1}%
-\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{54}{subsection.2.6.1}%
-\contentsline {paragraph}{Script \texttt {01\_install\_db.sh:}}{55}{lstnumber.2.10.7}%
-\contentsline {paragraph}{Script \texttt {02\_configure\_snort.sh:}}{55}{lstnumber.2.10.7}%
-\contentsline {paragraph}{Script \texttt {03\_log\_rotation.sh:}}{55}{lstnumber.2.11.3}%
-\contentsline {paragraph}{Script \texttt {04\_setup\_grafana.sh:}}{55}{lstnumber.2.11.3}%
-\contentsline {paragraph}{Script \texttt {05\_setup\_python\_env.sh:}}{55}{lstnumber.2.11.3}%
-\contentsline {paragraph}{Script \texttt {06\_install\_services.sh:}}{55}{lstnumber.2.11.3}%
-\contentsline {paragraph}{Script \texttt {07\_import\_dashboard.sh:}}{55}{lstnumber.2.11.3}%
-\contentsline {paragraph}{Scripts Python: arquitectura y lógica interna}{56}{lstnumber.2.11.3}%
-\contentsline {subsection}{\numberline {2.6.2}Instalador del módulo central: \texttt {r-snort-central-module}}{56}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{56}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {01\_dependencies.sh:}}{56}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {02\_compile\_frontend.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {03\_compile\_backend.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {04\_prepare\_db.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {05\_add\_admin\_user.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {06\_setup\_agents.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {07\_install\_services.sh:}}{57}{subsection.2.6.2}%
-\contentsline {paragraph}{Script \texttt {run\_all.sh:}}{57}{lstnumber.2.13.6}%
-\contentsline {chapter}{\numberline {3}Caso práctico: utilización del frontend de R-Snort}{60}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Entorno de trabajo}{60}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Instalación del sistema}{62}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Preparación de la instalación}{63}{subsection.3.2.1}%
-\contentsline {subsubsection}{Instalación del sistema operativo en las Raspberry Pi}{63}{subsection.3.2.1}%
-\contentsline {subsubsection}{Conexiones físicas de la Raspberry Pi 5}{64}{figure.caption.32}%
-\contentsline {subsubsection}{Configuración del switch y port mirroring}{65}{figure.caption.33}%
-\contentsline {subsubsection}{Conexión del agente en la subred secundaria}{66}{figure.caption.35}%
-\contentsline {subsubsection}{Conexión del switch de la subred secundaria}{67}{figure.caption.36}%
-\contentsline {subsubsection}{Instalación de Snort 3 personalizado}{67}{figure.caption.37}%
-\contentsline {subsection}{\numberline {3.2.2}Instalación del agente R-Snort}{69}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Instalación del módulo central de R-Snort}{70}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Utilización y pruebas}{72}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Configuración}{72}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{76}{subsection.3.3.2}%
-\contentsline {subsubsection}{Monitorización del rendimiento en funcionamiento normal}{76}{subsection.3.3.2}%
-\contentsline {subsubsection}{Análisis de rendimiento en situación de estrés}{77}{figure.caption.55}%
-\contentsline {subsection}{\numberline {3.3.3}Pruebas}{81}{subsection.3.3.3}%
-\contentsline {subsubsection}{Registro de alertas masivas}{81}{subsection.3.3.3}%
-\contentsline {subsubsection}{Pruebas funcionales}{82}{figure.caption.60}%
-\contentsline {paragraph}{Descarga de logs archivados}{82}{figure.caption.60}%
-\contentsline {paragraph}{Exportación de alertas activas en CSV}{83}{figure.caption.61}%
-\contentsline {paragraph}{Añadir reglas personalizadas a Snort}{83}{figure.caption.62}%
-\contentsline {paragraph}{Eliminación segura de reglas}{84}{figure.caption.64}%
-\contentsline {paragraph}{Gestión de agentes y eliminación con verificación}{85}{figure.caption.65}%
-\contentsline {paragraph}{Supervisión de servicios y reinicio desde la interfaz}{85}{figure.caption.66}%
-\contentsline {section}{\numberline {3.4}Resumen}{86}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Resultados y discusión}{88}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultados obtenidos}{88}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Eficacia en la detección de amenazas}{88}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Rendimiento y escalabilidad}{88}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Usabilidad y experiencia de usuario}{89}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Limitaciones y consideraciones}{89}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Discusión}{89}{section.4.2}%
-\contentsline {chapter}{Conclusiones}{92}{chapter*.68}%
-\contentsline {chapter}{Trabajo futuro}{95}{chapter*.69}%
-\contentsline {chapter}{Bibliografía}{97}{section*.70}%
-\contentsline {chapter}{Anexo I. Descripción de la plataforma}{100}{appendix*.72}%
-\contentsline {chapter}{Anexo II. Repositorios y guía rápida de instalación}{103}{appendix*.73}%
+\contentsline {section}{\numberline {1.3}Frontends más utilizados de Snort}{12}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Comparativa de interfaces web}{17}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Interfaz web de Suricata en pfSense}{17}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Interfaz BASE para Snort}{18}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Interfaz web de Suricata en T-Pot}{19}{subsection.1.4.3}%
+\contentsline {chapter}{\numberline {2}Diseño e implantación de un frontend para R-Snort}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introducción}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Especificaciones del sistema}{25}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Entorno de trabajo}{26}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Hardware: Raspberry Pi como agente de seguridad}{27}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Software: Snort 3 y complementos}{28}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Entorno de desarrollo}{31}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Diseño del frontend}{32}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Diseño de la arquitectura}{32}{subsection.2.4.1}%
+\contentsline {subsubsection}{Agentes Snort distribuidos (\texttt {snort-agent})}{32}{subsection.2.4.1}%
+\contentsline {subsubsection}{Módulo central (coordinador + interfaz web)}{33}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Diseño de la interfaz de usuario}{35}{subsection.2.4.2}%
+\contentsline {subsubsection}{Frontend web (Angular SPA)}{35}{subsection.2.4.2}%
+\contentsline {subsubsection}{Mecanismo de autenticación y control de acceso}{37}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Esquema de la base de datos}{37}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Implementación y configuración del sistema}{40}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Snort 3: configuración de salida de alertas en JSON}{40}{subsection.2.5.1}%
+\contentsline {subsubsection}{Servicio de ingesta de alertas en base de datos}{41}{lstnumber.2.1.6}%
+\contentsline {subsubsection}{Servicio de métricas y monitorización del agente}{42}{figure.caption.25}%
+\contentsline {subsubsection}{Rotación y archivado de logs de Snort}{43}{figure.caption.26}%
+\contentsline {subsubsection}{Integración de Grafana con base de datos MariaDB}{44}{figure.caption.27}%
+\contentsline {subsection}{\numberline {2.5.2}Implementación del backend}{46}{subsection.2.5.2}%
+\contentsline {subsubsection}{Backend de los agentes (FastAPI)}{46}{subsection.2.5.2}%
+\contentsline {subsubsection}{Backend central (Spring Boot)}{48}{lstnumber.2.5.6}%
+\contentsline {subsubsection}{Resumen del backend}{51}{Item.8}%
+\contentsline {subsection}{\numberline {2.5.3}Implementación del frontend}{52}{subsection.2.5.3}%
+\contentsline {subsubsection}{Enrutamiento y selección dinámica de agentes}{55}{figure.caption.37}%
+\contentsline {subsubsection}{Integración de Grafana para visualización de métricas}{56}{lstnumber.2.7.13}%
+\contentsline {subsubsection}{Integración de Grafana en la interfaz Angular}{56}{lstnumber.2.7.13}%
+\contentsline {subsubsection}{Ejemplo de interacciones en el frontend}{57}{lstnumber.2.7.13}%
+\contentsline {paragraph}{Login y almacenamiento del token JWT}{57}{lstnumber.2.7.13}%
+\contentsline {paragraph}{Carga de alertas del agente seleccionado}{57}{lstnumber.2.8.4}%
+\contentsline {subsubsection}{Resumen del frontend}{57}{lstnumber.2.9.3}%
+\contentsline {section}{\numberline {2.6}Script automático R-Snort}{58}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Instalador del agente: \texttt {snort-agent}}{58}{subsection.2.6.1}%
+\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{59}{subsection.2.6.1}%
+\contentsline {paragraph}{Script \texttt {01\_install\_db.sh:}}{59}{lstnumber.2.10.7}%
+\contentsline {paragraph}{Script \texttt {02\_configure\_snort.sh:}}{59}{lstnumber.2.10.7}%
+\contentsline {paragraph}{Script \texttt {03\_log\_rotation.sh:}}{59}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {04\_setup\_grafana.sh:}}{59}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {05\_setup\_python\_env.sh:}}{59}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {06\_install\_services.sh:}}{60}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Script \texttt {07\_import\_dashboard.sh:}}{60}{lstnumber.2.11.3}%
+\contentsline {paragraph}{Scripts Python: arquitectura y lógica interna}{60}{lstnumber.2.11.3}%
+\contentsline {subsection}{\numberline {2.6.2}Instalador del módulo central: \texttt {r-snort-central-module}}{61}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {00\_common.sh:}}{61}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {01\_dependencies.sh:}}{61}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {02\_compile\_frontend.sh:}}{61}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {03\_compile\_backend.sh:}}{62}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {04\_prepare\_db.sh:}}{62}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {05\_add\_admin\_user.sh:}}{62}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {06\_setup\_agents.sh:}}{62}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {07\_install\_services.sh:}}{62}{subsection.2.6.2}%
+\contentsline {paragraph}{Script \texttt {run\_all.sh:}}{62}{lstnumber.2.13.6}%
+\contentsline {chapter}{\numberline {3}Caso práctico: utilización del frontend de R-Snort}{65}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Entorno de trabajo}{65}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Instalación del sistema}{67}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Preparación de la instalación}{68}{subsection.3.2.1}%
+\contentsline {subsubsection}{Instalación del sistema operativo en las Raspberry Pi}{68}{subsection.3.2.1}%
+\contentsline {subsubsection}{Conexiones físicas de la Raspberry Pi 5}{69}{figure.caption.43}%
+\contentsline {subsubsection}{Configuración del switch y port mirroring}{70}{figure.caption.44}%
+\contentsline {subsubsection}{Conexión del agente en la subred secundaria}{71}{figure.caption.46}%
+\contentsline {subsubsection}{Conexión del switch de la subred secundaria}{72}{figure.caption.47}%
+\contentsline {subsubsection}{Instalación de Snort 3 personalizado}{72}{figure.caption.48}%
+\contentsline {subsection}{\numberline {3.2.2}Instalación del agente R-Snort}{74}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Instalación del módulo central de R-Snort}{75}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Utilización y pruebas}{77}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Configuración}{77}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{81}{subsection.3.3.2}%
+\contentsline {subsubsection}{Monitorización del rendimiento en funcionamiento normal}{81}{subsection.3.3.2}%
+\contentsline {subsubsection}{Análisis de rendimiento en situación de estrés}{82}{figure.caption.66}%
+\contentsline {subsection}{\numberline {3.3.3}Pruebas funcionales}{86}{subsection.3.3.3}%
+\contentsline {subsubsection}{Registro de alertas masivas}{86}{subsection.3.3.3}%
+\contentsline {subsubsection}{Recorrido de las funciones}{87}{figure.caption.71}%
+\contentsline {paragraph}{Descarga de logs archivados}{87}{figure.caption.71}%
+\contentsline {paragraph}{Exportación de alertas activas en CSV}{88}{figure.caption.72}%
+\contentsline {paragraph}{Añadir reglas personalizadas a Snort}{88}{figure.caption.73}%
+\contentsline {paragraph}{Eliminación segura de reglas}{89}{figure.caption.75}%
+\contentsline {paragraph}{Gestión de agentes y eliminación con verificación}{90}{figure.caption.76}%
+\contentsline {paragraph}{Supervisión de servicios y reinicio desde la interfaz}{90}{figure.caption.77}%
+\contentsline {section}{\numberline {3.4}Resumen}{91}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Resultados y discusión}{93}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados obtenidos}{93}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Eficacia en la detección de amenazas}{93}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Rendimiento y escalabilidad}{93}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Usabilidad y experiencia de usuario}{94}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Limitaciones y consideraciones}{94}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Discusión}{94}{section.4.2}%
+\contentsline {chapter}{Conclusiones}{97}{chapter*.79}%
+\contentsline {chapter}{Trabajo futuro}{100}{chapter*.80}%
+\contentsline {chapter}{Bibliografía}{101}{section*.81}%
+\contentsline {chapter}{Anexo I. Descripción de la plataforma}{104}{appendix*.83}%
+\contentsline {chapter}{Anexo II. Repositorios y guía rápida de instalación}{107}{appendix*.84}%
