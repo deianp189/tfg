@@ -81,9 +81,20 @@
 \contentsline {section}{\numberline {3.3}Utilización y pruebas}{68}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Configuración}{68}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{72}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Resultados}{74}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resumen}{74}{section.4.1}%
-\contentsline {chapter}{Conclusiones}{76}{chapter*.51}%
-\contentsline {chapter}{Trabajo futuro}{78}{chapter*.52}%
-\contentsline {chapter}{Bibliografía}{79}{section*.53}%
-\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{82}{appendix.Alph1}%
+\contentsline {subsubsection}{Monitorización del rendimiento en funcionamiento normal}{72}{subsection.3.3.2}%
+\contentsline {subsubsection}{Análisis de rendimiento en situación de estrés}{73}{figure.caption.52}%
+\contentsline {subsection}{\numberline {3.3.3}Pruebas}{77}{subsection.3.3.3}%
+\contentsline {subsubsection}{Registro de alertas masivas}{77}{subsection.3.3.3}%
+\contentsline {subsubsection}{Pruebas funcionales}{78}{figure.caption.57}%
+\contentsline {paragraph}{Descarga de logs archivados}{78}{figure.caption.57}%
+\contentsline {paragraph}{Exportación de alertas activas en CSV}{79}{figure.caption.58}%
+\contentsline {paragraph}{Añadir reglas personalizadas a Snort}{79}{figure.caption.59}%
+\contentsline {paragraph}{Eliminación segura de reglas}{80}{figure.caption.61}%
+\contentsline {paragraph}{Gestión de agentes y eliminación con verificación}{81}{figure.caption.62}%
+\contentsline {paragraph}{Supervisión de servicios y reinicio desde la interfaz}{81}{figure.caption.63}%
+\contentsline {chapter}{\numberline {4}Resultados}{83}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resumen}{83}{section.4.1}%
+\contentsline {chapter}{Conclusiones}{85}{chapter*.65}%
+\contentsline {chapter}{Trabajo futuro}{87}{chapter*.66}%
+\contentsline {chapter}{Bibliografía}{89}{section*.67}%
+\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{92}{appendix.Alph1}%

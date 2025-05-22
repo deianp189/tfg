@@ -251,12 +251,54 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{72}{figure.caption.50}\protected@file@percent }
 \newlabel{fig:estado-multiple-agentes}{{3.23}{72}{Gestión avanzada de agentes Snort desde la interfaz}{figure.caption.50}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pruebas de rendimiento}{72}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Resultados}{74}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Monitorización del rendimiento en funcionamiento normal}{72}{subsection.3.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces Temperatura de la CPU durante funcionamiento normal.}}{73}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:temp-normal}{{3.24}{73}{Temperatura de la CPU durante funcionamiento normal}{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces Consumo de CPU y uso de disco durante funcionamiento normal.}}{73}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:cpu-normal}{{3.25}{73}{Consumo de CPU y uso de disco durante funcionamiento normal}{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Análisis de rendimiento en situación de estrés}{73}{figure.caption.52}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Alertas registradas durante tráfico normal.}}{75}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:bench-alertas-normales}{{3.26}{75}{Alertas registradas durante tráfico normal}{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.27}{\ignorespaces Porcentaje de uso de CPU y disco durante el ataque.}}{75}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:bench-uso-cpu-disco}{{3.27}{75}{Porcentaje de uso de CPU y disco durante el ataque}{figure.caption.54}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.28}{\ignorespaces Temperatura de la CPU durante la fase de estrés.}}{75}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:bench-temp-cpu}{{3.28}{75}{Temperatura de la CPU durante la fase de estrés}{figure.caption.55}{}}
+\newlabel{lst:ataques-masivos}{{3.4}{76}{Script para generar ataques masivos contra R-Snort}{lstlisting.3.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.4}{\ignorespaces Script para generar ataques masivos contra R-Snort}}{76}{lstlisting.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Pruebas}{77}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Registro de alertas masivas}{77}{subsection.3.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.29}{\ignorespaces Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen.}}{78}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:alertas_masivas_grafana}{{3.29}{78}{Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen}{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga.}}{78}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:alertas_masivas_webapp}{{3.30}{78}{Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga}{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Pruebas funcionales}{78}{figure.caption.57}\protected@file@percent }
+\newlabel{sec:pruebas_funcionales}{{3.3.3}{78}{Pruebas funcionales}{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {paragraph}{Descarga de logs archivados}{78}{figure.caption.57}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.31}{\ignorespaces Descarga de archivos de logs archivados generados por el sistema de rotación.}}{79}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:descarga_logs_archivados}{{3.31}{79}{Descarga de archivos de logs archivados generados por el sistema de rotación}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {paragraph}{Exportación de alertas activas en CSV}{79}{figure.caption.58}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.32}{\ignorespaces Opciones de descarga de alertas activas por agente o globales en formato CSV.}}{79}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:descarga_alertas_csv}{{3.32}{79}{Opciones de descarga de alertas activas por agente o globales en formato CSV}{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Añadir reglas personalizadas a Snort}{79}{figure.caption.59}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.33}{\ignorespaces Inserción de una nueva regla de detección de conexiones SSH no autorizadas.}}{80}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:insertar_regla_ssh}{{3.33}{80}{Inserción de una nueva regla de detección de conexiones SSH no autorizadas}{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.34}{\ignorespaces Regla personalizada añadida correctamente al sistema del agente central.}}{80}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:regla_ssh_insertada}{{3.34}{80}{Regla personalizada añadida correctamente al sistema del agente central}{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {paragraph}{Eliminación segura de reglas}{80}{figure.caption.61}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.35}{\ignorespaces Confirmación de eliminación de una regla personalizada.}}{80}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:eliminar_regla}{{3.35}{80}{Confirmación de eliminación de una regla personalizada}{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {paragraph}{Gestión de agentes y eliminación con verificación}{81}{figure.caption.62}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.36}{\ignorespaces Verificación antes de eliminar un agente de la interfaz.}}{81}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:eliminar_agente}{{3.36}{81}{Verificación antes de eliminar un agente de la interfaz}{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {paragraph}{Supervisión de servicios y reinicio desde la interfaz}{81}{figure.caption.63}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.37}{\ignorespaces Estado de los servicios de los agentes y opción de reinicio remoto.}}{81}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:estado_servicios_agentes}{{3.37}{81}{Estado de los servicios de los agentes y opción de reinicio remoto}{figure.caption.64}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Resultados}{83}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Resumen}{74}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Conclusiones}{76}{chapter*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{78}{chapter*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Resumen}{83}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Conclusiones}{85}{chapter*.65}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Trabajo futuro}{87}{chapter*.66}\protected@file@percent }
 \bibcite{enisa2023}{1}
 \bibcite{google2024}{2}
 \bibcite{telefonica2023}{3}
@@ -268,7 +310,7 @@
 \bibcite{Sakura2020}{9}
 \bibcite{GrafanaForum2020}{10}
 \bibcite{SnortBlog2011}{11}
-\@writefile{toc}{\contentsline {chapter}{Bibliografía}{79}{section*.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliografía}{89}{section*.67}\protected@file@percent }
 \bibcite{SnorbyHelpnet2010}{12}
 \bibcite{SnortReport2010}{13}
 \bibcite{AanvalWiki}{14}
@@ -285,7 +327,7 @@
 \bibcite{grafana-snort-dashboard}{25}
 \bibcite{grafana-dashboard}{26}
 \bibcite{raspberrypi_software}{27}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{82}{appendix.Alph1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anexo A: Repositorio de R-SNORT}{92}{appendix.Alph1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{98}
+\gdef \@abspage@last{108}

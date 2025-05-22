@@ -46,5 +46,19 @@
 \contentsline {figure}{\numberline {3.21}{\ignorespaces Formulario para añadir un nuevo agente Snort.}}{71}{figure.caption.48}%
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Visualización de métricas del agente secundario.}}{71}{figure.caption.49}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{72}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Temperatura de la CPU durante funcionamiento normal.}}{73}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Consumo de CPU y uso de disco durante funcionamiento normal.}}{73}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Alertas registradas durante tráfico normal.}}{75}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Porcentaje de uso de CPU y disco durante el ataque.}}{75}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Temperatura de la CPU durante la fase de estrés.}}{75}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen.}}{78}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga.}}{78}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Descarga de archivos de logs archivados generados por el sistema de rotación.}}{79}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Opciones de descarga de alertas activas por agente o globales en formato CSV.}}{79}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Inserción de una nueva regla de detección de conexiones SSH no autorizadas.}}{80}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Regla personalizada añadida correctamente al sistema del agente central.}}{80}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Confirmación de eliminación de una regla personalizada.}}{80}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Verificación antes de eliminar un agente de la interfaz.}}{81}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Estado de los servicios de los agentes y opción de reinicio remoto.}}{81}{figure.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

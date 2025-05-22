@@ -1594,8 +1594,247 @@ Finalmente, en la vista de \textbf{Estado} ahora se muestran múltiples tarjetas
 
 \subsection{Pruebas de rendimiento}
 
+Gracias a que el propio diseño del módulo central de de R-Snort cuenta con métricas del sistema que se actualizan en tiempo real vamos a aprovechar estas con el fin de hacer unas pruebas de rendimiento bajo uso normal o moderado del sistema, es decir simplemente escuchando la red sin ningún tipo de ataque ni alteración que pueda disparar las alertas y posteriormente haremos un envio de datos masivos para tratar de comprobar la estabilidad del sistema y como responde ante dicho envio de datos.
 
+\subsubsection{Monitorización del rendimiento en funcionamiento normal}
 
+Para analizar el comportamiento del sistema R-Snort durante su funcionamiento ordinario, se ha optado por utilizar directamente los paneles de Grafana integrados en la interfaz web del módulo central. Esta decisión no solo permite evitar herramientas externas, sino que además ilustra la capacidad del propio sistema para autodiagnosticarse en tiempo real, un aspecto clave en entornos de monitorización profesional.
+
+Las métricas analizadas han sido las siguientes:
+
+\begin{itemize}
+	\item \textbf{Temperatura de la CPU}: Como se aprecia en la Figura~\ref{fig:temp-normal}, la temperatura del sistema se mantiene entre los 46 y 51 grados durante un intervalo prolongado de uso normal. Estas cifras se encuentran dentro de los márgenes aceptables para una Raspberry Pi 5 en carga moderada, lo cual indica una refrigeración adecuada y ausencia de sobrecalentamientos.
+	
+	\item \textbf{Uso de CPU (\%)}: Tal como muestra la Figura~\ref{fig:cpu-normal}, el consumo de CPU se mantiene mayoritariamente por debajo del 10\%, con algunos picos aislados que no superan el 30\%. Este comportamiento es coherente con un sistema que opera de manera eficiente, sin procesos en bucle ni sobrecargas injustificadas.
+	
+	\item \textbf{Uso de disco}: También representado en la Figura~\ref{fig:cpu-normal}, el uso del disco se estabiliza en torno al 7\% de capacidad total. Esta métrica sugiere que los logs y la base de datos de alertas no saturan el almacenamiento durante la operación diaria del sistema.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{benchmark/1.png}
+	\caption{Temperatura de la CPU durante funcionamiento normal.}
+	\label{fig:temp-normal}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{benchmark/2.png}
+	\caption{Consumo de CPU y uso de disco durante funcionamiento normal.}
+	\label{fig:cpu-normal}
+\end{figure}
+
+En conjunto, estos resultados permiten afirmar que R-Snort presenta un comportamiento estable y eficiente en condiciones de uso normales. Las gráficas no solo validan la correcta instalación de los scripts, sino también la eficacia de los servicios en ejecución, sin que se produzcan cuellos de botella ni compromisos en la estabilidad del sistema.
+
+\subsubsection{Análisis de rendimiento en situación de estrés}
+
+Para evaluar el comportamiento del sistema R-Snort ante un escenario de uso intensivo, se ha llevado a cabo una prueba de estrés basada en el envío masivo de paquetes desde varias terminales empleando \texttt{iperf3} contra la interfaz promiscua del agente central. Esta situación simula un ataque de denegación de servicio distribuido (DDoS), en el cual se pretende saturar tanto la red como los recursos del sistema, y evaluar la capacidad de detección y resistencia de la Raspberry Pi 5 actuando como nodo central.
+
+\subsubsection*{Descripción del experimento}
+Durante el experimento se han abierto múltiples instancias concurrentes de \texttt{iperf3}, generando tráfico simultáneo a través de diferentes puertos. A su vez, se ha mantenido Snort 3 activo con sus correspondientes preprocesadores y reglas personalizadas, recogiendo y analizando cada paquete de red. Las métricas de rendimiento se han recogido mediante Grafana, obteniendo series temporales de las siguientes variables clave:
+
+\begin{itemize}
+	\item Uso de CPU (\%).
+	\item Uso de disco (\%).
+	\item Temperatura de la CPU (ºC).
+	\item Alertas registradas por severidad y tipo.
+\end{itemize}
+
+\subsubsection*{Resultados observados}
+
+\begin{itemize}
+	\item En la Figura \ref{fig:bench-alertas-normales}, correspondiente al tráfico normal previo al ataque, se observa un número moderado de alertas, con predominancia de alertas de severidad baja o media, originadas principalmente por tráfico ICMP o DNS.
+	
+	\item En la Figura \ref{fig:bench-uso-cpu-disco}, tras iniciar la prueba de carga, se detecta un incremento inmediato y sostenido del uso de CPU, alcanzando picos superiores al 60\% de uso. Sin embargo, el uso de disco permanece estable, gracias al sistema de rotación de logs y al diseño eficiente del almacenamiento.
+	
+	\item La Figura \ref{fig:bench-temp-cpu} muestra el incremento progresivo de la temperatura del sistema, alcanzando máximos en torno a los 62 grados (con refrigeración) durante la fase más intensa del ataque. A pesar del aumento térmico, el sistema mantuvo la estabilidad operativa sin pérdidas de servicio.
+	
+\end{itemize}
+
+\subsubsection*{Conclusiones}
+Estas pruebas demuestran que el sistema R-Snort es capaz de soportar picos de carga elevados durante periodos prolongados sin comprometer la integridad de la plataforma. El uso sostenido de CPU y el aumento térmico son respuestas esperadas bajo estas condiciones, pero en ningún momento se observaron reinicios, errores del servicio o pérdida de conectividad. Este comportamiento refuerza la validez del diseño implementado para entornos SOHO donde la seguridad, la fiabilidad y la eficiencia energética son prioritarias.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{benchmark/3.png}
+	\caption{Alertas registradas durante tráfico normal.}
+	\label{fig:bench-alertas-normales}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{benchmark/5.png}
+	\caption{Porcentaje de uso de CPU y disco durante el ataque.}
+	\label{fig:bench-uso-cpu-disco}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{benchmark/4.png}
+	\caption{Temperatura de la CPU durante la fase de estrés.}
+	\label{fig:bench-temp-cpu}
+\end{figure}
+
+Para este ataque masivo con el objetivo de someter al sistema R-Snort a condiciones extremas y evaluar su capacidad de detección y estabilidad bajo situaciones de estrés, se diseñó un script que ejecuta múltiples ataques en paralelo. Este script fue lanzado desde una máquina externa WSL y permitió generar un volumen de tráfico malicioso elevado, simulando un escenario realista de intrusión.\newline
+
+Las pruebas se ha realizado activando simultáneamente diferentes vectores de ataque: un \textit{TCP SYN Flood}, un \textit{ICMP Flood}, un escaneo agresivo con \textit{nmap}, tráfico constante con \textit{iperf3}, y un intento limitado de fuerza bruta sobre el servicio \texttt{ssh} utilizando \textit{hydra}. Cada ejecución del script puede adaptarse para utilizar diferentes puertos de iperf, lo que permite lanzarlo desde varias terminales en paralelo sin conflictos.\newline
+
+El siguiente fragmento muestra el contenido del script utilizado:
+
+\begin{lstlisting}[language=bash,caption={Script para generar ataques masivos contra R-Snort},label={lst:ataques-masivos}]
+	# PUERTO UNICO POR INSTANCIA
+	PUERTO_IPERF="${1:-5201}"
+	
+	echo "[+] ATAQUE desde terminal con IPERF en puerto $PUERTO_IPERF"
+	echo "==============================================="
+	
+	# 1. TCP SYN Flood
+	echo "[1] Iniciando TCP SYN Flood con hping3..."
+	sudo hping3 -S --flood -p 80 $R_SNORT_IP &
+	
+	# 2. ICMP Flood
+	echo "[2] Iniciando ICMP Flood..."
+	sudo hping3 -1 --flood $R_SNORT_IP &
+	
+	# 3. Escaneo nmap agresivo
+	echo "[3] Lanzando escaneo Nmap agresivo..."
+	sudo nmap -sS -sU -T4 -A $R_SNORT_IP --reason --script "default" -p- &
+	
+	# 4. Tráfico continuo con iperf3 (en puerto variable)
+	echo "[4] Ejecutando iperf3 -c $R_SNORT_IP -p $PUERTO_IPERF ..."
+	iperf3 -c $R_SNORT_IP -p $PUERTO_IPERF -t 60 -b 100M &
+	
+	# 5. Ataque de fuerza bruta con hydra (limitado)
+	echo "[5] Simulando fuerza bruta con Hydra..."
+	hydra -l admin -p admin ssh://$R_SNORT_IP -t 4 -V -f &
+	
+	echo "==============================================="
+	echo "Todos los ataques están en ejecución. Observar las gráficas."
+\end{lstlisting}
+
+Este enfoque permitió verificar no solo la capacidad del sistema para generar alertas ante ataques múltiples, sino también analizar el rendimiento de la Raspberry Pi bajo carga, así como la eficacia del almacenamiento de alertas y la visualización en tiempo real mediante Grafana.
+
+\newpage
+
+\subsection{Pruebas}
+
+Para el apartado de pruebas se pretende verificar la estabilidad y eficiencia de la interfaz frontend de R-Snort ante un volumen extremo de alertas generado durante las pruebas de estrés con tráfico malicioso y las demás funcionalidades del ecosistema R-Snort.\newline
+
+\subsubsection{Registro de alertas masivas}
+
+Durante los benchmarks realizados en el apartado \textit{3.3.2 Benchmark de rendimiento}, se generaron decenas de miles de alertas mediante ataques simulados que incluían DDoS, escaneos agresivos y envíos masivos de paquetes ICMP, TCP y UDP con herramientas como \texttt{hping3}, \texttt{iperf3} y \texttt{nmap}. Como resultado, Snort detectó y registró más de \textbf{250.000 alertas} en un intervalo de pocas horas.\newline
+
+La interfaz de R-Snort, tanto en la vista de alertas como en el panel de Grafana incrustado, fue puesta a prueba visualizando este gran volumen de información. Se evaluaron los tiempos de carga, la fluidez al cambiar entre vistas y la capacidad de la base de datos para manejar consultas masivas sin cuellos de botella visibles.\newline
+
+\textbf{Resultado:}  
+A pesar del gran volumen de datos, la aplicación web se comportó de forma fluida y sin fallos. En la vista \texttt{Alertas}, se mostraron correctamente los conteos por severidad, así como las tablas paginadas con miles de resultados. Por otro lado, los dashboards de Grafana embebidos en la sección \texttt{Overview} actualizaron en tiempo real los gráficos de tendencias por severidad, tipos de alerta, IPs de origen y protocolos.\newline
+
+Este comportamiento confirma que R-Snort es capaz de operar eficazmente incluso en escenarios de saturación de red, cumpliendo así uno de sus objetivos clave como herramienta profesional para entornos empresariales.
+
+\textbf{Componentes implicados:}
+\begin{itemize}
+	\item Backend de ingestión de alertas (\texttt{ingest\_service.py})
+	\item API REST del agente y del módulo central
+	\item Base de datos MariaDB para almacenamiento de alertas
+	\item Frontend Angular (tablas, visualización por severidad)
+	\item Dashboards de Grafana incrustados (Overview)
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/1.png}
+	\caption{Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen.}
+	\label{fig:alertas_masivas_grafana}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/2.png}
+	\caption{Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga.}
+	\label{fig:alertas_masivas_webapp}
+\end{figure}
+
+\subsubsection{Pruebas funcionales}
+\label{sec:pruebas_funcionales}
+
+En esta sección se describen algunas de las funcionalidades adicionales del sistema R-Snort implementadas en la interfaz web, que no habían sido abordadas o lo fueron muy superficialmente en apartados anteriores. Estas funcionalidades están orientadas a facilitar el uso y mantenimiento del sistema por parte de un administrador de red, permitiendo gestionar reglas, supervisar el estado de los agentes, y acceder a los registros generados por Snort.
+
+\paragraph{Descarga de logs archivados}
+
+Una de las funcionalidades destacadas es el sistema de rotación y archivado de logs implementado en los agentes. Este sistema previene que los archivos de alertas crezcan indefinidamente, lo cual es especialmente útil en entornos con tráfico elevado. Los archivos rotados se comprimen automáticamente y se almacenan como copias de respaldo, accesibles desde la interfaz. Se ha incorporado un botón para descargar estos logs archivados, lo cual resulta especialmente útil para tareas de análisis forense o revisión posterior.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pruebas/3.png}
+	\caption{Descarga de archivos de logs archivados generados por el sistema de rotación.}
+	\label{fig:descarga_logs_archivados}
+\end{figure}
+
+\paragraph{Exportación de alertas activas en CSV}
+
+Además de los logs comprimidos, el sistema permite exportar las alertas activas en formato \texttt{.csv}, tanto para un agente específico como para todos los agentes de la red. Esta funcionalidad permite al administrador exportar la información y analizarla con herramientas externas como hojas de cálculo o entornos de análisis de datos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/4.png}
+	\caption{Opciones de descarga de alertas activas por agente o globales en formato CSV.}
+	\label{fig:descarga_alertas_csv}
+\end{figure}
+
+\paragraph{Añadir reglas personalizadas a Snort}
+
+En el módulo de gestión de reglas, el sistema permite añadir nuevas reglas personalizadas al archivo \texttt{custom.rules} del agente. El formulario de inserción verifica automáticamente que la regla no esté duplicada y que su sintaxis sea válida. En caso de error, se notifica al usuario de forma clara. A continuación, se muestra la creación de una nueva regla para detectar intentos de acceso externo al puerto 22 (SSH).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/5.png}
+	\caption{Inserción de una nueva regla de detección de conexiones SSH no autorizadas.}
+	\label{fig:insertar_regla_ssh}
+\end{figure}
+
+Una vez agregada, la regla aparece listada junto a las demás reglas activas. Esto permite al administrador confirmar su incorporación y tener una visión clara de las políticas de detección vigentes en el sistema.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/6.png}
+	\caption{Regla personalizada añadida correctamente al sistema del agente central.}
+	\label{fig:regla_ssh_insertada}
+\end{figure}
+
+\paragraph{Eliminación segura de reglas}
+
+Del mismo modo, el sistema permite eliminar reglas personalizadas de forma controlada. Cada eliminación requiere confirmación explícita por parte del usuario para evitar modificaciones accidentales.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pruebas/7.png}
+	\caption{Confirmación de eliminación de una regla personalizada.}
+	\label{fig:eliminar_regla}
+\end{figure}
+
+\paragraph{Gestión de agentes y eliminación con verificación}
+
+En cuanto a la gestión de agentes, el sistema permite también eliminar instancias previamente registradas. Dado que esta acción puede afectar la supervisión de una subred completa, el sistema solicita una doble confirmación, reforzando así la seguridad en las operaciones críticas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/8.png}
+	\caption{Verificación antes de eliminar un agente de la interfaz.}
+	\label{fig:eliminar_agente}
+\end{figure}
+
+\paragraph{Supervisión de servicios y reinicio desde la interfaz}
+
+Por último, el panel de estado permite visualizar en tiempo real la disponibilidad de los servicios principales de cada agente (Snort, ingestión de alertas y métricas del sistema). En caso de que algún servicio se encuentre caído o inactivo, el administrador puede reiniciarlo directamente desde la interfaz sin necesidad de acceso por terminal. Esto proporciona una herramienta de recuperación rápida ante fallos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pruebas/9.png}
+	\caption{Estado de los servicios de los agentes y opción de reinicio remoto.}
+	\label{fig:estado_servicios_agentes}
+\end{figure}
+
+Estas pruebas funcionales demuestran que el sistema R-Snort no solo es capaz de detectar tráfico sospechoso y generar alertas, sino que también proporciona un conjunto de herramientas completas para la administración y supervisión de agentes, reglas y registros, mejorando la capacidad operativa y reduciendo la necesidad de intervención manual.
 
 
 
