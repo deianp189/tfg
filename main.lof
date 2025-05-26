@@ -1,78 +1,85 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Cronograma de ejecución del TFG R-SNORT.}}{5}{figure.caption.5}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Comparativa de tiempo estimado vs. tiempo real por categoría.}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Cronograma de ejecución del TFG R-SNORT.}}{5}{figure.caption.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Comparativa de tiempo estimado vs. tiempo real por categoría.}}{5}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo proyecto R-Snort.}}{12}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Interfaz de BASE.}}{13}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Interfaz de Snort Report.}}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Interfaz de Aanval.}}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Interfaz de Sguil.}}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Interfaz de Snorby.}}{16}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Panel de alertas de Suricata en la interfaz web de pfSense.}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Consulta de BASE.}}{20}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Panel principal de Suricata en T-Pot.}}{21}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo proyecto R-Snort.}}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Interfaz de BASE.}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Interfaz de Snort Report.}}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Interfaz de Aanval.}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Interfaz de Sguil.}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Interfaz de Snorby.}}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Panel de alertas de Snort en la interfaz web de pfSense.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces BASE.}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Panel principal de Suricata en T-Pot.}}{21}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura general del sistema R-Snort.}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Esquema de despliegue de R-Snort en la red local.}}{28}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort.}}{34}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Tabla alertas.}}{37}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Tabla métricas.}}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla usuario.}}{38}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Tablas base de datos.}}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces BPMN del servicio de ingesta de alertas.}}{41}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces BPMN del servicio de ingesta de métricas.}}{42}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces BPMN del servicio de logrotate y archivado.}}{43}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Dashboard de Grafana adaptado para R-Snort.}}{44}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Diagrama de funcionamiento del agente.}}{45}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Documentación Swagger de la API de un agente R-Snort.}}{46}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Flujo de funcionamiento del backend.}}{51}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Vista general.}}{52}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Vista de alertas del agente seleccionado en la interfaz R-Snort.}}{52}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Reglas del sistema de R-Snort.}}{53}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Estado del agente seleccionado.}}{53}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Estado de los servicios de un agente individual.}}{54}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Diagrama de secuencia de interacción.}}{58}{figure.caption.38}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{60}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{62}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura general del sistema R-Snort.}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Esquema de despliegue de R-Snort en la red local.}}{28}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Uso de CPU de la Raspaberry Pi 5 bajo carga de trabajo habitual.}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Uso de la CPU de la Raspaberry Pi 5 bajo carga de trabajo extremo.}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Carga del sistema de la Raspaberry Pi 5 bajo en condiciones extremas.}}{29}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Esquema de la arquitectura distribuida de R-Snort.}}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Tabla alertas.}}{38}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Tabla métricas.}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Tabla usuario.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Tablas base de datos.}}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces BPMN del servicio de almacenamiento de alertas.}}{43}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces BPMN del servicio de almacenamiento de métricas.}}{44}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces BPMN del servicio de logrotate y archivado.}}{45}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Dashboard de Grafana adaptado para R-Snort.}}{47}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Diagrama de funcionamiento del agente.}}{48}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Documentación Swagger de la API de un agente R-Snort.}}{49}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Flujo de funcionamiento del backend.}}{53}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Vista general.}}{54}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Vista de alertas del agente seleccionado en la interfaz R-Snort.}}{55}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Reglas del sistema de R-Snort.}}{55}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Estado del agente seleccionado.}}{56}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Estado de los servicios de un agente individual.}}{56}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Diagrama de secuencia de interacción.}}{60}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Proceso detallado de instalación del agente R-Snort.}}{63}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Proceso escalonado de instalación del módulo central de R-Snort.}}{65}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort.}}{65}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager.}}{69}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Conexión física de la Raspberry Pi 5 como módulo central.}}{70}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Conexiones del switch.}}{70}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuración del mirroring.}}{71}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi 3 actuando como agente.}}{71}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Conexiones del switch secundario.}}{72}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Inicio de la instalación del agente.}}{73}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Resumen tras la instalación.}}{73}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Inicio de la instalación del agente.}}{74}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Finalización y resumen del agente instalado.}}{75}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Inicio de la instalación del módulo central.}}{75}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Finalización y resumen del módulo central.}}{76}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla de inicio de sesión del sistema R-Snort.}}{77}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Panel general con métricas y alertas.}}{77}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Panel de alertas clasificadas por severidad.}}{78}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Gestión de reglas Snort desde la interfaz.}}{78}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Monitorización de temperatura, CPU y estado del servicio.}}{79}{figure.caption.59}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Estado detallado del agente central.}}{79}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Menú de selección de agentes activos.}}{80}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Formulario para añadir un nuevo agente Snort.}}{80}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Visualización de métricas del agente secundario.}}{80}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{81}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Temperatura de la CPU durante funcionamiento normal.}}{82}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Consumo de CPU y uso de disco durante funcionamiento normal.}}{82}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Alertas registradas durante tráfico normal.}}{84}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Porcentaje de uso de CPU y disco durante el ataque.}}{84}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Temperatura de la CPU durante la fase de estrés.}}{84}{figure.caption.69}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen.}}{87}{figure.caption.70}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga.}}{87}{figure.caption.71}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Descarga de archivos de logs archivados generados por el sistema de rotación.}}{88}{figure.caption.72}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces Opciones de descarga de alertas activas por agente o globales en formato CSV.}}{88}{figure.caption.73}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces Inserción de una nueva regla de detección de conexiones SSH no autorizadas.}}{89}{figure.caption.74}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Regla personalizada añadida correctamente al sistema del agente central.}}{89}{figure.caption.75}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Confirmación de eliminación de una regla personalizada.}}{89}{figure.caption.76}%
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Verificación antes de eliminar un agente de la interfaz.}}{90}{figure.caption.77}%
-\contentsline {figure}{\numberline {3.37}{\ignorespaces Estado de los servicios de los agentes y opción de reinicio remoto.}}{90}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Funcionamiento del sistema R-Snort en modo mononodo.}}{67}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema lógico de red con múltiples agentes Snort y módulo central R-Snort.}}{68}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Proceso de escritura de Ubuntu Server 25.04 (64-bit) en una Raspberry Pi 5 mediante Raspberry Pi Imager.}}{72}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Conexión física de la Raspberry Pi 5 como módulo central.}}{73}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Conexiones del switch.}}{73}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Configuración del mirroring.}}{74}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Raspberry Pi 3 actuando como agente.}}{74}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Conexiones del switch secundario.}}{75}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Inicio de la instalación del agente.}}{76}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Resumen tras la instalación.}}{76}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Inicio de la instalación del agente.}}{77}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Finalización y resumen del agente instalado.}}{78}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Inicio de la instalación del módulo central.}}{78}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Finalización y resumen del módulo central.}}{79}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Pantalla de inicio de sesión del sistema R-Snort.}}{80}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Panel general con métricas y alertas.}}{80}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Panel de alertas clasificadas por severidad.}}{81}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Gestión de reglas Snort desde la interfaz.}}{81}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Monitorización de temperatura, CPU y estado del servicio.}}{82}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Estado detallado del agente central.}}{82}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Menú de selección de agentes activos.}}{83}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Formulario para añadir un nuevo agente Snort.}}{83}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Visualización de métricas del agente secundario.}}{83}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Gestión avanzada de agentes Snort desde la interfaz.}}{84}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Temperatura de la CPU durante funcionamiento normal.}}{85}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Consumo de CPU y uso de disco durante funcionamiento normal.}}{85}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Alertas registradas durante tráfico normal.}}{87}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Porcentaje de uso de CPU y disco durante el ataque.}}{87}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Temperatura de la CPU durante la fase de estrés.}}{87}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Dashboard de Grafana mostrando más de 250.000 alertas tras una prueba de estrés. Se observan tendencias por severidad, protocolo e IPs de origen.}}{90}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Panel de alertas en la aplicación web con visualización correcta de alertas severas, medias y bajas tras las pruebas de carga.}}{90}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Descarga de archivos de logs archivados generados por el sistema de rotación.}}{91}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Opciones de descarga de alertas activas por agente o globales en formato CSV.}}{91}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Inserción de una nueva regla de detección de conexiones SSH no autorizadas.}}{92}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Regla personalizada añadida correctamente al sistema del agente central.}}{92}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Confirmación de eliminación de una regla personalizada.}}{92}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Verificación antes de eliminar un agente de la interfaz.}}{93}{figure.caption.80}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Estado de los servicios de los agentes y opción de reinicio remoto.}}{93}{figure.caption.81}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Ejemplo de documentación y guía de inicio rápido disponible en el repositorio del agente.}}{107}{figure.caption.85}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Vista del repositorio y estructura de archivos del módulo central de R-Snort.}}{108}{figure.caption.86}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de funcionalidades destacadas y guía visual en el README de la WebApp.}}{109}{figure.caption.87}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Ejemplo de documentación y guía de inicio rápido disponible en el repositorio del agente.}}{112}{figure.caption.86}%
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Vista del repositorio y estructura de archivos del módulo central de R-Snort.}}{113}{figure.caption.87}%
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Ejemplo de funcionalidades destacadas y guía visual en el README de la WebApp.}}{114}{figure.caption.88}%
+\addvspace {10\p@ }
