@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.17)  26 MAY 2025 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.17)  3 JUN 2025 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,8 +990,9 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15
-2.
+\c@anexo=\count357
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 16
+9.
 
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -999,39 +1000,35 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count357
+\l__color_backend_stack_int=\count358
 \l__pdf_internal_box=\box94
 ) (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
-
-
-LaTeX Warning: Label `lst:instalacion-snort-agent' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Info: Redefining \. on input line 152.
-LaTeX Info: Redefining \% on input line 152.
-Package hyperref Info: Link coloring OFF on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+Package hyperref Info: Link coloring OFF on input line 169.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1040,16 +1037,16 @@ Package hyperref Info: Link coloring OFF on input line 152.
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count358
+\scratchcounter=\count359
 \scratchdimen=\dimen308
 \scratchbox=\box95
-\nofMPsegments=\count359
-\nofMParguments=\count360
+\nofMPsegments=\count360
+\nofMParguments=\count361
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count361
+\MPscratchCnt=\count362
 \MPscratchDim=\dimen309
-\MPnumerator=\count362
-\makeMPintoPDFobject=\count363
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
 \everyMPtoPDFconversion=\toks47
 )
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1096,7 +1093,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count364
+\c@lstlisting=\count365
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1116,10 +1113,10 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 pdfTeX warning: pdflatex.exe (file ./portada.pdf): PDF inclusion: found PDF ver
 sion <1.7>, but at most version <1.5> allowed
-<portada.pdf, id=297, 597.62169pt x 845.16069pt>
+<portada.pdf, id=286, 597.62169pt x 845.16069pt>
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf>
-Package pdftex.def Info: portada.pdf  used on input line 158.
+Package pdftex.def Info: portada.pdf  used on input line 175.
 (pdftex.def)             Requested size: 597.62022pt x 845.15863pt.
 
 
@@ -1129,26 +1126,26 @@ sion <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./portada.pdf): PDF inclusion: found PDF ver
 sion <1.7>, but at most version <1.5> allowed
-<portada.pdf, id=299, page=1, 597.62169pt x 845.16069pt>
+<portada.pdf, id=288, page=1, 597.62169pt x 845.16069pt>
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf, page 1>
-Package pdftex.def Info: portada.pdf , page1 used on input line 158.
+Package pdftex.def Info: portada.pdf , page1 used on input line 175.
 (pdftex.def)             Requested size: 597.62022pt x 845.15863pt.
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf, page 1>
-Package pdftex.def Info: portada.pdf , page1 used on input line 158.
+Package pdftex.def Info: portada.pdf , page1 used on input line 175.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf, page 1>
-Package pdftex.def Info: portada.pdf , page1 used on input line 158.
+Package pdftex.def Info: portada.pdf , page1 used on input line 175.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf, page 1>
-Package pdftex.def Info: portada.pdf , page1 used on input line 158.
+Package pdftex.def Info: portada.pdf , page1 used on input line 175.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: portada.pdf Graphic file (type pdf)
 <use portada.pdf, page 1>
-Package pdftex.def Info: portada.pdf , page1 used on input line 158.
+Package pdftex.def Info: portada.pdf , page1 used on input line 175.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 [1
 
@@ -1157,25 +1154,25 @@ Package pdftex.def Info: portada.pdf , page1 used on input line 158.
  <./portada.pdf>] [2
 
 ]
-<adicional/cc.xlarge.png, id=336, 1027.84pt x 1027.84pt>
+<adicional/cc.xlarge.png, id=325, 1027.84pt x 1027.84pt>
 File: adicional/cc.xlarge.png Graphic file (type png)
 <use adicional/cc.xlarge.png>
-Package pdftex.def Info: adicional/cc.xlarge.png  used on input line 171.
+Package pdftex.def Info: adicional/cc.xlarge.png  used on input line 188.
 (pdftex.def)             Requested size: 136.57462pt x 136.57239pt.
  [3{C:/Users/deian/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/d
 eian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./adicional/c
 c.xlarge.png>] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
@@ -1216,7 +1213,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 49
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 47
 .
 
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
@@ -1226,38 +1223,35 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-LaTeX Info: Redefining \. on input line 212.
-LaTeX Info: Redefining \% on input line 212.
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
 
 [8] (main.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [9]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
  [10])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
- [11] (main.lot
+LaTeX Info: Redefining \. on input line 234.
+LaTeX Info: Redefining \% on input line 234.
+ [11] [12] (main.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [12] [13]
-LaTeX Info: Redefining \. on input line 229.
-LaTeX Info: Redefining \% on input line 229.
- [14
-
-] (main.lol)
+ [13] [14] (main.lol)
 \tf@lol=\write8
 \openout8 = `main.lol'.
 
- [15] [16
+ [15
+
+] [16
 
 ]
 [17
@@ -1265,943 +1259,1027 @@ LaTeX Info: Redefining \% on input line 229.
 ] [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 280--282
+Cap\'{\i }tulo 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 [1
 
 ]
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 290.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-LaTeX Info: Redefining \. on input line 299.
-LaTeX Info: Redefining \% on input line 299.
+LaTeX Info: Redefining \. on input line 319.
+LaTeX Info: Redefining \% on input line 319.
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-LaTeX Info: Redefining \. on input line 320.
-LaTeX Info: Redefining \% on input line 320.
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
 [3]
-LaTeX Info: Redefining \. on input line 338.
-LaTeX Info: Redefining \% on input line 338.
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
  [4]
 <cronologia/1.png, id=717, 722.7pt x 433.62pt>
 File: cronologia/1.png Graphic file (type png)
 <use cronologia/1.png>
-Package pdftex.def Info: cronologia/1.png  used on input line 346.
-(pdftex.def)             Requested size: 318.66948pt x 191.20361pt.
-<cronologia/2.png, id=718, 867.24pt x 578.16pt>
+Package pdftex.def Info: cronologia/1.png  used on input line 365.
+(pdftex.def)             Requested size: 364.19667pt x 218.51653pt.
+<cronologia/2.png, id=718, 1387.584pt x 698.8509pt>
 File: cronologia/2.png Graphic file (type png)
 <use cronologia/2.png>
-Package pdftex.def Info: cronologia/2.png  used on input line 353.
-(pdftex.def)             Requested size: 318.66948pt x 212.44257pt.
-LaTeX Info: Redefining \. on input line 358.
-LaTeX Info: Redefining \% on input line 358.
+Package pdftex.def Info: cronologia/2.png  used on input line 372.
+(pdftex.def)             Requested size: 409.71692pt x 206.35117pt.
+LaTeX Info: Redefining \. on input line 377.
+LaTeX Info: Redefining \% on input line 377.
  [5 <./cronologia/1.png> <./cronologia/2.png>]
-LaTeX Info: Redefining \. on input line 390.
-LaTeX Info: Redefining \% on input line 390.
- [6]
-LaTeX Info: Redefining \. on input line 402.
-LaTeX Info: Redefining \% on input line 402.
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+LaTeX Info: Redefining \. on input line 401.
+LaTeX Info: Redefining \% on input line 401.
+[6]
+LaTeX Info: Redefining \. on input line 422.
+LaTeX Info: Redefining \% on input line 422.
  [7] [8
 
 ]
-Cap\'{\i }tulo 1.
+Cap\'{\i }tulo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
-<documento/16.png, id=760, 1027.84pt x 513.92pt>
+<documento/16.png, id=761, 1027.84pt x 513.92pt>
 File: documento/16.png Graphic file (type png)
 <use documento/16.png>
-Package pdftex.def Info: documento/16.png  used on input line 435.
+Package pdftex.def Info: documento/16.png  used on input line 455.
 (pdftex.def)             Requested size: 218.51521pt x 109.25163pt.
-<documento/17.png, id=761, 1927.2pt x 1202.4925pt>
+<documento/17.png, id=762, 1927.2pt x 1202.4925pt>
 File: documento/17.png Graphic file (type png)
 <use documento/17.png>
-Package pdftex.def Info: documento/17.png  used on input line 442.
+Package pdftex.def Info: documento/17.png  used on input line 462.
 (pdftex.def)             Requested size: 218.51521pt x 136.3296pt.
-<logo.png, id=762, 1084.05pt x 1084.05pt>
+<logo.png, id=764, 1084.05pt x 1084.05pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 454.
-(pdftex.def)             Requested size: 91.04742pt x 91.04303pt.
+Package pdftex.def Info: logo.png  used on input line 475.
+(pdftex.def)             Requested size: 182.09486pt x 182.08607pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
-LaTeX Info: Redefining \. on input line 462.
-LaTeX Info: Redefining \% on input line 462.
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [11 <./documento/16.png> <./documento/17.png>]
-<documento/18.png, id=771, 520.19344pt x 373.395pt>
+<documento/18.png, id=773, 520.19344pt x 373.395pt>
 File: documento/18.png Graphic file (type png)
 <use documento/18.png>
-Package pdftex.def Info: documento/18.png  used on input line 467.
+Package pdftex.def Info: documento/18.png  used on input line 488.
 (pdftex.def)             Requested size: 227.62206pt x 163.3884pt.
-LaTeX Info: Redefining \. on input line 471.
-LaTeX Info: Redefining \% on input line 471.
- [12 <./logo.png>]
-<documento/19.png, id=779, 878.28125pt x 720.6925pt>
-File: documento/19.png Graphic file (type png)
-<use documento/19.png>
-Package pdftex.def Info: documento/19.png  used on input line 476.
-(pdftex.def)             Requested size: 273.14923pt x 224.13815pt.
-LaTeX Info: Redefining \. on input line 482.
-LaTeX Info: Redefining \% on input line 482.
- [13 <./documento/18.png> <./documento/19.png>]
-<documento/20.png, id=788, 1284.8pt x 792.9625pt>
-File: documento/20.png Graphic file (type png)
-<use documento/20.png>
-Package pdftex.def Info: documento/20.png  used on input line 485.
-(pdftex.def)             Requested size: 273.14923pt x 168.58397pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
-
- []
-
 LaTeX Info: Redefining \. on input line 492.
 LaTeX Info: Redefining \% on input line 492.
-[14 <./documento/20.png>]
-<documento/21.png, id=797, 1214.5375pt x 816.04875pt>
-File: documento/21.png Graphic file (type png)
-<use documento/21.png>
-Package pdftex.def Info: documento/21.png  used on input line 495.
-(pdftex.def)             Requested size: 273.14923pt x 183.52834pt.
-LaTeX Info: Redefining \. on input line 501.
-LaTeX Info: Redefining \% on input line 501.
- [15 <./documento/21.png>]
-<documento/22.png, id=804, 1027.84pt x 681.54625pt>
-File: documento/22.png Graphic file (type png)
-<use documento/22.png>
-Package pdftex.def Info: documento/22.png  used on input line 504.
-(pdftex.def)             Requested size: 273.14923pt x 181.11847pt.
-LaTeX Info: Redefining \. on input line 510.
-LaTeX Info: Redefining \% on input line 510.
- [16 <./documento/22.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
+[12 <./logo.png>]
+<documento/19.png, id=783, 878.28125pt x 720.6925pt>
+File: documento/19.png Graphic file (type png)
+<use documento/19.png>
+Package pdftex.def Info: documento/19.png  used on input line 497.
+(pdftex.def)             Requested size: 273.14923pt x 224.13815pt.
+LaTeX Info: Redefining \. on input line 503.
+LaTeX Info: Redefining \% on input line 503.
+
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
+[13 <./documento/18.png> <./documento/19.png>]
+<documento/20.png, id=793, 1284.8pt x 792.9625pt>
+File: documento/20.png Graphic file (type png)
+<use documento/20.png>
+Package pdftex.def Info: documento/20.png  used on input line 506.
+(pdftex.def)             Requested size: 273.14923pt x 168.58397pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
+LaTeX Info: Redefining \. on input line 513.
+LaTeX Info: Redefining \% on input line 513.
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--516
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
+[14 <./documento/20.png>]
+<documento/21.png, id=803, 1214.5375pt x 816.04875pt>
+File: documento/21.png Graphic file (type png)
+<use documento/21.png>
+Package pdftex.def Info: documento/21.png  used on input line 516.
+(pdftex.def)             Requested size: 273.14923pt x 183.52834pt.
+LaTeX Info: Redefining \. on input line 522.
+LaTeX Info: Redefining \% on input line 522.
+
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
+[15 <./documento/21.png>]
+<documento/22.png, id=811, 1027.84pt x 681.54625pt>
+File: documento/22.png Graphic file (type png)
+<use documento/22.png>
+Package pdftex.def Info: documento/22.png  used on input line 525.
+(pdftex.def)             Requested size: 273.14923pt x 181.11847pt.
+LaTeX Info: Redefining \. on input line 531.
+LaTeX Info: Redefining \% on input line 531.
+
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
+[16 <./documento/22.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
-LaTeX Info: Redefining \. on input line 518.
-LaTeX Info: Redefining \% on input line 518.
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+LaTeX Info: Redefining \. on input line 539.
+LaTeX Info: Redefining \% on input line 539.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [17]
-<documento/1.png, id=820, 1183.42125pt x 1103.12125pt>
+<documento/1.png, id=827, 1183.42125pt x 1103.12125pt>
 File: documento/1.png Graphic file (type png)
 <use documento/1.png>
-Package pdftex.def Info: documento/1.png  used on input line 523.
+Package pdftex.def Info: documento/1.png  used on input line 544.
 (pdftex.def)             Requested size: 364.19667pt x 339.47289pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
-LaTeX Info: Redefining \. on input line 530.
-LaTeX Info: Redefining \% on input line 530.
+LaTeX Info: Redefining \. on input line 551.
+LaTeX Info: Redefining \% on input line 551.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [18 <./documento/1.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 531--533
+Underfull \hbox (badness 10000) in paragraph at lines 552--554
 
  []
 
-<documento/2.png, id=827, 241.8636pt x 250.536pt>
+<documento/2.png, id=834, 241.8636pt x 250.536pt>
 File: documento/2.png Graphic file (type png)
 <use documento/2.png>
-Package pdftex.def Info: documento/2.png  used on input line 536.
+Package pdftex.def Info: documento/2.png  used on input line 557.
 (pdftex.def)             Requested size: 273.14923pt x 282.96474pt.
-LaTeX Info: Redefining \. on input line 542.
-LaTeX Info: Redefining \% on input line 542.
+LaTeX Info: Redefining \. on input line 563.
+LaTeX Info: Redefining \% on input line 563.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [19 <./documento/2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 544--545
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
 
  []
 
-<documento/3.png, id=836, 1360.33218pt x 682.80093pt>
+<documento/3.png, id=843, 1360.33218pt x 682.80093pt>
 File: documento/3.png Graphic file (type png)
 <use documento/3.png>
-Package pdftex.def Info: documento/3.png  used on input line 552.
+Package pdftex.def Info: documento/3.png  used on input line 573.
 (pdftex.def)             Requested size: 409.71692pt x 205.64409pt.
-LaTeX Info: Redefining \. on input line 556.
-LaTeX Info: Redefining \% on input line 556.
+LaTeX Info: Redefining \. on input line 577.
+LaTeX Info: Redefining \% on input line 577.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
-LaTeX Info: Redefining \. on input line 585.
-LaTeX Info: Redefining \% on input line 585.
+LaTeX Info: Redefining \. on input line 606.
+LaTeX Info: Redefining \% on input line 606.
+
+Package fancyhdr Warning: \headheight is too small (16.0pt): 
+(fancyhdr)                Make it at least 27.7595pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.7595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.7595pt}.
+
 [21 <./documento/3.png>] [22
 
 ]
-Cap\'{\i }tulo 2.
+Cap\'{\i }tulo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--597
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
 
  []
 
 [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
-<documento/5.png, id=863, 835.12pt x 594.22pt>
+<documento/5.png, id=870, 835.12pt x 583.17876pt>
 File: documento/5.png Graphic file (type png)
 <use documento/5.png>
-Package pdftex.def Info: documento/5.png  used on input line 604.
-(pdftex.def)             Requested size: 455.24411pt x 323.92961pt.
+Package pdftex.def Info: documento/5.png  used on input line 625.
+(pdftex.def)             Requested size: 455.24411pt x 317.91066pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 612--613
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
 
  []
 
-LaTeX Info: Redefining \. on input line 613.
-LaTeX Info: Redefining \% on input line 613.
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+
+ []
+
+LaTeX Info: Redefining \. on input line 634.
+LaTeX Info: Redefining \% on input line 634.
 [24 <./documento/5.png>]
-LaTeX Info: Redefining \. on input line 630.
-LaTeX Info: Redefining \% on input line 630.
+LaTeX Info: Redefining \. on input line 651.
+LaTeX Info: Redefining \% on input line 651.
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 644--645
-
- []
-
-LaTeX Info: Redefining \. on input line 645.
-LaTeX Info: Redefining \% on input line 645.
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 646--647
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--651
-
- []
-
-<documento/4.png, id=883, 1822.55907pt x 1072.75781pt>
-File: documento/4.png Graphic file (type png)
-<use documento/4.png>
-Package pdftex.def Info: documento/4.png  used on input line 654.
-(pdftex.def)             Requested size: 364.19667pt x 214.3677pt.
-LaTeX Info: Redefining \. on input line 658.
-LaTeX Info: Redefining \% on input line 658.
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--662
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
 
  []
 
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
-[28 <./documento/4.png>]
-<ref_complemento/1.1.png, id=898, 1442.38875pt x 677.53125pt>
-File: ref_complemento/1.1.png Graphic file (type png)
-<use ref_complemento/1.1.png>
-Package pdftex.def Info: ref_complemento/1.1.png  used on input line 669.
-(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
-<ref_complemento/2.png, id=899, 1442.38875pt x 677.53125pt>
-File: ref_complemento/2.png Graphic file (type png)
-<use ref_complemento/2.png>
-Package pdftex.def Info: ref_complemento/2.png  used on input line 676.
-(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
-<ref_complemento/1.png, id=900, 1442.38875pt x 677.53125pt>
-File: ref_complemento/1.png Graphic file (type png)
-<use ref_complemento/1.png>
-Package pdftex.def Info: ref_complemento/1.png  used on input line 683.
-(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 667--668
 
  []
 
-LaTeX Info: Redefining \. on input line 691.
-LaTeX Info: Redefining \% on input line 691.
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+<documento/4.png, id=890, 1822.55907pt x 1072.75781pt>
+File: documento/4.png Graphic file (type png)
+<use documento/4.png>
+Package pdftex.def Info: documento/4.png  used on input line 675.
+(pdftex.def)             Requested size: 364.19667pt x 214.3677pt.
+LaTeX Info: Redefining \. on input line 679.
+LaTeX Info: Redefining \% on input line 679.
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 680--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
+
+ []
+
+LaTeX Info: Redefining \. on input line 687.
+LaTeX Info: Redefining \% on input line 687.
+[28 <./documento/4.png>]
+<ref_complemento/1.1.png, id=905, 1442.38875pt x 677.53125pt>
+File: ref_complemento/1.1.png Graphic file (type png)
+<use ref_complemento/1.1.png>
+Package pdftex.def Info: ref_complemento/1.1.png  used on input line 690.
+(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
+<ref_complemento/2.png, id=906, 1442.38875pt x 677.53125pt>
+File: ref_complemento/2.png Graphic file (type png)
+<use ref_complemento/2.png>
+Package pdftex.def Info: ref_complemento/2.png  used on input line 697.
+(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
+<ref_complemento/1.png, id=907, 1442.38875pt x 677.53125pt>
+File: ref_complemento/1.png Graphic file (type png)
+<use ref_complemento/1.png>
+Package pdftex.def Info: ref_complemento/1.png  used on input line 704.
+(pdftex.def)             Requested size: 364.19667pt x 171.06754pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
+
+ []
+
+LaTeX Info: Redefining \. on input line 712.
+LaTeX Info: Redefining \% on input line 712.
 [29 <./ref_complemento/1.1.png (PNG copy)> <./ref_complemento/2.png (PNG copy)>
  <./ref_complemento/1.png (PNG copy)>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 694.
+nput line 715.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 695.
+(Font)              <9> on input line 716.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 695.
+(Font)              <5> on input line 716.
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--718
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
-LaTeX Info: Redefining \. on input line 718.
-LaTeX Info: Redefining \% on input line 718.
+LaTeX Info: Redefining \. on input line 739.
+LaTeX Info: Redefining \% on input line 739.
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 721--722
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
 
  []
 
-LaTeX Info: Redefining \. on input line 729.
-LaTeX Info: Redefining \% on input line 729.
+LaTeX Info: Redefining \. on input line 750.
+LaTeX Info: Redefining \% on input line 750.
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 739--740
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
  []
 
-LaTeX Info: Redefining \. on input line 740.
-LaTeX Info: Redefining \% on input line 740.
+LaTeX Info: Redefining \. on input line 761.
+LaTeX Info: Redefining \% on input line 761.
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 
  []
 
-LaTeX Info: Redefining \. on input line 756.
-LaTeX Info: Redefining \% on input line 756.
+LaTeX Info: Redefining \. on input line 777.
+LaTeX Info: Redefining \% on input line 777.
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 769--770
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
-LaTeX Info: Redefining \. on input line 770.
-LaTeX Info: Redefining \% on input line 770.
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
-<documento/6.png, id=953, 1162.3425pt x 431.6125pt>
+<documento/6.png, id=961, 1162.3425pt x 431.6125pt>
 File: documento/6.png Graphic file (type png)
 <use documento/6.png>
-Package pdftex.def Info: documento/6.png  used on input line 776.
+Package pdftex.def Info: documento/6.png  used on input line 797.
 (pdftex.def)             Requested size: 500.77129pt x 185.95197pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 776--777
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 797--798
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 782.
-LaTeX Info: Redefining \% on input line 782.
+LaTeX Info: Redefining \. on input line 803.
+LaTeX Info: Redefining \% on input line 803.
 [35 <./documento/6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--790
+Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
 
-LaTeX Info: Redefining \. on input line 797.
-LaTeX Info: Redefining \% on input line 797.
+LaTeX Info: Redefining \. on input line 818.
+LaTeX Info: Redefining \% on input line 818.
 [36]
-LaTeX Info: Redefining \. on input line 809.
-LaTeX Info: Redefining \% on input line 809.
+LaTeX Info: Redefining \. on input line 830.
+LaTeX Info: Redefining \% on input line 830.
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--814
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
 
  []
 
-<documento/7.png, id=969, 201.75375pt x 249.93375pt>
+<documento/7.png, id=979, 201.75375pt x 249.93375pt>
 File: documento/7.png Graphic file (type png)
 <use documento/7.png>
-Package pdftex.def Info: documento/7.png  used on input line 817.
-(pdftex.def)             Requested size: 182.09486pt x 225.5828pt.
+Package pdftex.def Info: documento/7.png  used on input line 838.
+(pdftex.def)             Requested size: 136.57462pt x 169.18996pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--823
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
 
  []
 
-<documento/8.png, id=970, 166.37157pt x 155.07938pt>
+<documento/8.png, id=981, 166.37157pt x 155.07938pt>
 File: documento/8.png Graphic file (type png)
 <use documento/8.png>
-Package pdftex.def Info: documento/8.png  used on input line 826.
-(pdftex.def)             Requested size: 182.09486pt x 169.7454pt.
-LaTeX Info: Redefining \. on input line 829.
-LaTeX Info: Redefining \% on input line 829.
+Package pdftex.def Info: documento/8.png  used on input line 847.
+(pdftex.def)             Requested size: 136.57462pt x 127.3126pt.
+LaTeX Info: Redefining \. on input line 851.
+LaTeX Info: Redefining \% on input line 851.
 [38 <./documento/7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 831--832
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
-<documento/9.png, id=976, 166.37157pt x 105.39375pt>
+<documento/9.png, id=988, 166.37157pt x 105.39375pt>
 File: documento/9.png Graphic file (type png)
 <use documento/9.png>
-Package pdftex.def Info: documento/9.png  used on input line 835.
-(pdftex.def)             Requested size: 182.09486pt x 115.36095pt.
-<documento/10.png, id=977, 668.4975pt x 307.1475pt>
+Package pdftex.def Info: documento/9.png  used on input line 856.
+(pdftex.def)             Requested size: 136.57462pt x 86.52312pt.
+<documento/10.png, id=990, 668.4975pt x 307.1475pt>
 File: documento/10.png Graphic file (type png)
 <use documento/10.png>
-Package pdftex.def Info: documento/10.png  used on input line 844.
-(pdftex.def)             Requested size: 364.19667pt x 167.33817pt.
-LaTeX Info: Redefining \. on input line 848.
-LaTeX Info: Redefining \% on input line 848.
+Package pdftex.def Info: documento/10.png  used on input line 865.
+(pdftex.def)             Requested size: 455.24411pt x 209.17154pt.
+LaTeX Info: Redefining \. on input line 869.
+LaTeX Info: Redefining \% on input line 869.
 [39 <./documento/8.png> <./documento/9.png>]
-LaTeX Info: Redefining \. on input line 849.
-LaTeX Info: Redefining \% on input line 849.
- [40 <./documento/10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 868--869
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
-
- []
-
-LaTeX Info: Redefining \. on input line 875.
-LaTeX Info: Redefining \% on input line 875.
-[41{C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
+LaTeX Info: Redefining \. on input line 888.
+LaTeX Info: Redefining \% on input line 888.
+[40{C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
 nc}{C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.e
-nc}]
-Underfull \hbox (badness 10000) in paragraph at lines 876--877
+nc} <./documento/10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 893--894
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--879
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--881
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 
  []
 
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
-[42]
+LaTeX Info: Redefining \. on input line 899.
+LaTeX Info: Redefining \% on input line 899.
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
+
+ []
+
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-<documento/23.png, id=1008, 991.705pt x 374.39874pt>
+<documento/23.png, id=1017, 991.705pt x 374.39874pt>
 File: documento/23.png Graphic file (type png)
 <use documento/23.png>
-Package pdftex.def Info: documento/23.png  used on input line 906.
+Package pdftex.def Info: documento/23.png  used on input line 923.
 (pdftex.def)             Requested size: 455.24411pt x 171.8656pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--914
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
+
+ []
+
+LaTeX Info: Redefining \. on input line 931.
+LaTeX Info: Redefining \% on input line 931.
+[42 <./documento/23.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 932--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
 
  []
 
-LaTeX Info: Redefining \. on input line 916.
-LaTeX Info: Redefining \% on input line 916.
-[43 <./documento/23.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
-
- []
-
-<documento/24.png, id=1031, 828.09375pt x 411.5375pt>
+<documento/24.png, id=1039, 828.09375pt x 411.5375pt>
 File: documento/24.png Graphic file (type png)
 <use documento/24.png>
-Package pdftex.def Info: documento/24.png  used on input line 923.
+Package pdftex.def Info: documento/24.png  used on input line 940.
 (pdftex.def)             Requested size: 455.24411pt x 226.24585pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
+
+ []
+
+LaTeX Info: Redefining \. on input line 949.
+LaTeX Info: Redefining \% on input line 949.
+[43 <./documento/24.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 950--951
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 935--936
-
- []
-
-LaTeX Info: Redefining \. on input line 936.
-LaTeX Info: Redefining \% on input line 936.
-[44 <./documento/24.png>]
-<documento/25.png, id=1039, 1080.035pt x 222.8325pt>
+<documento/25.png, id=1048, 1080.035pt x 222.8325pt>
 File: documento/25.png Graphic file (type png)
 <use documento/25.png>
-Package pdftex.def Info: documento/25.png  used on input line 954.
+Package pdftex.def Info: documento/25.png  used on input line 971.
 (pdftex.def)             Requested size: 455.24411pt x 93.92561pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 961--962
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
+LaTeX Info: Redefining \. on input line 975.
+LaTeX Info: Redefining \% on input line 975.
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 978--979
 
  []
 
-LaTeX Info: Redefining \. on input line 964.
-LaTeX Info: Redefining \% on input line 964.
-[45 <./documento/25.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 980--981
+
+ []
+
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
+Underfull \hbox (badness 10000) in paragraph at lines 992--993
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--978
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+[45 <./documento/25.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 994--995
 
  []
 
-<documento/grafana1.png, id=1058, 1433.355pt x 677.53125pt>
+<documento/grafana1.png, id=1077, 1433.355pt x 677.53125pt>
 File: documento/grafana1.png Graphic file (type png)
 <use documento/grafana1.png>
-Package pdftex.def Info: documento/grafana1.png  used on input line 981.
+Package pdftex.def Info: documento/grafana1.png  used on input line 998.
 (pdftex.def)             Requested size: 432.48051pt x 204.42917pt.
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 986--987
+
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 
  []
 
-<documento/26.png, id=1070, 1208.515pt x 471.7625pt>
+LaTeX Info: Redefining \. on input line 1006.
+LaTeX Info: Redefining \% on input line 1006.
+[46 <./documento/grafana1.png>]
+<documento/26.png, id=1084, 1208.515pt x 471.7625pt>
 File: documento/26.png Graphic file (type png)
 <use documento/26.png>
-Package pdftex.def Info: documento/26.png  used on input line 992.
+Package pdftex.def Info: documento/26.png  used on input line 1009.
 (pdftex.def)             Requested size: 455.24411pt x 177.70953pt.
-LaTeX Info: Redefining \. on input line 996.
-LaTeX Info: Redefining \% on input line 996.
-[47 <./documento/grafana1.png>]
-<documento/13.png, id=1078, 545.03625pt x 858.20625pt>
+<documento/13.png, id=1087, 545.03625pt x 858.20625pt>
 File: documento/13.png Graphic file (type png)
 <use documento/13.png>
-Package pdftex.def Info: documento/13.png  used on input line 1008.
+Package pdftex.def Info: documento/13.png  used on input line 1025.
 (pdftex.def)             Requested size: 227.62206pt x 358.40132pt.
-LaTeX Info: Redefining \. on input line 1049.
-LaTeX Info: Redefining \% on input line 1049.
- [48 <./documento/26.png>]
-LaTeX Info: Redefining \. on input line 1052.
-LaTeX Info: Redefining \% on input line 1052.
- [49 <./documento/13.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
-
- []
-
-
-Overfull \hbox (14.61913pt too wide) in paragraph at lines 1071--1072
-\T1/lmr/m/n/10.95 ejem-plo, un \T1/pcr/m/n/10.95 AgentController \T1/lmr/m/n/10
-.95 po-dría ges-tio-nar ru-tas co-mo \T1/pcr/m/n/10.95 /api/agents/{id}/alerts
- []
-
-LaTeX Info: Redefining \. on input line 1076.
-LaTeX Info: Redefining \% on input line 1076.
-[50]
+LaTeX Info: Redefining \. on input line 1067.
+LaTeX Info: Redefining \% on input line 1067.
+ [47 <./documento/26.png>]
+LaTeX Info: Redefining \. on input line 1070.
+LaTeX Info: Redefining \% on input line 1070.
+ [48 <./documento/13.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1084--1085
 
  []
 
+
+Overfull \hbox (14.61913pt too wide) in paragraph at lines 1089--1090
+\T1/lmr/m/n/10.95 ejem-plo, un \T1/pcr/m/n/10.95 AgentController \T1/lmr/m/n/10
+.95 po-dría ges-tio-nar ru-tas co-mo \T1/pcr/m/n/10.95 /api/agents/{id}/alerts
+ []
+
+LaTeX Info: Redefining \. on input line 1094.
+LaTeX Info: Redefining \% on input line 1094.
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
+
+ []
+
 (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Info: Redefining \. on input line 1096.
-LaTeX Info: Redefining \% on input line 1096.
-
-[51]
 LaTeX Info: Redefining \. on input line 1114.
 LaTeX Info: Redefining \% on input line 1114.
- [52]
-<documento/27.png, id=1117, 341.275pt x 522.95375pt>
+
+[50]
+LaTeX Info: Redefining \. on input line 1132.
+LaTeX Info: Redefining \% on input line 1132.
+ [51]
+<documento/27.png, id=1128, 341.275pt x 522.95375pt>
 File: documento/27.png Graphic file (type png)
 <use documento/27.png>
-Package pdftex.def Info: documento/27.png  used on input line 1121.
+Package pdftex.def Info: documento/27.png  used on input line 1139.
 (pdftex.def)             Requested size: 227.62206pt x 348.8052pt.
-LaTeX Info: Redefining \. on input line 1126.
-LaTeX Info: Redefining \% on input line 1126.
- [53 <./documento/27.png (PNG copy)>]
-<documento/overview.png, id=1122, 1415.2875pt x 677.53125pt>
+LaTeX Info: Redefining \. on input line 1144.
+LaTeX Info: Redefining \% on input line 1144.
+ [52 <./documento/27.png (PNG copy)>]
+<documento/overview.png, id=1134, 1415.2875pt x 677.53125pt>
 File: documento/overview.png Graphic file (type png)
 <use documento/overview.png>
-Package pdftex.def Info: documento/overview.png  used on input line 1141.
-(pdftex.def)             Requested size: 409.71692pt x 196.13786pt.
-<documento/alertas.png, id=1123, 1422.0628pt x 673.01437pt>
+Package pdftex.def Info: documento/overview.png  used on input line 1160.
+(pdftex.def)             Requested size: 455.24411pt x 217.93095pt.
+LaTeX Info: Redefining \. on input line 1166.
+LaTeX Info: Redefining \% on input line 1166.
+ [53 <./documento/overview.png>]
+<documento/alertas.png, id=1141, 1422.0628pt x 673.01437pt>
 File: documento/alertas.png Graphic file (type png)
 <use documento/alertas.png>
-Package pdftex.def Info: documento/alertas.png  used on input line 1150.
-(pdftex.def)             Requested size: 409.71692pt x 193.90604pt.
-LaTeX Info: Redefining \. on input line 1154.
-LaTeX Info: Redefining \% on input line 1154.
- [54 <./documento/overview.png>]
-<documento/reglas.png, id=1129, 1427.3325pt x 673.76718pt>
+Package pdftex.def Info: documento/alertas.png  used on input line 1169.
+(pdftex.def)             Requested size: 455.24411pt x 215.45114pt.
+<documento/reglas.png, id=1143, 1427.3325pt x 673.76718pt>
 File: documento/reglas.png Graphic file (type png)
 <use documento/reglas.png>
-Package pdftex.def Info: documento/reglas.png  used on input line 1159.
-(pdftex.def)             Requested size: 409.71692pt x 193.40327pt.
-<documento/estado.png, id=1130, 1409.265pt x 575.90157pt>
+Package pdftex.def Info: documento/reglas.png  used on input line 1178.
+(pdftex.def)             Requested size: 455.24411pt x 214.89024pt.
+LaTeX Info: Redefining \. on input line 1183.
+LaTeX Info: Redefining \% on input line 1183.
+
+[54 <./documento/alertas.png> <./documento/reglas.png>]
+<documento/estado.png, id=1152, 1409.265pt x 575.90157pt>
 File: documento/estado.png Graphic file (type png)
 <use documento/estado.png>
-Package pdftex.def Info: documento/estado.png  used on input line 1168.
-(pdftex.def)             Requested size: 409.71692pt x 167.42897pt.
-LaTeX Info: Redefining \. on input line 1172.
-LaTeX Info: Redefining \% on input line 1172.
-
-[55 <./documento/alertas.png> <./documento/reglas.png>]
-<documento/estado_agente.png, id=1138, 271.76532pt x 305.64188pt>
+Package pdftex.def Info: documento/estado.png  used on input line 1189.
+(pdftex.def)             Requested size: 455.24411pt x 186.0322pt.
+<documento/estado_agente.png, id=1153, 271.76532pt x 305.64188pt>
 File: documento/estado_agente.png Graphic file (type png)
 <use documento/estado_agente.png>
-Package pdftex.def Info: documento/estado_agente.png  used on input line 1175.
-(pdftex.def)             Requested size: 273.14923pt x 307.21278pt.
+Package pdftex.def Info: documento/estado_agente.png  used on input line 1196.
+(pdftex.def)             Requested size: 182.09486pt x 204.80229pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1186
-
- []
-
-LaTeX Info: Redefining \. on input line 1186.
-LaTeX Info: Redefining \% on input line 1186.
-[56 <./documento/estado.png> <./documento/estado_agente.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+LaTeX Info: Redefining \. on input line 1207.
+LaTeX Info: Redefining \% on input line 1207.
+[55 <./documento/estado.png> <./documento/estado_agente.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
 
  []
 
-LaTeX Info: Redefining \. on input line 1195.
-LaTeX Info: Redefining \% on input line 1195.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+
+ []
+
+LaTeX Info: Redefining \. on input line 1216.
+LaTeX Info: Redefining \% on input line 1216.
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
+
+ []
+
+LaTeX Info: Redefining \. on input line 1249.
+LaTeX Info: Redefining \% on input line 1249.
 [57]
-Overfull \hbox (28.82207pt too wide) in paragraph at lines 1213--1214
-[]\T1/lmr/m/n/10.95 En el có-di-go an-te-rior, el guard (\T1/pcr/m/n/10.95 Auth
-Guard\T1/lmr/m/n/10.95 ) con-sul-ta a un ser-vi-cio de au-ten-ti-ca-ción \T1/pc
-r/m/n/10.95 AuthService
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
+Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1257
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
-
- []
-
-LaTeX Info: Redefining \. on input line 1228.
-LaTeX Info: Redefining \% on input line 1228.
+LaTeX Info: Redefining \. on input line 1286.
+LaTeX Info: Redefining \% on input line 1286.
 [58]
-Underfull \hbox (badness 10000) in paragraph at lines 1229--1230
-
- []
-
-LaTeX Info: Redefining \. on input line 1268.
-LaTeX Info: Redefining \% on input line 1268.
-[59]
-<documento/28.png, id=1176, 634.37pt x 457.71pt>
+<documento/28.png, id=1196, 634.37pt x 457.71pt>
 File: documento/28.png Graphic file (type png)
 <use documento/28.png>
-Package pdftex.def Info: documento/28.png  used on input line 1276.
+Package pdftex.def Info: documento/28.png  used on input line 1293.
 (pdftex.def)             Requested size: 364.19667pt x 262.78311pt.
-LaTeX Info: Redefining \. on input line 1292.
-LaTeX Info: Redefining \% on input line 1292.
- [60 <./documento/28.png (PNG copy)>]
-LaTeX Info: Redefining \. on input line 1325.
-LaTeX Info: Redefining \% on input line 1325.
- [61]
-<documento/29.png, id=1196, 383.4325pt x 579.16376pt>
+LaTeX Info: Redefining \. on input line 1309.
+LaTeX Info: Redefining \% on input line 1309.
+ [59 <./documento/28.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
+
+ []
+
+LaTeX Info: Redefining \. on input line 1344.
+LaTeX Info: Redefining \% on input line 1344.
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1349--1350
+
+ []
+
+LaTeX Info: Redefining \. on input line 1373.
+LaTeX Info: Redefining \% on input line 1373.
+[61]
+<documento/29.png, id=1233, 383.4325pt x 579.16376pt>
 File: documento/29.png Graphic file (type png)
 <use documento/29.png>
-Package pdftex.def Info: documento/29.png  used on input line 1354.
+Package pdftex.def Info: documento/29.png  used on input line 1379.
 (pdftex.def)             Requested size: 204.85846pt x 309.43861pt.
-LaTeX Info: Redefining \. on input line 1358.
-LaTeX Info: Redefining \% on input line 1358.
- [62]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-372.
-
-(C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+395.
+ (C:\Users\deian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \. on input line 1384.
-LaTeX Info: Redefining \% on input line 1384.
- [63{C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
-} <./documento/29.png (PNG copy)>]
-<documento/30.png, id=1215, 537.00626pt x 949.5475pt>
+LaTeX Info: Redefining \. on input line 1407.
+LaTeX Info: Redefining \% on input line 1407.
+
+[62{C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
+ <./documento/29.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 1442.
+LaTeX Info: Redefining \% on input line 1442.
+ [63]
+<documento/30.png, id=1251, 537.00626pt x 949.5475pt>
 File: documento/30.png Graphic file (type png)
 <use documento/30.png>
-Package pdftex.def Info: documento/30.png  used on input line 1421.
+Package pdftex.def Info: documento/30.png  used on input line 1448.
 (pdftex.def)             Requested size: 259.49246pt x 458.83478pt.
-LaTeX Info: Redefining \. on input line 1425.
-LaTeX Info: Redefining \% on input line 1425.
- [64]
-LaTeX Info: Redefining \. on input line 1429.
-LaTeX Info: Redefining \% on input line 1429.
- [65 <./documento/30.png (PNG copy)>] [66
+LaTeX Info: Redefining \. on input line 1455.
+LaTeX Info: Redefining \% on input line 1455.
+ [64 <./documento/30.png (PNG copy)>]
+Cap\'{\i }tulo 4.
 
-]
-Cap\'{\i }tulo 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1439--1440
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1462
 
  []
 
 File: documento/4.png Graphic file (type png)
 <use documento/4.png>
-Package pdftex.def Info: documento/4.png  used on input line 1445.
+Package pdftex.def Info: documento/4.png  used on input line 1467.
 (pdftex.def)             Requested size: 386.96027pt x 227.75749pt.
-<documento/multinodo.png, id=1236, 794.97pt x 614.295pt>
+<documento/multinodo.png, id=1258, 794.97pt x 614.295pt>
 File: documento/multinodo.png Graphic file (type png)
 <use documento/multinodo.png>
-Package pdftex.def Info: documento/multinodo.png  used on input line 1452.
+Package pdftex.def Info: documento/multinodo.png  used on input line 1474.
 (pdftex.def)             Requested size: 455.24411pt x 351.79211pt.
-[67
+[65
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1482
 
  []
 
-LaTeX Info: Redefining \. on input line 1468.
-LaTeX Info: Redefining \% on input line 1468.
-[68 <./documento/multinodo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
-
- []
-
-LaTeX Info: Redefining \. on input line 1501.
-LaTeX Info: Redefining \% on input line 1501.
-[69]
-Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
+LaTeX Info: Redefining \. on input line 1490.
+LaTeX Info: Redefining \% on input line 1490.
+[66 <./documento/multinodo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1516
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1509--1510
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1518
 
  []
 
-LaTeX Info: Redefining \. on input line 1542.
-LaTeX Info: Redefining \% on input line 1542.
-[70]
-Underfull \hbox (badness 10000) in paragraph at lines 1547--1548
+LaTeX Info: Redefining \. on input line 1523.
+LaTeX Info: Redefining \% on input line 1523.
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 1529--1530
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1550
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1532
 
  []
 
-<install/1.png, id=1256, 507.39563pt x 353.82187pt>
+LaTeX Info: Redefining \. on input line 1535.
+LaTeX Info: Redefining \% on input line 1535.
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 1570--1571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1573
+
+ []
+
+<install/1.png, id=1280, 507.39563pt x 353.82187pt>
 File: install/1.png Graphic file (type png)
 <use install/1.png>
-Package pdftex.def Info: install/1.png  used on input line 1555.
+Package pdftex.def Info: install/1.png  used on input line 1578.
 (pdftex.def)             Requested size: 364.19667pt x 253.9741pt.
-LaTeX Info: Redefining \. on input line 1559.
-LaTeX Info: Redefining \% on input line 1559.
-[71]
-Underfull \hbox (badness 10000) in paragraph at lines 1562--1563
+LaTeX Info: Redefining \. on input line 1582.
+LaTeX Info: Redefining \% on input line 1582.
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 
  []
 
-<install/0.1.png, id=1262, 963.6pt x 362.85562pt>
+<install/0.1.png, id=1287, 963.6pt x 362.85562pt>
 File: install/0.1.png Graphic file (type png)
 <use install/0.1.png>
-Package pdftex.def Info: install/0.1.png  used on input line 1570.
+Package pdftex.def Info: install/0.1.png  used on input line 1593.
 (pdftex.def)             Requested size: 364.19667pt x 137.1391pt.
-LaTeX Info: Redefining \. on input line 1574.
-LaTeX Info: Redefining \% on input line 1574.
-[72 <./install/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1578--1579
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1580--1581
-
- []
-
-<install/0.2.png, id=1268, 963.6pt x 788.9475pt>
-File: install/0.2.png Graphic file (type png)
-<use install/0.2.png>
-Package pdftex.def Info: install/0.2.png  used on input line 1586.
-(pdftex.def)             Requested size: 273.14923pt x 223.63649pt.
-<install/9-asignacion_port.png, id=1269, 751.30687pt x 367.3725pt>
-File: install/9-asignacion_port.png Graphic file (type png)
-<use install/9-asignacion_port.png>
-Package pdftex.def Info: install/9-asignacion_port.png  used on input line 1593
-.
-(pdftex.def)             Requested size: 318.66948pt x 155.82573pt.
 LaTeX Info: Redefining \. on input line 1597.
 LaTeX Info: Redefining \% on input line 1597.
-[73 <./install/0.1.png (PNG copy)> <./install/0.2.png (PNG copy)>]
+[70 <./install/1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1601--1602
 
  []
@@ -2211,348 +2289,353 @@ Underfull \hbox (badness 10000) in paragraph at lines 1603--1604
 
  []
 
-<install/0.3.png, id=1275, 963.6pt x 679.78969pt>
+<install/0.2.png, id=1295, 963.6pt x 788.9475pt>
+File: install/0.2.png Graphic file (type png)
+<use install/0.2.png>
+Package pdftex.def Info: install/0.2.png  used on input line 1609.
+(pdftex.def)             Requested size: 273.14923pt x 223.63649pt.
+<install/9-asignacion_port.png, id=1296, 751.30687pt x 367.3725pt>
+File: install/9-asignacion_port.png Graphic file (type png)
+<use install/9-asignacion_port.png>
+Package pdftex.def Info: install/9-asignacion_port.png  used on input line 1616
+.
+(pdftex.def)             Requested size: 318.66948pt x 155.82573pt.
+LaTeX Info: Redefining \. on input line 1620.
+LaTeX Info: Redefining \% on input line 1620.
+[71 <./install/0.1.png (PNG copy)> <./install/0.2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1627
+
+ []
+
+<install/0.3.png, id=1302, 963.6pt x 679.78969pt>
 File: install/0.3.png Graphic file (type png)
 <use install/0.3.png>
-Package pdftex.def Info: install/0.3.png  used on input line 1609.
+Package pdftex.def Info: install/0.3.png  used on input line 1632.
 (pdftex.def)             Requested size: 318.66948pt x 224.80843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1617--1618
+Underfull \hbox (badness 10000) in paragraph at lines 1640--1641
 
  []
 
-LaTeX Info: Redefining \. on input line 1618.
-LaTeX Info: Redefining \% on input line 1618.
-[74 <./install/9-asignacion_port.png> <./install/0.3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1620
+LaTeX Info: Redefining \. on input line 1641.
+LaTeX Info: Redefining \% on input line 1641.
+[72 <./install/9-asignacion_port.png> <./install/0.3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1643
 
  []
 
-<install/0.4.png, id=1281, 873.2625pt x 963.6pt>
+<install/0.4.png, id=1309, 873.2625pt x 963.6pt>
 File: install/0.4.png Graphic file (type png)
 <use install/0.4.png>
-Package pdftex.def Info: install/0.4.png  used on input line 1625.
+Package pdftex.def Info: install/0.4.png  used on input line 1648.
 (pdftex.def)             Requested size: 227.62206pt x 251.16234pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1633--1634
+Underfull \hbox (badness 10000) in paragraph at lines 1656--1657
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1636
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1659
 
  []
 
-LaTeX Info: Redefining \. on input line 1639.
-LaTeX Info: Redefining \% on input line 1639.
-[75 <./install/0.4.png (PNG copy)>]
-<install/2.png, id=1286, 511.15968pt x 338.01282pt>
+LaTeX Info: Redefining \. on input line 1662.
+LaTeX Info: Redefining \% on input line 1662.
+[73 <./install/0.4.png (PNG copy)>]
+<install/2.png, id=1317, 511.15968pt x 338.01282pt>
 File: install/2.png Graphic file (type png)
 <use install/2.png>
-Package pdftex.def Info: install/2.png  used on input line 1649.
+Package pdftex.def Info: install/2.png  used on input line 1672.
 (pdftex.def)             Requested size: 318.66948pt x 210.72624pt.
-<install/3.png, id=1287, 610.53094pt x 451.6875pt>
+<install/3.png, id=1319, 610.53094pt x 451.6875pt>
 File: install/3.png Graphic file (type png)
 <use install/3.png>
-Package pdftex.def Info: install/3.png  used on input line 1658.
+Package pdftex.def Info: install/3.png  used on input line 1681.
 (pdftex.def)             Requested size: 318.66948pt x 235.76793pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1666--1667
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1690
 
  []
 
-LaTeX Info: Redefining \. on input line 1667.
-LaTeX Info: Redefining \% on input line 1667.
-[76 <./install/2.png> <./install/3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
+LaTeX Info: Redefining \. on input line 1690.
+LaTeX Info: Redefining \% on input line 1690.
+[74 <./install/2.png> <./install/3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
-<install/4.png, id=1297, 421.575pt x 338.76563pt>
+<install/4.png, id=1331, 421.575pt x 338.76563pt>
 File: install/4.png Graphic file (type png)
 <use install/4.png>
-Package pdftex.def Info: install/4.png  used on input line 1690.
+Package pdftex.def Info: install/4.png  used on input line 1713.
 (pdftex.def)             Requested size: 273.14923pt x 219.49721pt.
-LaTeX Info: Redefining \. on input line 1696.
-LaTeX Info: Redefining \% on input line 1696.
-[77 <./install/4.png>]
-<install/5.png, id=1306, 910.90312pt x 577.40718pt>
+LaTeX Info: Redefining \. on input line 1719.
+LaTeX Info: Redefining \% on input line 1719.
+[75 <./install/4.png>]
+<install/5.png, id=1341, 910.90312pt x 577.40718pt>
 File: install/5.png Graphic file (type png)
 <use install/5.png>
-Package pdftex.def Info: install/5.png  used on input line 1699.
+Package pdftex.def Info: install/5.png  used on input line 1722.
 (pdftex.def)             Requested size: 318.66948pt x 201.99863pt.
-<install/6.png, id=1307, 824.32968pt x 449.42906pt>
+<install/6.png, id=1344, 824.32968pt x 449.42906pt>
 File: install/6.png Graphic file (type png)
 <use install/6.png>
-Package pdftex.def Info: install/6.png  used on input line 1717.
-(pdftex.def)             Requested size: 364.19667pt x 198.56546pt.
-LaTeX Info: Redefining \. on input line 1722.
-LaTeX Info: Redefining \% on input line 1722.
- [78 <./install/5.png> <./install/6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
+Package pdftex.def Info: install/6.png  used on input line 1740.
+(pdftex.def)             Requested size: 341.43307pt x 186.15297pt.
+LaTeX Info: Redefining \. on input line 1745.
+LaTeX Info: Redefining \% on input line 1745.
+ [76 <./install/5.png> <./install/6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1747--1748
 
  []
 
-<install/7.png, id=1317, 909.3975pt x 608.2725pt>
+<install/7.png, id=1355, 909.3975pt x 608.2725pt>
 File: install/7.png Graphic file (type png)
 <use install/7.png>
-Package pdftex.def Info: install/7.png  used on input line 1730.
+Package pdftex.def Info: install/7.png  used on input line 1753.
 (pdftex.def)             Requested size: 409.71692pt x 274.05423pt.
-LaTeX Info: Redefining \. on input line 1735.
-LaTeX Info: Redefining \% on input line 1735.
-[79 <./install/7.png>]
-Overfull \hbox (4.82545pt too wide) in paragraph at lines 1742--1743
+<documento/31.png, id=1357, 1552.80125pt x 586.19pt>
+File: documento/31.png Graphic file (type png)
+<use documento/31.png>
+Package pdftex.def Info: documento/31.png  used on input line 1762.
+(pdftex.def)             Requested size: 455.24411pt x 171.8512pt.
+LaTeX Info: Redefining \. on input line 1768.
+LaTeX Info: Redefining \% on input line 1768.
+[77 <./install/7.png> <./documento/31.png>]
+Overfull \hbox (4.82545pt too wide) in paragraph at lines 1774--1775
 \T1/lmr/m/n/10.95 men-te in-tro-du-cien-do en el na-ve-ga-dor la di-rec-ción \T
 1/pcr/m/n/10.95 http://<IP-del-módulo-central>:8080
  []
 
-<configuracion/1.png, id=1324, 1438.6247pt x 721.19438pt>
+<configuracion/1.png, id=1365, 1438.6247pt x 721.19438pt>
 File: configuracion/1.png Graphic file (type png)
 <use configuracion/1.png>
-Package pdftex.def Info: configuracion/1.png  used on input line 1746.
+Package pdftex.def Info: configuracion/1.png  used on input line 1778.
 (pdftex.def)             Requested size: 364.19667pt x 182.57608pt.
-<configuracion/2.png, id=1325, 1436.36626pt x 738.50906pt>
+<configuracion/2.png, id=1367, 1436.36626pt x 738.50906pt>
 File: configuracion/2.png Graphic file (type png)
 <use configuracion/2.png>
-Package pdftex.def Info: configuracion/2.png  used on input line 1755.
+Package pdftex.def Info: configuracion/2.png  used on input line 1787.
 (pdftex.def)             Requested size: 364.19667pt x 187.25243pt.
-LaTeX Info: Redefining \. on input line 1760.
-LaTeX Info: Redefining \% on input line 1760.
-[80 <./configuracion/1.png> <./configuracion/2.png>]
-<configuracion/3.png, id=1332, 1420.55719pt x 670.00313pt>
+LaTeX Info: Redefining \. on input line 1792.
+LaTeX Info: Redefining \% on input line 1792.
+[78 <./configuracion/1.png> <./configuracion/2.png>]
+<configuracion/3.png, id=1375, 1420.55719pt x 670.00313pt>
 File: configuracion/3.png Graphic file (type png)
 <use configuracion/3.png>
-Package pdftex.def Info: configuracion/3.png  used on input line 1766.
+Package pdftex.def Info: configuracion/3.png  used on input line 1798.
 (pdftex.def)             Requested size: 409.71692pt x 193.24292pt.
-<configuracion/4.png, id=1333, 1426.57968pt x 682.04813pt>
+<configuracion/4.png, id=1377, 1426.57968pt x 682.04813pt>
 File: configuracion/4.png Graphic file (type png)
 <use configuracion/4.png>
-Package pdftex.def Info: configuracion/4.png  used on input line 1775.
+Package pdftex.def Info: configuracion/4.png  used on input line 1807.
 (pdftex.def)             Requested size: 409.71692pt x 195.88437pt.
-LaTeX Info: Redefining \. on input line 1780.
-LaTeX Info: Redefining \% on input line 1780.
- [81 <./configuracion/3.png> <./configuracion/4.png>]
-<configuracion/5.png, id=1340, 1428.83812pt x 642.14906pt>
+LaTeX Info: Redefining \. on input line 1812.
+LaTeX Info: Redefining \% on input line 1812.
+ [79 <./configuracion/3.png> <./configuracion/4.png>]
+<configuracion/5.png, id=1386, 1428.83812pt x 642.14906pt>
 File: configuracion/5.png Graphic file (type png)
 <use configuracion/5.png>
-Package pdftex.def Info: configuracion/5.png  used on input line 1786.
+Package pdftex.def Info: configuracion/5.png  used on input line 1818.
 (pdftex.def)             Requested size: 409.71692pt x 184.1314pt.
-<configuracion/6.png, id=1341, 1405.50093pt x 558.58687pt>
+<configuracion/6.png, id=1388, 1405.50093pt x 558.58687pt>
 File: configuracion/6.png Graphic file (type png)
 <use configuracion/6.png>
-Package pdftex.def Info: configuracion/6.png  used on input line 1795.
+Package pdftex.def Info: configuracion/6.png  used on input line 1827.
 (pdftex.def)             Requested size: 409.71692pt x 162.82985pt.
-LaTeX Info: Redefining \. on input line 1800.
-LaTeX Info: Redefining \% on input line 1800.
- [82 <./configuracion/5.png> <./configuracion/6.png>]
-<configuracion/7.png, id=1348, 570.63188pt x 87.32625pt>
+LaTeX Info: Redefining \. on input line 1832.
+LaTeX Info: Redefining \% on input line 1832.
+ [80 <./configuracion/5.png> <./configuracion/6.png>]
+<configuracion/7.png, id=1396, 570.63188pt x 87.32625pt>
 File: configuracion/7.png Graphic file (type png)
 <use configuracion/7.png>
-Package pdftex.def Info: configuracion/7.png  used on input line 1806.
+Package pdftex.def Info: configuracion/7.png  used on input line 1838.
 (pdftex.def)             Requested size: 409.71692pt x 62.70029pt.
-<configuracion/8.png, id=1349, 1437.11906pt x 740.0147pt>
+<configuracion/8.png, id=1398, 1437.11906pt x 740.0147pt>
 File: configuracion/8.png Graphic file (type png)
 <use configuracion/8.png>
-Package pdftex.def Info: configuracion/8.png  used on input line 1815.
+Package pdftex.def Info: configuracion/8.png  used on input line 1847.
 (pdftex.def)             Requested size: 318.66948pt x 164.09099pt.
-<configuracion/9.png, id=1350, 1431.09656pt x 733.99219pt>
+<configuracion/9.png, id=1400, 1431.09656pt x 733.99219pt>
 File: configuracion/9.png Graphic file (type png)
 <use configuracion/9.png>
-Package pdftex.def Info: configuracion/9.png  used on input line 1824.
+Package pdftex.def Info: configuracion/9.png  used on input line 1856.
 (pdftex.def)             Requested size: 318.66948pt x 163.43874pt.
-LaTeX Info: Redefining \. on input line 1829.
-LaTeX Info: Redefining \% on input line 1829.
-[83 <./configuracion/7.png> <./configuracion/8.png> <./configuracion/9.png>]
-<configuracion/10.png, id=1358, 1403.99532pt x 611.28375pt>
+LaTeX Info: Redefining \. on input line 1861.
+LaTeX Info: Redefining \% on input line 1861.
+[81 <./configuracion/7.png> <./configuracion/8.png> <./configuracion/9.png>]
+<configuracion/10.png, id=1409, 1403.99532pt x 611.28375pt>
 File: configuracion/10.png Graphic file (type png)
 <use configuracion/10.png>
-Package pdftex.def Info: configuracion/10.png  used on input line 1835.
+Package pdftex.def Info: configuracion/10.png  used on input line 1867.
 (pdftex.def)             Requested size: 409.71692pt x 178.38704pt.
-LaTeX Info: Redefining \. on input line 1856.
-LaTeX Info: Redefining \% on input line 1856.
+LaTeX Info: Redefining \. on input line 1888.
+LaTeX Info: Redefining \% on input line 1888.
 
-[84 <./configuracion/10.png>]
-<benchmark/1.png, id=1367, 1204.5pt x 577.40718pt>
+[82 <./configuracion/10.png>]
+<benchmark/1.png, id=1418, 1204.5pt x 577.40718pt>
 File: benchmark/1.png Graphic file (type png)
 <use benchmark/1.png>
-Package pdftex.def Info: benchmark/1.png  used on input line 1860.
+Package pdftex.def Info: benchmark/1.png  used on input line 1892.
 (pdftex.def)             Requested size: 432.48051pt x 207.32018pt.
-<benchmark/2.png, id=1368, 1194.71344pt x 572.89032pt>
+<benchmark/2.png, id=1419, 1194.71344pt x 572.89032pt>
 File: benchmark/2.png Graphic file (type png)
 <use benchmark/2.png>
-Package pdftex.def Info: benchmark/2.png  used on input line 1867.
+Package pdftex.def Info: benchmark/2.png  used on input line 1899.
 (pdftex.def)             Requested size: 432.48051pt x 207.3855pt.
-LaTeX Info: Redefining \. on input line 1877.
-LaTeX Info: Redefining \% on input line 1877.
- [85 <./benchmark/1.png> <./benchmark/2.png>]
-<benchmark/3.png, id=1379, 1194.71344pt x 245.41687pt>
-File: benchmark/3.png Graphic file (type png)
-<use benchmark/3.png>
-Package pdftex.def Info: benchmark/3.png  used on input line 1905.
-(pdftex.def)             Requested size: 455.24411pt x 93.514pt.
 LaTeX Info: Redefining \. on input line 1909.
 LaTeX Info: Redefining \% on input line 1909.
+ [83 <./benchmark/1.png> <./benchmark/2.png>]
+<benchmark/3.png, id=1429, 1194.71344pt x 245.41687pt>
+File: benchmark/3.png Graphic file (type png)
+<use benchmark/3.png>
+Package pdftex.def Info: benchmark/3.png  used on input line 1937.
+(pdftex.def)             Requested size: 455.24411pt x 93.514pt.
+LaTeX Info: Redefining \. on input line 1941.
+LaTeX Info: Redefining \% on input line 1941.
 
-[86]
-<benchmark/5.png, id=1384, 1193.96063pt x 569.87906pt>
+[84]
+<benchmark/5.png, id=1434, 1193.96063pt x 569.87906pt>
 File: benchmark/5.png Graphic file (type png)
 <use benchmark/5.png>
-Package pdftex.def Info: benchmark/5.png  used on input line 1912.
+Package pdftex.def Info: benchmark/5.png  used on input line 1944.
 (pdftex.def)             Requested size: 455.24411pt x 217.28671pt.
-<benchmark/4.png, id=1385, 1196.21906pt x 584.1825pt>
+<benchmark/4.png, id=1435, 1196.21906pt x 584.1825pt>
 File: benchmark/4.png Graphic file (type png)
 <use benchmark/4.png>
-Package pdftex.def Info: benchmark/4.png  used on input line 1919.
+Package pdftex.def Info: benchmark/4.png  used on input line 1951.
 (pdftex.def)             Requested size: 455.24411pt x 222.32146pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1924--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1956--1957
 
  []
 
-LaTeX Info: Redefining \. on input line 1925.
-LaTeX Info: Redefining \% on input line 1925.
-[87 <./benchmark/3.png> <./benchmark/5.png> <./benchmark/4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1926--1927
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1965--1966
+LaTeX Info: Redefining \. on input line 1957.
+LaTeX Info: Redefining \% on input line 1957.
+[85 <./benchmark/3.png> <./benchmark/5.png> <./benchmark/4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1958--1959
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1969--1970
+Underfull \hbox (badness 10000) in paragraph at lines 1997--1998
 
  []
 
-LaTeX Info: Redefining \. on input line 1970.
-LaTeX Info: Redefining \% on input line 1970.
-[88]
-Underfull \hbox (badness 10000) in paragraph at lines 1971--1972
+LaTeX Info: Redefining \. on input line 1999.
+LaTeX Info: Redefining \% on input line 1999.
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 2001--2002
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1974--1975
-
- []
-
-<pruebas/1.png, id=1425, 1431.09656pt x 674.52pt>
+<pruebas/1.png, id=1478, 1431.09656pt x 674.52pt>
 File: pruebas/1.png Graphic file (type png)
 <use pruebas/1.png>
-Package pdftex.def Info: pruebas/1.png  used on input line 1989.
-(pdftex.def)             Requested size: 364.19667pt x 171.65553pt.
-LaTeX Info: Redefining \. on input line 1993.
-LaTeX Info: Redefining \% on input line 1993.
-[89]
-<pruebas/2.png, id=1430, 1429.59094pt x 671.50874pt>
+Package pdftex.def Info: pruebas/1.png  used on input line 2007.
+(pdftex.def)             Requested size: 455.24411pt x 214.57455pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2013--2014
+
+ []
+
+<pruebas/2.png, id=1480, 1429.59094pt x 671.50874pt>
 File: pruebas/2.png Graphic file (type png)
 <use pruebas/2.png>
-Package pdftex.def Info: pruebas/2.png  used on input line 1996.
-(pdftex.def)             Requested size: 364.19667pt x 171.07364pt.
-<pruebas/3.png, id=1431, 471.26062pt x 631.60968pt>
+Package pdftex.def Info: pruebas/2.png  used on input line 2019.
+(pdftex.def)             Requested size: 455.24411pt x 213.8318pt.
+LaTeX Info: Redefining \. on input line 2023.
+LaTeX Info: Redefining \% on input line 2023.
+[87 <./pruebas/1.png>]
+<pruebas/3.png, id=1487, 471.26062pt x 631.60968pt>
 File: pruebas/3.png Graphic file (type png)
 <use pruebas/3.png>
-Package pdftex.def Info: pruebas/3.png  used on input line 2012.
+Package pdftex.def Info: pruebas/3.png  used on input line 2035.
 (pdftex.def)             Requested size: 227.62206pt x 305.07744pt.
-LaTeX Info: Redefining \. on input line 2016.
-LaTeX Info: Redefining \% on input line 2016.
- [90 <./pruebas/1.png> <./pruebas/2.png>]
-<pruebas/4.png, id=1438, 1325.70282pt x 261.97874pt>
+LaTeX Info: Redefining \. on input line 2039.
+LaTeX Info: Redefining \% on input line 2039.
+ [88 <./pruebas/2.png>]
+<pruebas/4.png, id=1494, 1325.70282pt x 261.97874pt>
 File: pruebas/4.png Graphic file (type png)
 <use pruebas/4.png>
-Package pdftex.def Info: pruebas/4.png  used on input line 2023.
-(pdftex.def)             Requested size: 364.19667pt x 71.97041pt.
-<pruebas/5.png, id=1439, 1430.34375pt x 670.75594pt>
+Package pdftex.def Info: pruebas/4.png  used on input line 2046.
+(pdftex.def)             Requested size: 455.24411pt x 89.96303pt.
+<pruebas/5.png, id=1496, 1430.34375pt x 670.75594pt>
 File: pruebas/5.png Graphic file (type png)
 <use pruebas/5.png>
-Package pdftex.def Info: pruebas/5.png  used on input line 2034.
-(pdftex.def)             Requested size: 364.19667pt x 170.78973pt.
-LaTeX Info: Redefining \. on input line 2038.
-LaTeX Info: Redefining \% on input line 2038.
- [91 <./pruebas/3.png> <./pruebas/4.png>]
-<pruebas/6.png, id=1447, 1351.29843pt x 676.77844pt>
+Package pdftex.def Info: pruebas/5.png  used on input line 2057.
+(pdftex.def)             Requested size: 455.24411pt x 213.47949pt.
+LaTeX Info: Redefining \. on input line 2061.
+LaTeX Info: Redefining \% on input line 2061.
+ [89 <./pruebas/3.png> <./pruebas/4.png>]
+<pruebas/6.png, id=1504, 1351.29843pt x 676.77844pt>
 File: pruebas/6.png Graphic file (type png)
 <use pruebas/6.png>
-Package pdftex.def Info: pruebas/6.png  used on input line 2043.
-(pdftex.def)             Requested size: 364.19667pt x 182.40216pt.
-<pruebas/7.png, id=1448, 334.24875pt x 139.27031pt>
+Package pdftex.def Info: pruebas/6.png  used on input line 2066.
+(pdftex.def)             Requested size: 455.24411pt x 227.99496pt.
+<pruebas/7.png, id=1506, 334.24875pt x 139.27031pt>
 File: pruebas/7.png Graphic file (type png)
 <use pruebas/7.png>
-Package pdftex.def Info: pruebas/7.png  used on input line 2054.
+Package pdftex.def Info: pruebas/7.png  used on input line 2077.
 (pdftex.def)             Requested size: 227.62206pt x 94.84492pt.
-LaTeX Info: Redefining \. on input line 2062.
-LaTeX Info: Redefining \% on input line 2062.
- [92 <./pruebas/5.png> <./pruebas/6.png> <./pruebas/7.png>]
-<pruebas/8.png, id=1456, 1405.50093pt x 665.48625pt>
+LaTeX Info: Redefining \. on input line 2081.
+LaTeX Info: Redefining \% on input line 2081.
+ [90 <./pruebas/5.png> <./pruebas/6.png>]
+<pruebas/8.png, id=1514, 1405.50093pt x 665.48625pt>
 File: pruebas/8.png Graphic file (type png)
 <use pruebas/8.png>
-Package pdftex.def Info: pruebas/8.png  used on input line 2065.
-(pdftex.def)             Requested size: 364.19667pt x 172.44353pt.
-<pruebas/9.png, id=1457, 544.28343pt x 321.45094pt>
+Package pdftex.def Info: pruebas/8.png  used on input line 2088.
+(pdftex.def)             Requested size: 455.24411pt x 215.54935pt.
+<pruebas/9.png, id=1516, 544.28343pt x 321.45094pt>
 File: pruebas/9.png Graphic file (type png)
 <use pruebas/9.png>
-Package pdftex.def Info: pruebas/9.png  used on input line 2076.
-(pdftex.def)             Requested size: 364.19667pt x 215.09142pt.
-LaTeX Info: Redefining \. on input line 2083.
-LaTeX Info: Redefining \% on input line 2083.
- [93 <./pruebas/8.png> <./pruebas/9.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2085--2086
+Package pdftex.def Info: pruebas/9.png  used on input line 2099.
+(pdftex.def)             Requested size: 318.66948pt x 188.20255pt.
+LaTeX Info: Redefining \. on input line 2103.
+LaTeX Info: Redefining \% on input line 2103.
+ [91 <./pruebas/7.png> <./pruebas/8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2108--2109
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2087--2088
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2090
-
- []
-
-LaTeX Info: Redefining \. on input line 2098.
-LaTeX Info: Redefining \% on input line 2098.
-[94] [95
-
-]
-Cap\'{\i }tulo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2110--2111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2116--2117
+Underfull \hbox (badness 10000) in paragraph at lines 2112--2113
 
  []
 
-[96
+LaTeX Info: Redefining \. on input line 2115.
+LaTeX Info: Redefining \% on input line 2115.
+[92 <./pruebas/9.png>]
+LaTeX Info: Redefining \. on input line 2116.
+LaTeX Info: Redefining \% on input line 2116.
+ [93] [94
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2122--2123
+Cap\'{\i }tulo 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2128--2129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2139--2140
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2135
 
  []
 
-LaTeX Info: Redefining \. on input line 2141.
-LaTeX Info: Redefining \% on input line 2141.
-[97]
-Underfull \hbox (badness 10000) in paragraph at lines 2141--2142
-
- []
-
-LaTeX Info: Redefining \. on input line 2147.
-LaTeX Info: Redefining \% on input line 2147.
-[98] [99
+[95
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2155--2156
+Underfull \hbox (badness 10000) in paragraph at lines 2140--2141
 
  []
 
@@ -2561,216 +2644,381 @@ Underfull \hbox (badness 10000) in paragraph at lines 2157--2158
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2168--2169
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2170--2171
+LaTeX Info: Redefining \. on input line 2159.
+LaTeX Info: Redefining \% on input line 2159.
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2160
 
  []
 
-[100
+LaTeX Info: Redefining \. on input line 2165.
+LaTeX Info: Redefining \% on input line 2165.
+[97] [98
 
 ]
-LaTeX Info: Redefining \. on input line 2174.
-LaTeX Info: Redefining \% on input line 2174.
- [101]
-Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
+Underfull \hbox (badness 10000) in paragraph at lines 2173--2174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
+Underfull \hbox (badness 10000) in paragraph at lines 2175--2176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2181--2182
+Underfull \hbox (badness 10000) in paragraph at lines 2186--2187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2183--2184
+Underfull \hbox (badness 10000) in paragraph at lines 2188--2189
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2185--2186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2188
-
- []
-
-[102
-
-] [103
+[99
 
 ]
-Underfull \hbox (badness 5592) in paragraph at lines 2203--2204
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 2193.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2195--2196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2197--2198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2199--2200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2205--2206
+
+ []
+
+LaTeX Info: Redefining \. on input line 2206.
+LaTeX Info: Redefining \% on input line 2206.
+[100]
+LaTeX Info: Redefining \. on input line 2210.
+LaTeX Info: Redefining \% on input line 2210.
+ [101] [102
+
+]
+Underfull \hbox (badness 5592) in paragraph at lines 2221--2222
 []\T1/lmr/m/n/10.95 ENISA. \T1/lmr/m/it/10.95 Cy-ber-se-cu-rity for SMEs\T1/lmr
 /m/n/10.95 . Agen-cia de la Unión Eu-ro-pea pa-ra la Ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2221--2222
 \T1/lmr/m/n/10.95 ber-se-gu-ri-dad. Dis-po-ni-ble en: []$\T1/pcr/m/n/10.95 http
 s : / / www . enisa . europa . eu / topics /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2221--2222
 \T1/pcr/m/n/10.95 awareness-[]and-[]cyber-[]hygiene / smes-[]cybersecurity# : ~
  : text = Small %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2221--2222
 \T1/pcr/m/n/10.95 20and % 20medium ,[] the % 20European % 20Commission % 20SMEs
  % 20report$[]\T1/lmr/m/n/10.95 . Úl-ti-mo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2210--2211
+Underfull \hbox (badness 3557) in paragraph at lines 2224--2229
+[]\T1/lmr/m/n/10.95 20Minutos. \T1/lmr/m/it/10.95 Goo-gle avi-sa que Es-pa-ña t
+ie-ne un pro-ble-ma gor-do: el 43$ $% de los
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 2224--2229
+\T1/lmr/m/it/10.95 ci-ber-ata-ques son a PY-MEs\T1/lmr/m/n/10.95 . Pu-bli-ca-do
+ en 20mi-nu-tos.es, 2024. Dis-po-ni-ble en:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2224--2229
+[]\T1/lmr/m/n/10.95 https://www.20minutos.es/tecnologia/google-avisa-que-espana
+-tiene-un-problema-gordo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2232--2233
 \T1/pcr/m/n/10.95 12 / Informe-[]situacion-[]ciberseguridad-[]2023 _ compressed
  . pdf# : ~ : text =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2210--2211
+Underfull \hbox (badness 10000) in paragraph at lines 2232--2233
 \T1/pcr/m/n/10.95 Telef % C3 % B3nica % 20Cyber % 20Security % 20Tech % 2C % 20
 el ,[] empresarial %
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 2215--2216
+Underfull \hbox (badness 4378) in paragraph at lines 2237--2238
 []\T1/lmr/m/n/10.95 A. Al-cai-de, ^^PSis-te-mas IDS, IPS, HIDS, NIPS, SIEM ^^U 
 ¾Qué son?^^Q \T1/lmr/m/it/10.95 Blog de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2226
+Underfull \hbox (badness 10000) in paragraph at lines 2247--2248
 []\T1/lmr/m/n/10.95 Grafana Labs, ^^PSNORT 3, using JSON alert on la-test GRA-F
 A-NA dash-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2226
+Underfull \hbox (badness 10000) in paragraph at lines 2247--2248
 \T1/lmr/m/n/10.95 board,^^Q \T1/lmr/m/it/10.95 Gra-fa-na Labs Com-mu-nity Fo-ru
 ms\T1/lmr/m/n/10.95 , men-sa-je de usua-rio ba-ruk-cic, 27
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2226
+Underfull \hbox (badness 10000) in paragraph at lines 2247--2248
 \T1/lmr/m/n/10.95 ju-nio 2020. [En lí-nea]. Dis-po-ni-ble: []$\T1/pcr/m/n/10.95
  https : / / community . grafana . com / t /
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 2229--2230
+Underfull \hbox (badness 5036) in paragraph at lines 2251--2252
 []\T1/lmr/m/n/10.95 Help Net Se-cu-rity, ^^PSnorby: Mo-dern Snort IDS fron-tend
 ,^^Q 7 di-ciem-bre 2010.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2229--2230
+Underfull \hbox (badness 10000) in paragraph at lines 2251--2252
 \T1/lmr/m/n/10.95 [En lí-nea]. Dis-po-ni-ble: []$\T1/pcr/m/n/10.95 https : / / 
 www . helpnetsecurity . com / 2010 / 12 / 07 /
  []
 
-[104
+[103
 
 ]
-Underfull \hbox (badness 2245) in paragraph at lines 2265--2266
+Underfull \hbox (badness 2245) in paragraph at lines 2287--2288
 []\T1/lmr/m/n/10.95 Raspberry Pi Foun-da-tion. \T1/lmr/m/it/10.95 Rasp-berry Pi
  Soft-wa-re\T1/lmr/m/n/10.95 . Dis-po-ni-ble en: []$\T1/pcr/m/n/10.95 https : /
  / www .
  []
 
-LaTeX Info: Redefining \. on input line 2269.
-LaTeX Info: Redefining \% on input line 2269.
-[105]
-LaTeX Info: Redefining \. on input line 2269.
-LaTeX Info: Redefining \% on input line 2269.
- [106] [107
+LaTeX Info: Redefining \. on input line 2288.
+LaTeX Info: Redefining \% on input line 2288.
+[104]
+LaTeX Info: Redefining \. on input line 2291.
+LaTeX Info: Redefining \% on input line 2291.
+ [105] [106
 
 ]
-Anexo I.
-[108
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2306 \section{Â¿QuÃ© es R-Snort?}
+                                   
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2310 ...omponentes principales de la plataforma}
+                                                   [107
+
 
 ]
-LaTeX Info: Redefining \. on input line 2344.
-LaTeX Info: Redefining \% on input line 2344.
- [109]
-LaTeX Info: Redefining \. on input line 2365.
-LaTeX Info: Redefining \% on input line 2365.
- [110] [111
+LaTeX Info: Redefining \. on input line 2361.
+LaTeX Info: Redefining \% on input line 2361.
+ [108]
+LaTeX Info: Redefining \. on input line 2387.
+LaTeX Info: Redefining \% on input line 2387.
+ [109] [110
 
 ]
-Anexo II.
-<apendix_agent/1.png, id=1593, 660.96938pt x 540.51938pt>
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2396 \section{Repositorio del Agente R-Snort}
+                                               
+<apendix_agent/1.png, id=1661, 660.96938pt x 540.51938pt>
 File: apendix_agent/1.png Graphic file (type png)
 <use apendix_agent/1.png>
-Package pdftex.def Info: apendix_agent/1.png  used on input line 2389.
+Package pdftex.def Info: apendix_agent/1.png  used on input line 2413.
 (pdftex.def)             Requested size: 386.96027pt x 316.45412pt.
-[112
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2420 ...epositorio del MÃ³dulo Central (WebApp)}
+                                                   [111
+
 
  <./apendix_agent/1.png>]
-<apendix_web/1.png, id=1604, 650.43pt x 546.54187pt>
+<apendix_web/1.png, id=1674, 650.43pt x 546.54187pt>
 File: apendix_web/1.png Graphic file (type png)
 <use apendix_web/1.png>
-Package pdftex.def Info: apendix_web/1.png  used on input line 2409.
+Package pdftex.def Info: apendix_web/1.png  used on input line 2436.
 (pdftex.def)             Requested size: 386.96027pt x 325.15892pt.
-LaTeX Info: Redefining \. on input line 2423.
-LaTeX Info: Redefining \% on input line 2423.
- [113 <./apendix_web/1.png>]
-<apendix_web/3.png, id=1614, 649.67719pt x 525.46312pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2443 \section{Consejos rÃ¡pidos y soporte}
+                                            
+LaTeX Info: Redefining \. on input line 2449.
+LaTeX Info: Redefining \% on input line 2449.
+ [112 <./apendix_web/1.png>]
+<apendix_web/3.png, id=1684, 649.67719pt x 525.46312pt>
 File: apendix_web/3.png Graphic file (type png)
 <use apendix_web/3.png>
-Package pdftex.def Info: apendix_web/3.png  used on input line 2429.
+Package pdftex.def Info: apendix_web/3.png  used on input line 2457.
 (pdftex.def)             Requested size: 341.43307pt x 276.16092pt.
-LaTeX Info: Redefining \. on input line 2440.
-LaTeX Info: Redefining \% on input line 2440.
- [114 <./apendix_web/3.png>] [115
+LaTeX Info: Redefining \. on input line 2469.
+LaTeX Info: Redefining \% on input line 2469.
+
+[113 <./apendix_web/3.png>] [114
 
 ]
-Anexo III.
-
-Overfull \hbox (7.58597pt too wide) in paragraph at lines 2472--2473
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2478 \section{Estructura general de una regla}
+                                                
+pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.5.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2489 ...egla Snort 3.},label={lst:snort3-regla}]
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.1
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2490 	
+        alert <proto> <src_ip> <src_port> -> <dst_ip> <dst_port> (
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.1
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2491 	
+        msg:"Texto descriptivo";
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.1
+.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2492 	
+        content:"cadena o patrÃ³n";
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2498 \section{Cabecera}
+                         
+Overfull \hbox (7.58597pt too wide) in paragraph at lines 2503--2504
 []\T1/lmr/bx/n/10.95 Direcciones/puertos\T1/lmr/m/n/10.95 : pue-den ser IP, ran
 -gos ([][]\T1/pcr/m/n/10.95 192.168.1.0/24[]\T1/lmr/m/n/10.95 ), va-ria-bles ([
 ][]\T1/pcr/m/n/10.95 $HOME_NET[]\T1/lmr/m/n/10.95 )
  []
 
-[116
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2521 \section{Opciones mÃ¡s comunes}
+                                       [115
+
 
 ]
-Overfull \hbox (28.25887pt too wide) in paragraph at lines 2534--2535
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2535 \section{Ejemplo comentado paso a paso}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.5.
+2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2539 ...FTP anÃ³nimos.},label={lst:ejemplo-ftp}]
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.2
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2540 	
+        alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.2
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2541 	
+        msg:"FTP anonymous login attempt";
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5.2
+.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2542 	
+        flow:to_server,established;
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.5})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2560 \section{Buenas prÃ¡cticas}
+                                  
+Overfull \hbox (28.25887pt too wide) in paragraph at lines 2567--2568
 []\T1/lmr/m/n/10.95 Agrupa re-glas re-la-cio-na-das en fi-che-ros te-má-ti-cos 
 ([][]\T1/pcr/m/n/10.95 local.rules[]\T1/lmr/m/n/10.95 , [][]\T1/pcr/m/n/10.95 w
 eb.rules[]\T1/lmr/m/n/10.95 , [][]\T1/pcr/m/n/10.95 iot.rules[]\T1/lmr/m/n/10.9
 5 ...). 
  []
 
-LaTeX Info: Redefining \. on input line 2544.
-LaTeX Info: Redefining \% on input line 2544.
-[117]
-LaTeX Info: Redefining \. on input line 2561.
-LaTeX Info: Redefining \% on input line 2561.
- [118] [119
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.6})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2570 \section{ValidaciÃ³n y despliegue}
+                                         
+LaTeX Info: Redefining \. on input line 2575.
+LaTeX Info: Redefining \% on input line 2575.
+ [116]
+pdfTeX warning (ext4): destination with the same identifier (name{section.5.7})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2587 \section{Recursos recomendados}
+                                      
+LaTeX Info: Redefining \. on input line 2597.
+LaTeX Info: Redefining \% on input line 2597.
+ [117] [118
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./contraportada.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<contraportada.pdf, id=1677, 597.62169pt x 845.16069pt>
+<contraportada.pdf, id=1744, 597.62169pt x 845.16069pt>
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf>
-Package pdftex.def Info: contraportada.pdf  used on input line 2565.
+Package pdftex.def Info: contraportada.pdf  used on input line 2601.
 (pdftex.def)             Requested size: 597.62022pt x 845.15863pt.
 
 
@@ -2780,28 +3028,28 @@ DF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./contraportada.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<contraportada.pdf, id=1679, page=1, 597.62169pt x 845.16069pt>
+<contraportada.pdf, id=1746, page=1, 597.62169pt x 845.16069pt>
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf, page 1>
-Package pdftex.def Info: contraportada.pdf , page1 used on input line 2565.
+Package pdftex.def Info: contraportada.pdf , page1 used on input line 2601.
 (pdftex.def)             Requested size: 597.62022pt x 845.15863pt.
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf, page 1>
-Package pdftex.def Info: contraportada.pdf , page1 used on input line 2565.
+Package pdftex.def Info: contraportada.pdf , page1 used on input line 2601.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf, page 1>
-Package pdftex.def Info: contraportada.pdf , page1 used on input line 2565.
+Package pdftex.def Info: contraportada.pdf , page1 used on input line 2601.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf, page 1>
-Package pdftex.def Info: contraportada.pdf , page1 used on input line 2565.
+Package pdftex.def Info: contraportada.pdf , page1 used on input line 2601.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
 File: contraportada.pdf Graphic file (type pdf)
 <use contraportada.pdf, page 1>
-Package pdftex.def Info: contraportada.pdf , page1 used on input line 2565.
+Package pdftex.def Info: contraportada.pdf , page1 used on input line 2601.
 (pdftex.def)             Requested size: 597.72964pt x 845.31337pt.
-[120
+[119
 
  <./contraportada.pdf>] (main.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -2811,21 +3059,17 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BC9FC229D6C8ADE51A2D88E9EB752279;14662.
+(rerunfilecheck)             Checksum: 37379D33C74D10463DDA68A82CE2C0C0;14820.
  ) 
 Here is how much of TeX's memory you used:
- 32221 strings out of 474486
- 621602 string characters out of 5743754
+ 32224 strings out of 474486
+ 621519 string characters out of 5743754
  2248542 words of memory out of 5000000
- 53411 multiletter control sequences out of 15000+600000
+ 53428 multiletter control sequences out of 15000+600000
  624490 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,87p,3418b,1438s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,87p,3406b,1438s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.p
@@ -2839,9 +3083,9 @@ b><C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb>
 C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb
 ><C:/Users/deian/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.p
 fb>
-Output written on main.pdf (138 pages, 31652717 bytes).
+Output written on main.pdf (137 pages, 31666198 bytes).
 PDF statistics:
- 1875 PDF objects out of 2073 (max. 8388607)
- 540 named destinations out of 1000 (max. 500000)
- 1022 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1940 PDF objects out of 2073 (max. 8388607)
+ 526 named destinations out of 1000 (max. 500000)
+ 1027 words of extra memory for PDF output out of 10000 (max. 10000000)
 
